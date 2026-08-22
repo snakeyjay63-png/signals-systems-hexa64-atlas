@@ -303,9 +303,40 @@ class AtlasMathTests(unittest.TestCase):
         self.assertEqual(conds,{'RI1':'A_ψ(c₁)=D','RI2':'A_ψ(c₂)=D','RI3':'∃ c′ : A_ψ(c′) ≠ D'})
         self.assertEqual(d['reader_independence']['gate'],
                          'EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass')
-        self.assertFalse(d['reader_independence']['current']['reader_independence_proven'])
+        self.assertTrue(d['reader_independence']['current']['reader_independence_proven'])
+        self.assertEqual(d['reader_independence']['current']['RI1'],'PASS')
+        self.assertEqual(d['reader_independence']['current']['RI2'],'PASS')
+        self.assertEqual(d['reader_independence']['current']['RI3'],'PASS')
+        self.assertTrue(d['reader_independence']['current']['carrier_content_consumed'])
         self.assertEqual(d['reader_independence']['optional_stronger_property']['name'],
                          'component-wise sensitivity')
+
+    def test_ch20_reader_independence_real_carriers(self):
+        import sys
+        sys.path.insert(0,str(ROOT/'tools'))
+        from reader_independence import derive
+        committed=json.loads((ROOT/'data'/'reader_independence_real_carriers_ch20.json').read_text(encoding='utf-8'))
+        d=derive()
+        self.assertEqual(committed,d)
+        self.assertTrue(d['reader_independence_proven'])
+        self.assertTrue(d['RI1'])
+        self.assertTrue(d['RI2'])
+        self.assertTrue(d['RI3'])
+        # Both carriers produce same canonical atlas hash
+        self.assertEqual(d['carriers']['A']['d_canonical_atlas_sha256'],
+                         d['carriers']['B']['d_canonical_atlas_sha256'])
+        # Corrupted carrier produces different hash
+        self.assertNotEqual(d['carriers']['prime']['d_canonical_atlas_sha256'],
+                            d['carriers']['A']['d_canonical_atlas_sha256'])
+        # Structural independence
+        self.assertFalse(d['independence_provenance']['shared_parsing_code'])
+        self.assertTrue(d['independence_provenance']['both_consume_svg_text'])
+        self.assertEqual(d['vacuity_status'],'NONE — both carriers parse SVG text independently')
+        # D has expected structure
+        self.assertEqual(d['D']['concept_count'],103)
+        self.assertEqual(d['D']['chapter_count'],20)
+        self.assertEqual(len(d['D']['concept_id_list']),103)
+        self.assertEqual(len(d['D']['math_signature_map']),103)
 
     def test_ch20_independent_property_reader(self):
         import sys

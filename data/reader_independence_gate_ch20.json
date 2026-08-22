@@ -3,7 +3,7 @@
   "name": "Reader-independence and independent-reader gates",
   "reader_independence": {
     "adapter": "A_ψ(M,τ,c) → D",
-    "status": "OPEN",
+    "status": "REAL_CARRIERS_IMPLEMENTED",
     "conditions": [
       {
         "id": "RI1",
@@ -28,11 +28,28 @@
     ],
     "gate": "EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass",
     "current": {
-      "RI1": "OPEN_REAL_CARRIERS",
-      "RI2": "OPEN_REAL_CARRIERS",
-      "RI3": "OPEN_REAL_CARRIERS",
-      "carrier_content_consumed": false,
-      "reader_independence_proven": false
+      "RI1": "PASS",
+      "RI2": "PASS",
+      "RI3": "PASS",
+      "carrier_content_consumed": true,
+      "reader_independence_proven": true
+    },
+    "real_carriers": {
+      "implementation": "tools/reader_independence.py",
+      "carrier_A": {
+        "id": "carrier_A_xml",
+        "parser": "xml.etree.ElementTree",
+        "function": "_read_xml",
+        "evidence": "parses SVG text into a DOM tree, then reads data-sem-*-b64 attributes via element.attrib"
+      },
+      "carrier_B": {
+        "id": "carrier_B_regex",
+        "parser": "re (regex) + raw key=\"value\" attribute scanning",
+        "function": "_read_regex",
+        "evidence": "scans raw SVG text with <g ...> tag and key=\"value\" regexes; no DOM"
+      },
+      "shared_parsing_code": false,
+      "note": "Both carriers decode the same committed data-sem-*-b64 payload fields with base64+json (shared data format, not shared parsing). The parsing strategy (DOM vs raw-text scan) is structurally independent."
     },
     "optional_stronger_property": {
       "name": "component-wise sensitivity",
@@ -40,8 +57,9 @@
       "status": "OPTIONAL",
       "claim_enabled": "adapter uses every declared carrier component nontrivially"
     },
-    "gate_measurement": "data/reader_independence_gate_measurement_ch20.json",
-    "gate_logic_status": "TESTED"
+    "gate_logic_measurement": "data/reader_independence_gate_measurement_ch20.json",
+    "gate_logic_status": "TESTED",
+    "real_carriers_measurement": "data/reader_independence_real_carriers_ch20.json"
   },
   "independent_reader": {
     "reader": "P_χ",
@@ -73,7 +91,7 @@
     "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
     "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
     "RI_gate_logic": "TESTED",
-    "reader_independence": "OPEN",
-    "full_semantic_self_read": "OPEN"
+    "reader_independence": "REAL_CARRIERS_PASS",
+    "full_semantic_self_read": "OPEN_PENDING_FULL_SEMANTIC"
   }
 }

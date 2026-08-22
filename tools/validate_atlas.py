@@ -16,6 +16,7 @@ from self_read_roundtrip import derive as derive_self_read
 from independent_property_reader import derive as derive_independent_reader
 from independent_reader_fault_injection import derive as derive_fault_injection
 from reader_independence_gate import derive as derive_ri_gate
+from reader_independence import derive as derive_ri_real
 from full_semantic_delta import derive as derive_full_semantic_delta
 from full_semantic_self_read import derive as derive_full_semantic_self_read
 from full_semantic_fault_injection import derive as derive_full_semantic_faults
@@ -56,6 +57,7 @@ RIG20=ROOT/'data'/'reader_independence_gate_ch20.json'
 IR20=ROOT/'data'/'independent_reader_measurement_ch20.json'
 FI20=ROOT/'data'/'independent_reader_fault_injection_ch20.json'
 RIGM20=ROOT/'data'/'reader_independence_gate_measurement_ch20.json'
+RCC20=ROOT/'data'/'reader_independence_real_carriers_ch20.json'
 FSD20=ROOT/'data'/'full_semantic_self_read_delta_ch20.json'
 FSDM20=ROOT/'data'/'full_semantic_self_read_delta_measurement_ch20.json'
 FSM20=ROOT/'data'/'full_semantic_self_read_measurement_ch20.json'
@@ -470,7 +472,7 @@ if cg19.get('closure',{}).get('pipeline')!='carrier → encoding → geometry �
 ci20=json.loads(CI20.read_text(encoding='utf-8'))
 cm20=json.loads(CM20.read_text(encoding='utf-8'))
 derived20=derive_carrier_invariance()
-if ci20.get('status')!='self-consistent serialized atlas; reader-independence open':
+if ci20.get('status')!='self-consistent serialized atlas; reader-independence proven with real carriers':
     errors.append('Chapter 20 status mismatch')
 formal=ci20.get('formalization',{})
 if formal.get('carrier_route')!='(M,τ) → adapter → R → D':
@@ -505,8 +507,12 @@ if 'not arithmetic equality' not in typing.get('1_equiv_0',''):
 orth=ci20.get('orthogonal_claims',{})
 if orth.get('self_consistency',{}).get('status')!='EXACT_ON_SERIALIZED_SUBSET':
     errors.append('Chapter 20 self-consistency status drifted')
-if orth.get('reader_independence',{}).get('status')!='OPEN':
-    errors.append('Chapter 20 reader-independence must remain OPEN')
+if orth.get('reader_independence',{}).get('status')!='PROVEN_REAL_CARRIERS':
+    errors.append('Chapter 20 reader-independence must be PROVEN_REAL_CARRIERS')
+if orth.get('reader_independence',{}).get('real_carriers_status')!='PASS':
+    errors.append('Chapter 20 reader-independence real carriers must be PASS')
+if orth.get('reader_independence',{}).get('evidence')!='data/reader_independence_real_carriers_ch20.json':
+    errors.append('Chapter 20 reader-independence evidence path drifted')
 if orth.get('full_semantic_self_read',{}).get('status')!='EXACT_FULL_SEMANTIC':
     errors.append('Chapter 20 full semantic self-read must be EXACT_FULL_SEMANTIC')
 q20=json.loads(QF20.read_text(encoding='utf-8'))
@@ -529,10 +535,33 @@ if conds!={'RI1':'A_ψ(c₁)=D','RI2':'A_ψ(c₂)=D','RI3':'∃ c′ : A_ψ(c′
     errors.append('Chapter 20 reader-independence 3-condition gate drifted')
 if rig.get('reader_independence',{}).get('gate')!='EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass':
     errors.append('Chapter 20 reader-independence exact gate drifted')
-if rig.get('reader_independence',{}).get('current',{}).get('reader_independence_proven') is not False:
-    errors.append('Chapter 20 reader-independence must remain false')
+if rig.get('reader_independence',{}).get('current',{}).get('reader_independence_proven') is not True:
+    errors.append('Chapter 20 reader-independence must be proven')
+cur=rig.get('reader_independence',{}).get('current',{})
+if cur.get('RI1')!='PASS' or cur.get('RI2')!='PASS' or cur.get('RI3')!='PASS':
+    errors.append('Chapter 20 reader-independence RI1/RI2/RI3 must be PASS')
+if cur.get('carrier_content_consumed') is not True:
+    errors.append('Chapter 20 reader-independence carriers must consume content')
+if rig.get('reader_independence',{}).get('real_carriers',{}).get('carrier_A',{}).get('parser')!='xml.etree.ElementTree':
+    errors.append('Chapter 20 carrier A parser drifted')
+if 're (regex)' not in rig.get('reader_independence',{}).get('real_carriers',{}).get('carrier_B',{}).get('parser',''):
+    errors.append('Chapter 20 carrier B parser drifted')
 if rig.get('reader_independence',{}).get('optional_stronger_property',{}).get('name')!='component-wise sensitivity':
     errors.append('Chapter 20 component-wise sensitivity spec missing')
+
+rcc20=json.loads(RCC20.read_text(encoding='utf-8'))
+if rcc20!=derive_ri_real():
+    errors.append('Chapter 20 real-carriers measurement drifted')
+if not rcc20.get('reader_independence_proven'):
+    errors.append('Chapter 20 real-carriers gate must pass')
+if not rcc20.get('RI1') or not rcc20.get('RI2') or not rcc20.get('RI3'):
+    errors.append('Chapter 20 real-carriers RI1/RI2/RI3 failed')
+if rcc20.get('carriers',{}).get('A',{}).get('d_canonical_atlas_sha256')!=rcc20.get('carriers',{}).get('B',{}).get('d_canonical_atlas_sha256'):
+    errors.append('Chapter 20 carriers A/B canonical atlas hashes differ')
+if rcc20.get('carriers',{}).get('prime',{}).get('d_canonical_atlas_sha256')==rcc20.get('carriers',{}).get('A',{}).get('d_canonical_atlas_sha256'):
+    errors.append('Chapter 20 corrupted carrier must produce different D')
+if rcc20.get('independence_provenance',{}).get('shared_parsing_code') is not False:
+    errors.append('Chapter 20 carriers must not share parsing code')
 
 ir=json.loads(IR20.read_text(encoding='utf-8'))
 if ir!=derive_independent_reader():
@@ -600,7 +629,7 @@ for vec in cjs20.get('known_answer_vectors',[]):
 
 
 ladder=ci20.get('ladder_status',{})
-if ladder!={'self_consistency':'EXACT_ON_SERIALIZED_SUBSET','independent_reader':'PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5','RI_gate_logic':'TESTED','reader_independence':'OPEN','full_semantic_self_read':'EXACT_FULL_SEMANTIC'}:
+if ladder!={'self_consistency':'EXACT_ON_SERIALIZED_SUBSET','independent_reader':'PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5','RI_gate_logic':'TESTED','reader_independence':'REAL_CARRIERS_PASS','full_semantic_self_read':'EXACT_FULL_SEMANTIC'}:
     errors.append('Chapter 20 final ladder status drifted')
 
 rr=ci20.get('read_route',{})
@@ -665,7 +694,8 @@ print(f'- Chapter 20 carrier witness: canonical D hash {cm20["canonical_sha256"]
 print('- Chapter 20 self-read: 103/103 concepts · equations/texts/hashes MATCH · 20/20 chapter metadata · EXACT_ON_SERIALIZED_SUBSET')
 print('- Chapter 20 independent reader P_χ: 9/9 properties PASS · fault sensitivity 5/5 mutations detected · semantic guards active')
 print('- Chapter 20 RI gate logic: valid nonconstant ACCEPT · constant REJECT · missing provenance REJECT')
-print('- Chapter 20 quotient factorization: f=i∘b∘p · X/~_f≅im(f) · RI1/RI2/RI3 gate registered · reader-independence OPEN')
+print(f'- Chapter 20 reader independence: REAL CARRIERS PASS · A=XML DOM · B=regex scan · RI1/RI2/RI3 all PASS · D={rcc20["carriers"]["A"]["d_canonical_atlas_sha256"][:16]}… · prime≠D')
+print('- Chapter 20 quotient factorization: f=i∘b∘p · X/~_f≅im(f) · RI1/RI2/RI3 gate registered · reader-independence PROVEN')
 print('- Chapter 20 full semantic: 5 direct/recomputed + 2 derivable + 9 payload = 16 · P_full EXACT · canonicalJSON equality PASS')
 print('- Chapter 20 semantic faults: M6 parameter corruption detected/localized · M7 cross-chapter reorder detected')
 print(f'- Chapter 16 corpus: {quran_status}')
