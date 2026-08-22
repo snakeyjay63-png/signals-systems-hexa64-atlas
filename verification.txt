@@ -1,0 +1,125 @@
+SIGNALS & SYSTEMS · FULL VISUAL ATLAS · VERIFICATION
+==============================================================
+SVG path: assets/signals_systems_full_atlas_master.svg
+viewBox: 0 0 1600 26840
+pixel size: 3840 × 64416
+chapter count: 20
+visual field count: 103
+unique concept ids: 103
+embedded metadata: PASS
+SVG title: PASS
+SVG description: PASS
+XML parse: PASS
+embedded image only: PASS
+external URLs: PASS
+Chapter 14 PNG bytes: 2239
+Chapter 14 PNG sha256: 411ea26035897702802e016e8785c8a9efaa28fe023a4fba8390f06c71bba89c
+Chapter 14 Base64 chars: 2988
+Chapter 14 Base64 sha256: f5a98127add7a1530bedbaa901ad523fd807b9fb502cc286a63d719e64500f99
+Chapter 15 real RGB24 basin sum: 16777216
+Chapter 15 real RGB24 basin min/max: 1 / 633241
+
+Concept IDs:
+- ct_sinusoid
+- dt_sinusoid
+- signal_transformations
+- impulse_step
+- system_properties
+- convolution_sum
+- convolution_integral
+- impulse_response
+- step_response
+- system_equations
+- ctfs
+- line_spectrum
+- dtfs
+- gibbs
+- fourier_symmetry
+- ctft_rect_sinc
+- ctft_gaussian
+- ctft_modulation
+- ctft_convolution
+- ctft_properties
+- dtft_periodic
+- dtft_rect
+- dtft_shift
+- dtft_unit_circle
+- dtft_properties
+- freq_response
+- ideal_lpf
+- resonance
+- mag_phase
+- group_delay
+- sampling_train
+- sampling_replicas
+- nyquist
+- aliasing
+- reconstruction
+- dsb_sc
+- sidebands
+- demodulation
+- fdm
+- communication_chain
+- laplace_plane
+- laplace_roc
+- laplace_causality_stability
+- inverse_laplace
+- laplace_system_function
+- z_plane
+- z_roc_unit_circle
+- difference_to_z
+- z_to_dtft
+- pole_radius_angle
+- feedback_loop
+- sensitivity
+- closed_loop_poles
+- root_locus_concept
+- feedback_tradeoffs
+- finite_word_state
+- modular_addition
+- rotate_xor_mix
+- compression_round
+- avalanche_diffusion
+- ipv4_word
+- ipv6_lanes
+- ipv4_mapped_ipv6
+- ipv6_prefix_host
+- address_inclusion
+- vector_test_object
+- raster_frame_boundary
+- png_byte_space
+- base64_frame_shift
+- base64_char_space
+- reconstruction_lossiness
+- utf73_field
+- utf73_codepoints
+- utf73_utf8
+- utf73_fixed_point
+- utf73_basins
+- utf73_vs_base64
+- abjad_linear_carrier
+- abjad_cultural_mapping
+- abjad_mod9_orbits
+- abjad_corpus_fixture
+- abjad_empirical_measure
+- abjad_layer_separation
+- closure_atomic_frames
+- closure_disjoint_union_9
+- closure_boundary_quotient
+- closure_theorem
+- closure_v1_abjad_7
+- closure_status_ledger
+- transformer_frame_correspondence
+- transformer_seed_geometry
+- transformer_signal_system_atlas
+- transformer_frame_status
+- choice_operator_theta
+- choice_geometric_chain
+- choice_symbolic_chain
+- choice_registry
+- choice_reflective_closure
+- carrier_route_invariance
+- canonical_discrete_field
+- carrier_substitution_test
+- read_route_operations
+- carrier_invariance_status

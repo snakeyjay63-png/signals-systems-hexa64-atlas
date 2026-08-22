@@ -1,0 +1,628 @@
+{
+  "format_version": "1.0.0",
+  "local_verification_pass": true,
+  "local": [
+    {
+      "concept_id": "ct_sinusoid",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dt_sinusoid",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "signal_transformations",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "impulse_step",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "system_properties",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "convolution_sum",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "convolution_integral",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "impulse_response",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "step_response",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "system_equations",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctfs",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "line_spectrum",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtfs",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "gibbs",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "fourier_symmetry",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctft_rect_sinc",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctft_gaussian",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctft_modulation",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctft_convolution",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ctft_properties",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtft_periodic",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtft_rect",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtft_shift",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtft_unit_circle",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dtft_properties",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "freq_response",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ideal_lpf",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "resonance",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "mag_phase",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "group_delay",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "sampling_train",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "sampling_replicas",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "nyquist",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "aliasing",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "reconstruction",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "dsb_sc",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "sidebands",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "demodulation",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "fdm",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "communication_chain",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "laplace_plane",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "laplace_roc",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "laplace_causality_stability",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "inverse_laplace",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "laplace_system_function",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "z_plane",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "z_roc_unit_circle",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "difference_to_z",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "z_to_dtft",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "pole_radius_angle",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "feedback_loop",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "sensitivity",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closed_loop_poles",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "root_locus_concept",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "feedback_tradeoffs",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "finite_word_state",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "modular_addition",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "rotate_xor_mix",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "compression_round",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "avalanche_diffusion",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ipv4_word",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ipv6_lanes",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ipv4_mapped_ipv6",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "ipv6_prefix_host",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "address_inclusion",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "vector_test_object",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "raster_frame_boundary",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "png_byte_space",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "base64_frame_shift",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "base64_char_space",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "reconstruction_lossiness",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_field",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_codepoints",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_utf8",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_fixed_point",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_basins",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "utf73_vs_base64",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_linear_carrier",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_cultural_mapping",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_mod9_orbits",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_corpus_fixture",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_empirical_measure",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "abjad_layer_separation",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_atomic_frames",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_disjoint_union_9",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_boundary_quotient",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_theorem",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_v1_abjad_7",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "closure_status_ledger",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "transformer_frame_correspondence",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "transformer_seed_geometry",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "transformer_signal_system_atlas",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "transformer_frame_status",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "choice_operator_theta",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "choice_geometric_chain",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "choice_symbolic_chain",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "choice_registry",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "choice_reflective_closure",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "carrier_route_invariance",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "canonical_discrete_field",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "carrier_substitution_test",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "read_route_operations",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    },
+    {
+      "concept_id": "carrier_invariance_status",
+      "math_hash_match": true,
+      "svg_hash_match": true,
+      "chapter_crosscheck": true
+    }
+  ],
+  "canonical_equal": true,
+  "status": "EXACT_FULL_SEMANTIC",
+  "rebuilt_sha256": "b3e08f19f62bd0737690622b5a155a3bc6323a839639159bc0ee0d253e9f3646",
+  "committed_sha256": "b3e08f19f62bd0737690622b5a155a3bc6323a839639159bc0ee0d253e9f3646"
+}

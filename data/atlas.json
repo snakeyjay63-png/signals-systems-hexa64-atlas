@@ -1,0 +1,5292 @@
+{
+  "format_version": "1.9.0",
+  "title": "Signals & Systems · Full Visual Atlas",
+  "style": "HEXA_64 / NPN Signal Field",
+  "default_discrete_frame": 64,
+  "chapter_count": 20,
+  "concept_count": 103,
+  "source_svg": "assets/signals_systems_full_atlas_master.svg",
+  "concepts": [
+    {
+      "chapter": 1,
+      "chapter_title": "Signals & Systems",
+      "concept_id": "ct_sinusoid",
+      "title": "Continuous-Time Sinusoid",
+      "subtitle": "Amplitude, phase and period are geometric parameters",
+      "equation": "x(t)=A sin(ω0 t+φ)",
+      "domain": "continuous-time",
+      "signal_type": "CT",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "transforms_to": [
+          "ctfs"
+        ],
+        "prerequisites": []
+      },
+      "svg_selector": "[data-concept=\"ct_sinusoid\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "CONTINUOUS-TIME SINUSOID",
+        "Amplitude, phase and period are geometric parameters",
+        "t",
+        "A=1 · 2 periods · φ=0.55 rad"
+      ],
+      "svg_fragment_sha256": "5b3f94086b76ad95b239e86c48b6edb643e57c6e2c0d9cc1e469945f82da3ff1",
+      "math_signature_sha256": "05330607fc4341bc66a4f68d08f1780439b6c059fc5990c14129b4bd260fbdcb"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Signals & Systems",
+      "concept_id": "dt_sinusoid",
+      "title": "Discrete-Time Sinusoid",
+      "subtitle": "64 positions in a fixed frame",
+      "equation": "x[n]=sin(2π·5n/64)",
+      "domain": "discrete-time",
+      "signal_type": "DT",
+      "parameters": {
+        "N": 64,
+        "bin": 5,
+        "period_samples": 12.8
+      },
+      "validation": {
+        "invariants": [
+          "64 samples",
+          "DFT support at bins 5 and 59 in full FFT",
+          "one-sided dominant bin 5"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "dtfs",
+          "dtft_periodic"
+        ],
+        "prerequisites": []
+      },
+      "svg_selector": "[data-concept=\"dt_sinusoid\"]",
+      "svg_element_count": 143,
+      "svg_text": [
+        "DISCRETE-TIME SINUSOID",
+        "64 positions in a fixed frame",
+        "n",
+        "0",
+        "8",
+        "16",
+        "24",
+        "32",
+        "40",
+        "48",
+        "56"
+      ],
+      "svg_fragment_sha256": "bc6269ece2691c03d7744f354fd36a95064ad989cb9b1367785af5505526f4b0",
+      "math_signature_sha256": "0e6622f2e85f42e2ed6e1f6bb2b102253eec8bf78060a19e1db2c0d15e74531c"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Signals & Systems",
+      "concept_id": "signal_transformations",
+      "title": "Time Operations",
+      "subtitle": "Shift · scale · reverse",
+      "equation": "x(t), x(t-t0), x(at), x(-t)",
+      "domain": "time-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"signal_transformations\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "TIME OPERATIONS",
+        "Shift · scale · reverse",
+        "cyan=original · purple=shift · green=reverse"
+      ],
+      "svg_fragment_sha256": "13a9759fc4e71873a7b4a83f0d7e224fb84eabdfc5d30bfc917b5c22f04044a1",
+      "math_signature_sha256": "750330239bb2edbae67dfca7a6a2d507af3034ab6240d5f012cfc96358640aa8"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Signals & Systems",
+      "concept_id": "impulse_step",
+      "title": "Impulse & Step",
+      "subtitle": "Elementary building blocks",
+      "equation": "u[n], δ[n], u[n]-u[n-1]=δ[n]",
+      "domain": "time-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"impulse_step\"]",
+      "svg_element_count": 268,
+      "svg_text": [
+        "IMPULSE & STEP",
+        "Elementary building blocks",
+        "n",
+        "n",
+        "u[n]",
+        "δ[n]"
+      ],
+      "svg_fragment_sha256": "d73888b07e6e671137b6a668677e4daff805c3cdd6861a2e566586522595fd41",
+      "math_signature_sha256": "01dbd774f9ee498ab2a17e2f10316a4e516e117d3d9da3b8c081b76c8726ac11"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "Signals & Systems",
+      "concept_id": "system_properties",
+      "title": "System Properties",
+      "subtitle": "Memory · causality · linearity · time invariance · stability",
+      "equation": "S{x}=y ; properties ∈ {memoryless, causal, linear, TI, BIBO}",
+      "domain": "systems",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"system_properties\"]",
+      "svg_element_count": 19,
+      "svg_text": [
+        "SYSTEM PROPERTIES",
+        "Memory · causality · linearity · time invariance · stability",
+        "MEMORY",
+        "y(t)=x(t−1)",
+        "CAUSAL",
+        "depends on present/past",
+        "LINEAR",
+        "superposition",
+        "TIME-INVARIANT",
+        "shift commutes",
+        "BIBO",
+        "bounded → bounded"
+      ],
+      "svg_fragment_sha256": "5b53fe15cf50973ed02beb588a264c65af4c79a76b5b8559b25a1ac6287ab3b4",
+      "math_signature_sha256": "1a1655ba480f65a3c0b277ac19b5018312ba319f47621ce705b04f5658c3593e"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "LTI Systems",
+      "concept_id": "convolution_sum",
+      "title": "Convolution Sum",
+      "subtitle": "Flip · shift · multiply · sum",
+      "equation": "y[n]=Σ x[k]h[n-k]",
+      "domain": "discrete-time",
+      "signal_type": "DT",
+      "parameters": {
+        "N": 64,
+        "rect_length": 12,
+        "decay_constant_samples": 10.0
+      },
+      "validation": {
+        "invariants": [
+          "output equals first 64 samples of linear convolution"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "dtft_properties",
+          "difference_to_z"
+        ],
+        "prerequisites": [
+          "impulse_response"
+        ]
+      },
+      "svg_selector": "[data-concept=\"convolution_sum\"]",
+      "svg_element_count": 400,
+      "svg_text": [
+        "CONVOLUTION SUM",
+        "Flip · shift · multiply · sum",
+        "n",
+        "n",
+        "n",
+        "x[n]",
+        "h[n]",
+        "y[n]"
+      ],
+      "svg_fragment_sha256": "fd24ef5c62d39e8f32875e2dc4080be9f4d8f72e4cdfeb181dfbedf705454176",
+      "math_signature_sha256": "ca4c0acb93c62845bd043d55516e78070eac72373e6a01d9645ff19d5aca9183"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "LTI Systems",
+      "concept_id": "convolution_integral",
+      "title": "Convolution Integral",
+      "subtitle": "Overlap area becomes output",
+      "equation": "y(t)=∫x(τ)h(t-τ)dτ",
+      "domain": "continuous-time",
+      "signal_type": "CT",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "transforms_to": [
+          "ctft_convolution"
+        ],
+        "prerequisites": [
+          "impulse_response"
+        ]
+      },
+      "svg_selector": "[data-concept=\"convolution_integral\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "CONVOLUTION INTEGRAL",
+        "Overlap area becomes output",
+        "cyan=x(τ) · purple=h(t−τ) · green=integral result"
+      ],
+      "svg_fragment_sha256": "ae3c1c26b1529944fb0501b9e407dcaa45aaaa76551c1482485f65426796a7a8",
+      "math_signature_sha256": "f69cf1ef3b3819d500b78050b61283e2fc5b894cfbc01fb7a7fdf967f204d068"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "LTI Systems",
+      "concept_id": "impulse_response",
+      "title": "Impulse Response",
+      "subtitle": "LTI system is determined by h",
+      "equation": "y=x*h",
+      "domain": "systems",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"impulse_response\"]",
+      "svg_element_count": 12,
+      "svg_text": [
+        "IMPULSE RESPONSE",
+        "LTI system is determined by h",
+        "H",
+        "impulse response",
+        "δ",
+        "h",
+        "Probe with δ → observe h → predict response to every input by convolution."
+      ],
+      "svg_fragment_sha256": "1c7b134b22046c261755c5e83fb71fa9a7e8da9b266e224e44407c3c0621fc12",
+      "math_signature_sha256": "3497c21c22ce3b32693132d9a68d59e49a92acaedfed20f318b7a722363187c5"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "LTI Systems",
+      "concept_id": "step_response",
+      "title": "Step Response",
+      "subtitle": "Integrating h gives response to u",
+      "equation": "s(t)=u*h",
+      "domain": "systems",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"step_response\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "STEP RESPONSE",
+        "Integrating h gives response to u",
+        "cyan=h(t) · purple=step response s(t)"
+      ],
+      "svg_fragment_sha256": "7c8b19b9a7d11a1763ae8772df56b3aec029aa774f2775336978123def316ebb",
+      "math_signature_sha256": "59f87aedaa23026cc0ed84ee18c5ca96d94ad2c7d375f3d0c087ec450d179df3"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "LTI Systems",
+      "concept_id": "system_equations",
+      "title": "Difference / Differential Equations",
+      "subtitle": "Local recursion ↔ global impulse response",
+      "equation": "y[n]-ay[n-1]=bx[n]",
+      "domain": "systems",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"system_equations\"]",
+      "svg_element_count": 15,
+      "svg_text": [
+        "DIFFERENCE / DIFFERENTIAL EQUATIONS",
+        "Local recursion ↔ global impulse response",
+        "y[n] − a y[n−1] = b x[n]",
+        "difference equation",
+        "H(z)=b/(1−az⁻¹)",
+        "system function",
+        "h[n]=b aⁿu[n]",
+        "impulse response"
+      ],
+      "svg_fragment_sha256": "781df4f8a5717e8e7cd4b20cbafb320de069896f32abdcf9009d84f3f0f67b93",
+      "math_signature_sha256": "d686da975de1830dbed6a9e3476a2b33b2cc062445fa81f62acb8e3f1072fb18"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Fourier Series",
+      "concept_id": "ctfs",
+      "title": "Ct Fourier Series",
+      "subtitle": "Periodic waveform ↔ harmonic coefficients",
+      "equation": "x(t)=Σ ak e^{jkω0t}",
+      "domain": "frequency-domain",
+      "signal_type": "CT periodic",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctfs\"]",
+      "svg_element_count": 27,
+      "svg_text": [
+        "CT FOURIER SERIES",
+        "Periodic waveform ↔ harmonic coefficients",
+        "t",
+        "frequency / bin",
+        "magnitude",
+        "1",
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "svg_fragment_sha256": "6e5e5a0583bfe4621f196752b1f29cd7a1d85f586d3ad25c20770bb81ed2a11d",
+      "math_signature_sha256": "df526f766422f81d56a3e301e4a471d8ed3444187cf1b4c8ef60316d4945876a"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Fourier Series",
+      "concept_id": "line_spectrum",
+      "title": "Line Spectrum",
+      "subtitle": "Amplitude and phase live on discrete harmonics",
+      "equation": "ak",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"line_spectrum\"]",
+      "svg_element_count": 35,
+      "svg_text": [
+        "LINE SPECTRUM",
+        "Amplitude and phase live on discrete harmonics",
+        "frequency / bin",
+        "magnitude",
+        "symmetric magnitude example"
+      ],
+      "svg_fragment_sha256": "53041a307199eee79aed0514cd08509251020e4ba927c639920f1a9c7ae72ea4",
+      "math_signature_sha256": "f780f0eb1c3d74247341655d625e4f0495d87b002ff731cd490cdfac39272840"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Fourier Series",
+      "concept_id": "dtfs",
+      "title": "Dt Fourier Series",
+      "subtitle": "One period ↔ N coefficient bins",
+      "equation": "x[n]=Σ ak e^{jk(2π/N)n}",
+      "domain": "frequency-domain",
+      "signal_type": "DT periodic",
+      "parameters": {
+        "N": 16,
+        "bins": [
+          3,
+          5
+        ],
+        "amplitudes": [
+          1.0,
+          0.5
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "nonzero DFT support at ±3 and ±5 modulo 16"
+        ]
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtfs\"]",
+      "svg_element_count": 75,
+      "svg_text": [
+        "DT FOURIER SERIES",
+        "One period ↔ N coefficient bins",
+        "n",
+        "frequency / bin",
+        "magnitude"
+      ],
+      "svg_fragment_sha256": "028cd80513e86e93637bca4a1eb9173d196183f5d28d1217dabad797e0942907",
+      "math_signature_sha256": "f357380c8e61f048ac93385297aca090786e9fc7eebe68a49b39476eb73b56b0"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Fourier Series",
+      "concept_id": "gibbs",
+      "title": "Gibbs Phenomenon",
+      "subtitle": "Finite harmonic sums sharpen jumps but overshoot",
+      "equation": "partial sums of odd harmonics",
+      "domain": "time-frequency",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"gibbs\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "GIBBS PHENOMENON",
+        "Finite harmonic sums sharpen jumps but overshoot",
+        "grey=1 term · cyan=3 · purple=9"
+      ],
+      "svg_fragment_sha256": "48e223e04a2afef07c1080cff026e97e0a958c296db701ede5a29eb6cfb4db27",
+      "math_signature_sha256": "2568ad169f0558eff446c1afb1c7256d5d0c2f57658926621d6fd76cc6e35f49"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Fourier Series",
+      "concept_id": "fourier_symmetry",
+      "title": "Symmetry Shortcuts",
+      "subtitle": "Even ↔ cosine · odd ↔ sine · real ↔ conjugate symmetry",
+      "equation": "real x(t) ⇒ a₋k=aₖ*",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"fourier_symmetry\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "SYMMETRY SHORTCUTS",
+        "Even ↔ cosine · odd ↔ sine · real ↔ conjugate symmetry",
+        "EVEN",
+        "a₋k=aₖ",
+        "cosine content",
+        "ODD",
+        "a₋k=−aₖ",
+        "sine content",
+        "REAL",
+        "a₋k=aₖ*",
+        "conjugate symmetry",
+        "PERIODIC",
+        "line spectrum",
+        "discrete harmonics"
+      ],
+      "svg_fragment_sha256": "7e18a35ef9aa06b7f24ab58c040119ff40b4080a091e08600bbb279bbc94f60f",
+      "math_signature_sha256": "971e4095b6e0a7faff3a46322bb0f7e093435581acf6442c532afd8cf66dfe52"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Continuous-Time Fourier Transform",
+      "concept_id": "ctft_rect_sinc",
+      "title": "Rect ↔ Sinc",
+      "subtitle": "Finite support in time spreads in frequency",
+      "equation": "rect(t/T) ↔ T sinc(fT)",
+      "domain": "time-frequency",
+      "signal_type": "CT aperiodic",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctft_rect_sinc\"]",
+      "svg_element_count": 11,
+      "svg_text": [
+        "RECT ↔ SINC",
+        "Finite support in time spreads in frequency",
+        "t"
+      ],
+      "svg_fragment_sha256": "522f318894570b734d8ef5c0168ed8edfa41f8732cfb90c7fe87a3918562375a",
+      "math_signature_sha256": "18b4fcce65bb10d84472b3d296892b46d05961c747b82d74e96bb012a5824b36"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Continuous-Time Fourier Transform",
+      "concept_id": "ctft_gaussian",
+      "title": "Gaussian ↔ Gaussian",
+      "subtitle": "Localization in both domains",
+      "equation": "e^{-πt²} ↔ e^{-πf²}",
+      "domain": "time-frequency",
+      "signal_type": "CT aperiodic",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctft_gaussian\"]",
+      "svg_element_count": 13,
+      "svg_text": [
+        "GAUSSIAN ↔ GAUSSIAN",
+        "Localization in both domains",
+        "t",
+        "t",
+        "top=time · bottom=frequency"
+      ],
+      "svg_fragment_sha256": "4bd006d66c9c4bea869df7257363e061fcde315d1ac3a7aec409c62d5708c81e",
+      "math_signature_sha256": "a585a3633ea5de3cd7fe1a320d02bfef255aea836750cb64167f8422710f05d9"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Continuous-Time Fourier Transform",
+      "concept_id": "ctft_modulation",
+      "title": "Modulation Property",
+      "subtitle": "Multiplication by cosine shifts the spectrum",
+      "equation": "x(t)cos(2πfct) ↔ 1/2[X(f-fc)+X(f+fc)]",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctft_modulation\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "MODULATION PROPERTY",
+        "Multiplication by cosine shifts the spectrum",
+        "cyan=baseband · purple=translated copies"
+      ],
+      "svg_fragment_sha256": "4051dcc1010bdd0686a12b350b5fc4e68aca9679840a8a0a1e46b0fa265be1f7",
+      "math_signature_sha256": "5734fa672f4aa299c8b0bc0596dfb43031166a00558bff1e4dd557aa62a3b0b7"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Continuous-Time Fourier Transform",
+      "concept_id": "ctft_convolution",
+      "title": "Convolution Theorem",
+      "subtitle": "Convolution in time ↔ multiplication in frequency",
+      "equation": "x*h ↔ XH",
+      "domain": "time-frequency",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctft_convolution\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "CONVOLUTION THEOREM",
+        "Convolution in time ↔ multiplication in frequency",
+        "x(t) * h(t)",
+        "X(f) · H(f)",
+        "same operation viewed in the other domain"
+      ],
+      "svg_fragment_sha256": "1e58397e778ccfa08e8d8a4e7db14dbdc6ac0364d3cef2a33dcc976a378a9fb3",
+      "math_signature_sha256": "64e8445c64e727867269c83a765df9bf674d138e06a17382352e617821bb987e"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Continuous-Time Fourier Transform",
+      "concept_id": "ctft_properties",
+      "title": "Transform Property Map",
+      "subtitle": "Shift · scale · derivative · duality",
+      "equation": "x(t−t₀) ↔ e^{-j2πft₀}X(f)",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ctft_properties\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "TRANSFORM PROPERTY MAP",
+        "Shift · scale · derivative · duality",
+        "SHIFT",
+        "x(t−t₀)",
+        "e^{-j2πft₀}X(f)",
+        "SCALE",
+        "x(at)",
+        "|a|⁻¹X(f/a)",
+        "DERIVATIVE",
+        "dx/dt",
+        "j2πfX(f)",
+        "DUALITY",
+        "x↔X",
+        "X↔x(−·)"
+      ],
+      "svg_fragment_sha256": "5a983bc725ffa7f12edd37f40a48bf0500fd74ba32a07d3f4e3b86cab4e14914",
+      "math_signature_sha256": "86570e0332164b2477d31af0cb00057e2d77d5157382fb1556963ea49e777549"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Discrete-Time Fourier Transform",
+      "concept_id": "dtft_periodic",
+      "title": "Dtft Periodicity",
+      "subtitle": "Discrete time produces a 2π-periodic spectrum",
+      "equation": "X(e^{jω})=Σx[n]e^{-jωn}",
+      "domain": "frequency-domain",
+      "signal_type": "DT",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtft_periodic\"]",
+      "svg_element_count": 7,
+      "svg_text": [
+        "DTFT PERIODICITY",
+        "Discrete time produces a 2π-periodic spectrum"
+      ],
+      "svg_fragment_sha256": "6ed7e359f8a673edf591c8cba9bed30ee4de65ce63b2f374ca09ea5833047907",
+      "math_signature_sha256": "8e9285e593402dba1cd29dfefc72c1171ab91a2acd06253b75aad6ee8454fbe6"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Discrete-Time Fourier Transform",
+      "concept_id": "dtft_rect",
+      "title": "Finite Sequence Spectrum",
+      "subtitle": "Rectangular sequence ↔ Dirichlet kernel",
+      "equation": "x[n]=1, 0≤n≤M-1",
+      "domain": "time-frequency",
+      "signal_type": "DT finite",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtft_rect\"]",
+      "svg_element_count": 138,
+      "svg_text": [
+        "FINITE SEQUENCE SPECTRUM",
+        "Rectangular sequence ↔ Dirichlet kernel",
+        "n"
+      ],
+      "svg_fragment_sha256": "a73c15b1fad4824496481b987f1d4680ddfb075f88f223544ab54981c6ec9e3e",
+      "math_signature_sha256": "521da9eb1f28bbeebc82d8e514030c59c6b959e44f43b88fbe2a00cc7ef912e2"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Discrete-Time Fourier Transform",
+      "concept_id": "dtft_shift",
+      "title": "Frequency Shift",
+      "subtitle": "Multiply by e^{jω0n} → spectral translation",
+      "equation": "x[n]e^{jω0n} ↔ X(e^{j(ω-ω0)})",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtft_shift\"]",
+      "svg_element_count": 8,
+      "svg_text": [
+        "FREQUENCY SHIFT",
+        "Multiply by e^{jω0n} → spectral translation"
+      ],
+      "svg_fragment_sha256": "845a50573751ea498672e702b6753c1c22b55238a1b93ce349be39739242c355",
+      "math_signature_sha256": "c65010ed7c4d286abd349e1c12acf75dbb70dc1f66af72622565a45be1bfa4d4"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Discrete-Time Fourier Transform",
+      "concept_id": "dtft_unit_circle",
+      "title": "Circular View",
+      "subtitle": "Unit-circle frequency coordinate",
+      "equation": "z=e^{jω}",
+      "domain": "z/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtft_unit_circle\"]",
+      "svg_element_count": 22,
+      "svg_text": [
+        "CIRCULAR VIEW",
+        "Unit-circle frequency coordinate",
+        "ω wraps: −π = π"
+      ],
+      "svg_fragment_sha256": "e3fe008d7faf36268ba68652768faf36fea4eb4dcb095da1d9b88100da36eb76",
+      "math_signature_sha256": "1d0c0b154bf2402fc8e663a509bf932fef71d66ed2e72add2c5b219aab0bd8d4"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Discrete-Time Fourier Transform",
+      "concept_id": "dtft_properties",
+      "title": "Dtft Property Map",
+      "subtitle": "Convolution · multiplication · periodicity · Parseval",
+      "equation": "x*h ↔ X(ω)H(ω)",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dtft_properties\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "DTFT PROPERTY MAP",
+        "Convolution · multiplication · periodicity · Parseval",
+        "CONV",
+        "x*h",
+        "XH",
+        "MULT",
+        "xy",
+        "periodic convolution",
+        "PERIODIC",
+        "X(ω+2π)=X(ω)",
+        "wrap frequency",
+        "PARSEVAL",
+        "Σ|x|²",
+        "(1/2π)∫|X|²"
+      ],
+      "svg_fragment_sha256": "8c4cd9a8923ec90e457dd89967ca3fd94d185b0fb6bb49b70246c6f3a834f0d1",
+      "math_signature_sha256": "8ab61be1f0019f7217821648e3b7f454e6e7de94aa65c31653d2abfa7654eea6"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Time / Frequency Characterization",
+      "concept_id": "freq_response",
+      "title": "Frequency Response",
+      "subtitle": "Complex exponential is an LTI eigenfunction",
+      "equation": "e^{jωt}→H(jω)e^{jωt}",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"freq_response\"]",
+      "svg_element_count": 11,
+      "svg_text": [
+        "FREQUENCY RESPONSE",
+        "Complex exponential is an LTI eigenfunction",
+        "e^{jωt}",
+        "H",
+        "H(jω)e^{jωt}"
+      ],
+      "svg_fragment_sha256": "d242f0d2be7c3fa392c751c6e47c8ae4303cefcc88da52c5212b254f059ce816",
+      "math_signature_sha256": "5e6a633afe57c312419783d26402810cea4c522b1d46995efce6a42adaf9fb45"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Time / Frequency Characterization",
+      "concept_id": "ideal_lpf",
+      "title": "Ideal Low-Pass",
+      "subtitle": "Passband and stopband are spectral masks",
+      "equation": "H(jω)=1 for |ω|<ωc",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"ideal_lpf\"]",
+      "svg_element_count": 8,
+      "svg_text": [
+        "IDEAL LOW-PASS",
+        "Passband and stopband are spectral masks",
+        "PASSBAND"
+      ],
+      "svg_fragment_sha256": "0fbcb906ca903311a8ce66d206af0029ab44cc7d664fa359d25ddaa3a41e66ba",
+      "math_signature_sha256": "21c8224e7d0855186f288cfa3b19fcad0c5198191b81d96690c15b5981cc2077"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Time / Frequency Characterization",
+      "concept_id": "resonance",
+      "title": "Resonance",
+      "subtitle": "Pole proximity creates a frequency peak",
+      "equation": "|H(jω)|",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"resonance\"]",
+      "svg_element_count": 7,
+      "svg_text": [
+        "RESONANCE",
+        "Pole proximity creates a frequency peak"
+      ],
+      "svg_fragment_sha256": "d4dd1fe6b953b01f1cadcdad2bcadedd627ece43285a875530e5ee4cc6ff99a1",
+      "math_signature_sha256": "ccf151b7c3bd9ef889c994f4c5cc35316ce182221db997d06ce9cd9d492e7db2"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Time / Frequency Characterization",
+      "concept_id": "mag_phase",
+      "title": "Magnitude & Phase",
+      "subtitle": "A system reshapes amplitude and delay",
+      "equation": "H=|H|e^{j∠H}",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"mag_phase\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "MAGNITUDE & PHASE",
+        "A system reshapes amplitude and delay"
+      ],
+      "svg_fragment_sha256": "8daa204b33e8f6bda4e7bb0c9c59abaa86df0d84719179afd9f2b959c6c4c5e3",
+      "math_signature_sha256": "b3e81f9a495fe0e639ec63a0ab52271e356a0048c876d76db74c211dcb79e15b"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Time / Frequency Characterization",
+      "concept_id": "group_delay",
+      "title": "Group Delay",
+      "subtitle": "Phase slope controls envelope delay",
+      "equation": "τg(ω)=−dφ/dω",
+      "domain": "frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"group_delay\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "GROUP DELAY",
+        "Phase slope controls envelope delay",
+        "linear phase",
+        "constant group delay",
+        "pulse shape preserved"
+      ],
+      "svg_fragment_sha256": "77ad1a9444f5cfd24c149d4a36c04eb92315fc542c5b79abfb41873b96c2d40d",
+      "math_signature_sha256": "b937307f226e2dbb1c8d0832b77f0dc6416f36506c8ddef88d6984871f13ad77"
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Sampling",
+      "concept_id": "sampling_train",
+      "title": "Impulse-Train Sampling",
+      "subtitle": "Continuous waveform observed at uniform instants",
+      "equation": "xs(t)=x(t)Σδ(t-nTs)",
+      "domain": "sampling",
+      "signal_type": "CT→DT",
+      "parameters": {
+        "sample_count": 17,
+        "cycles_shown": 2
+      },
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "transforms_to": [
+          "sampling_replicas"
+        ],
+        "prerequisites": [
+          "ctft_rect_sinc"
+        ]
+      },
+      "svg_selector": "[data-concept=\"sampling_train\"]",
+      "svg_element_count": 42,
+      "svg_text": [
+        "IMPULSE-TRAIN SAMPLING",
+        "Continuous waveform observed at uniform instants",
+        "t"
+      ],
+      "svg_fragment_sha256": "c334a0287df9270605223cb207d1f2ac3335a6c709a1f6a577ba2a79aa216ef2",
+      "math_signature_sha256": "304844a023902a01b631263a452e7d06774e6c80cdf45c8323eab1dcd65c8184"
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Sampling",
+      "concept_id": "sampling_replicas",
+      "title": "Spectral Replicas",
+      "subtitle": "Sampling copies X(f) every fs",
+      "equation": "Xs(f)=1/Ts ΣX(f-kfs)",
+      "domain": "sampling/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "transforms_to": [
+          "nyquist",
+          "aliasing"
+        ],
+        "prerequisites": [
+          "sampling_train"
+        ]
+      },
+      "svg_selector": "[data-concept=\"sampling_replicas\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "SPECTRAL REPLICAS",
+        "Sampling copies X(f) every fs"
+      ],
+      "svg_fragment_sha256": "4dc1f21e74a668c17737da43a48825b76c005527e532788ea23f44c4012b8bc8",
+      "math_signature_sha256": "844413c2400f88eb431ee03810dbef00b45321d11f31169fbf9bfd7c61e68834"
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Sampling",
+      "concept_id": "nyquist",
+      "title": "Nyquist Condition",
+      "subtitle": "Replicas must not overlap",
+      "equation": "fs>2B",
+      "domain": "sampling",
+      "signal_type": "conceptual",
+      "parameters": {
+        "condition": "fs > 2B"
+      },
+      "validation": {
+        "invariants": [
+          "perfect ideal reconstruction requires sampling rate greater than twice bandwidth"
+        ]
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"nyquist\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "NYQUIST CONDITION",
+        "Replicas must not overlap",
+        "fₛ > 2B",
+        "no overlap → perfect ideal reconstruction possible"
+      ],
+      "svg_fragment_sha256": "faaf7d4c59aef9f15349b025b4b877b2b1e974f0530b27337f4775632bb5dedd",
+      "math_signature_sha256": "e71971853f9af602b12e34ce74b5b4f488518032e4c24fa047e1c3b9e926003a"
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Sampling",
+      "concept_id": "aliasing",
+      "title": "Aliasing",
+      "subtitle": "Overlap makes different frequencies indistinguishable",
+      "equation": "f_alias=|f-kfs|",
+      "domain": "sampling/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"aliasing\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "ALIASING",
+        "Overlap makes different frequencies indistinguishable",
+        "OVERLAP"
+      ],
+      "svg_fragment_sha256": "872c31bec8b52c99bf3edb055927e1d559fd5a719edbf519bb7107f397fda796",
+      "math_signature_sha256": "d3734a15fbb614975d4467d2b14a31cc1eacf0c19e460b693c1a642c1d34e368"
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Sampling",
+      "concept_id": "reconstruction",
+      "title": "Reconstruction Chain",
+      "subtitle": "samples → interpolation → anti-imaging filter",
+      "equation": "x[n] → interpolation → LPF → x̂(t)",
+      "domain": "sampling",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"reconstruction\"]",
+      "svg_element_count": 17,
+      "svg_text": [
+        "RECONSTRUCTION CHAIN",
+        "samples → interpolation → anti-imaging filter",
+        "x[n]",
+        "samples",
+        "INTERPOLATOR",
+        "sinc / hold",
+        "LOW-PASS",
+        "reconstruct",
+        "xᵣ(t)"
+      ],
+      "svg_fragment_sha256": "fe553ee9cc06256a7e05451f5622958cd701ad42b266bbabdf4ef19cdc65afc5",
+      "math_signature_sha256": "b2bf87c29a498d6f2a25a2416425a06a43f3416cba0d7d358c2f69056f016535"
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Communication Systems",
+      "concept_id": "dsb_sc",
+      "title": "Dsb-Sc Modulation",
+      "subtitle": "Message × carrier moves baseband to ±fc",
+      "equation": "s(t)=m(t)cos(2πfct)",
+      "domain": "communications",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"dsb_sc\"]",
+      "svg_element_count": 13,
+      "svg_text": [
+        "DSB-SC MODULATION",
+        "Message × carrier moves baseband to ±fc",
+        "t",
+        "t",
+        "top=message · bottom=modulated carrier"
+      ],
+      "svg_fragment_sha256": "46993bfe9329852ceed36f7a88616e9fa07e3cd1c082a3d85f59202484503754",
+      "math_signature_sha256": "1f6d21e795c8210ea8251d8c22aa19d275b330f3d2158244655b51aa0949c912"
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Communication Systems",
+      "concept_id": "sidebands",
+      "title": "Sidebands",
+      "subtitle": "Translated message spectra appear around carrier",
+      "equation": "M(f±fc)",
+      "domain": "communications/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"sidebands\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "SIDEBANDS",
+        "Translated message spectra appear around carrier",
+        "−fᶜ",
+        "+fᶜ"
+      ],
+      "svg_fragment_sha256": "dd198a740e50be9fc7f9a30caafa7fdecb801a09ffe987d9d0a25f7160c5485e",
+      "math_signature_sha256": "2365f051a43a754e20054aabdc52686c22b2039a70e5288d6a50064c0f6c33f6"
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Communication Systems",
+      "concept_id": "demodulation",
+      "title": "Coherent Demodulation",
+      "subtitle": "Multiply again + low-pass",
+      "equation": "LPF{2s(t)cos(ωct)} = m(t)",
+      "domain": "communications",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"demodulation\"]",
+      "svg_element_count": 13,
+      "svg_text": [
+        "COHERENT DEMODULATION",
+        "Multiply again + low-pass",
+        "s(t)",
+        "× cos ωct",
+        "LPF",
+        "m(t)"
+      ],
+      "svg_fragment_sha256": "5f82c8d15bc9c1b9c2c332199d5d01ec60b8caf3acce5a309d801c912844667e",
+      "math_signature_sha256": "63b515d54993b0b21e411ad62eb4547309087cc449c7b485ee6b7809dbad30ed"
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Communication Systems",
+      "concept_id": "fdm",
+      "title": "Frequency-Division Multiplexing",
+      "subtitle": "Different messages occupy disjoint bands",
+      "equation": "Bᵢ ∩ Bⱼ = ∅ for i≠j",
+      "domain": "communications/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"fdm\"]",
+      "svg_element_count": 12,
+      "svg_text": [
+        "FREQUENCY-DIVISION MULTIPLEXING",
+        "Different messages occupy disjoint bands",
+        "A",
+        "B",
+        "C"
+      ],
+      "svg_fragment_sha256": "e6748a46074c252984eb8fa30843a5167049b499b9955c370d4bddecff970fc8",
+      "math_signature_sha256": "fef0a21b4eb94b0f7d397d1d0ca8b44d175dd519100351dabf78c2647ca6ad97"
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Communication Systems",
+      "concept_id": "communication_chain",
+      "title": "Communication Chain",
+      "subtitle": "source → modulation → channel → demodulation → sink",
+      "equation": "source → modulation → channel → demodulation → sink",
+      "domain": "communications",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"communication_chain\"]",
+      "svg_element_count": 18,
+      "svg_text": [
+        "COMMUNICATION CHAIN",
+        "source → modulation → channel → demodulation → sink",
+        "SOURCE",
+        "MOD",
+        "CHANNEL",
+        "DEMOD",
+        "SINK"
+      ],
+      "svg_fragment_sha256": "01e4e3f3e31758d5605a85d1984998579cb304dcc8c189b01b0d5f274284dfaf",
+      "math_signature_sha256": "dd828b7cd35306fdc71af095bbc98ed1930385ae65e99f7e16491512d03e5682"
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Laplace Transform",
+      "concept_id": "laplace_plane",
+      "title": "S-Plane Geometry",
+      "subtitle": "Poles, zeros and ROC encode time behavior",
+      "equation": "X(s)",
+      "domain": "s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"laplace_plane\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "S-PLANE GEOMETRY",
+        "Poles, zeros and ROC encode time behavior",
+        "Re",
+        "Im"
+      ],
+      "svg_fragment_sha256": "6c7b3e5134a712672edfa37f25c71498a121add3f9f1fe1fa2a2602a8b1266db",
+      "math_signature_sha256": "ea364ff841f0fd3fcc51a50f2a714924442da67a639672e160fa2ae91d4226d5"
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Laplace Transform",
+      "concept_id": "laplace_roc",
+      "title": "Region Of Convergence",
+      "subtitle": "Same algebraic transform, different signals",
+      "equation": "ROC ⊂ ℂ ; poles ∉ ROC",
+      "domain": "s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"laplace_roc\"]",
+      "svg_element_count": 22,
+      "svg_text": [
+        "REGION OF CONVERGENCE",
+        "Same algebraic transform, different signals",
+        "Re",
+        "Im",
+        "Re",
+        "Im",
+        "right-sided",
+        "left-sided"
+      ],
+      "svg_fragment_sha256": "7ce601de59bb6e5a405621c9e35413fcaa72d15789eb3859176440a275d92175",
+      "math_signature_sha256": "84659c92599f4a4bd27e1e6435f7632fd0676a807cac853e3f349ec0f6c6e349"
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Laplace Transform",
+      "concept_id": "laplace_causality_stability",
+      "title": "Causality & Stability",
+      "subtitle": "ROC relative to poles and jω-axis",
+      "equation": "causal ⇒ ROC right of rightmost pole ; stable ⇒ jℝ ⊂ ROC",
+      "domain": "s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"laplace_causality_stability\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "CAUSALITY & STABILITY",
+        "ROC relative to poles and jω-axis",
+        "CAUSAL",
+        "ROC right of rightmost pole",
+        "STABLE",
+        "ROC includes jω-axis",
+        "CAUSAL + STABLE",
+        "all poles strictly in left half-plane"
+      ],
+      "svg_fragment_sha256": "c9ea27f204d3e982d79843ae73315d2a72dec7d2e2da6a210a1542e2dae72352",
+      "math_signature_sha256": "04b0e8786fdbe9b4023a11081f1ea8173fc24c48866d623135b69c335b782247"
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Laplace Transform",
+      "concept_id": "inverse_laplace",
+      "title": "Inverse Laplace",
+      "subtitle": "Partial fractions map poles to exponentials",
+      "equation": "1/(s+a) ↔ e^{-at}u(t)",
+      "domain": "s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"inverse_laplace\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "INVERSE LAPLACE",
+        "Partial fractions map poles to exponentials",
+        "1/(s+a)",
+        "e^{-at}u(t)",
+        "pole location sets exponential rate"
+      ],
+      "svg_fragment_sha256": "0ccdd848a88d3af87938e6308e11b8899bfcc4e515511c2fc0dc82d1227f476e",
+      "math_signature_sha256": "2689588430f3c9e92d11a36869f4cdb786d9b567e5f80c9b2e3adc4b4cc53cd0"
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Laplace Transform",
+      "concept_id": "laplace_system_function",
+      "title": "System Function",
+      "subtitle": "Differential equation → H(s) → poles → modes",
+      "equation": "H(s)=Y(s)/X(s)",
+      "domain": "s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"laplace_system_function\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "SYSTEM FUNCTION",
+        "Differential equation → H(s) → poles → modes",
+        "DIFFERENTIAL EQ.",
+        "H(s)=Y/X",
+        "POLES / ZEROS",
+        "MODES"
+      ],
+      "svg_fragment_sha256": "a8f8bb6a02d11609760861365b0130b8cfb76beaf17ad63b8b7614c822661770",
+      "math_signature_sha256": "3075453c2133c2bc3ddedcd50fb2e88ce228ad6cf761c0dd4b3ed74b69d856a7"
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Z-Transform",
+      "concept_id": "z_plane",
+      "title": "Z-Plane Geometry",
+      "subtitle": "Poles and zeros organize discrete-time behavior",
+      "equation": "X(z)",
+      "domain": "z-domain",
+      "signal_type": "DT",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "transforms_to": [
+          "z_roc_unit_circle",
+          "z_to_dtft"
+        ],
+        "prerequisites": [
+          "difference_to_z"
+        ]
+      },
+      "svg_selector": "[data-concept=\"z_plane\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "Z-PLANE GEOMETRY",
+        "Poles and zeros organize discrete-time behavior",
+        "Re",
+        "Im"
+      ],
+      "svg_fragment_sha256": "3c05468f6cf1c5844581657e801848eac8e45c7e6861102d7755b8b96d3d1e19",
+      "math_signature_sha256": "6e6cf2f43d98f95b3636a061a1d6c88f9e4c892ddd0c694c8b3eb417dfde14b5"
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Z-Transform",
+      "concept_id": "z_roc_unit_circle",
+      "title": "Roc And Unit Circle",
+      "subtitle": "DTFT exists where ROC crosses |z|=1",
+      "equation": "DTFT exists ⇔ {|z|=1} ⊂ ROC",
+      "domain": "z-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"z_roc_unit_circle\"]",
+      "svg_element_count": 13,
+      "svg_text": [
+        "ROC AND UNIT CIRCLE",
+        "DTFT exists where ROC crosses |z|=1",
+        "Re",
+        "Im",
+        "unit circle is frequency axis"
+      ],
+      "svg_fragment_sha256": "b3b633fd9c9f958715db7ebc378674a71b6686c66783367f83d4bd2860c06385",
+      "math_signature_sha256": "681f21e85e4fc2cc7f601050b5cfa0b64e543f047bc92b20bd55296ca573aacf"
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Z-Transform",
+      "concept_id": "difference_to_z",
+      "title": "Difference Equation → H(Z)",
+      "subtitle": "Recursion becomes rational geometry",
+      "equation": "y[n]-ay[n-1]=x[n]",
+      "domain": "z-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"difference_to_z\"]",
+      "svg_element_count": 9,
+      "svg_text": [
+        "DIFFERENCE EQUATION → H(Z)",
+        "Recursion becomes rational geometry",
+        "y[n]−ay[n−1]=x[n]",
+        "H(z)=1/(1−az⁻¹)"
+      ],
+      "svg_fragment_sha256": "2f935717697c8b511fae952e955820e2be3c7e1cda73ace1ac8ca159c48a3d70",
+      "math_signature_sha256": "adc78c234107e7ce2cdc4c1976207c54925a5c079a6de032d673cc7f6aafe5b7"
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Z-Transform",
+      "concept_id": "z_to_dtft",
+      "title": "Frequency Response On Unit Circle",
+      "subtitle": "Evaluate H(z) at z=e^{jω}",
+      "equation": "H(e^{jω})",
+      "domain": "z/frequency-domain",
+      "signal_type": "conceptual",
+      "parameters": {
+        "pole_radius": 0.72,
+        "unit_circle_samples": 24
+      },
+      "validation": {
+        "invariants": [
+          "frequency response is H(z) evaluated on |z|=1"
+        ]
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"z_to_dtft\"]",
+      "svg_element_count": 29,
+      "svg_text": [
+        "FREQUENCY RESPONSE ON UNIT CIRCLE",
+        "Evaluate H(z) at z=e^{jω}"
+      ],
+      "svg_fragment_sha256": "a51207647677d2c8802fd0e62b596e0a056cae775237393d9ae7aa0db9cf7eda",
+      "math_signature_sha256": "8bc62fa70aa8e7cd71a8216ef3fdb9d3c5898c8736d6a35e1b931b6d1257e57a"
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Z-Transform",
+      "concept_id": "pole_radius_angle",
+      "title": "Pole Radius & Angle",
+      "subtitle": "radius → decay · angle → oscillation",
+      "equation": "p=re^{jθ}",
+      "domain": "z-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"pole_radius_angle\"]",
+      "svg_element_count": 10,
+      "svg_text": [
+        "POLE RADIUS & ANGLE",
+        "radius → decay · angle → oscillation",
+        "r",
+        "controls exponential envelope",
+        "θ",
+        "controls oscillation frequency",
+        "|p|<1 → decays",
+        "∠p → radians / sample"
+      ],
+      "svg_fragment_sha256": "1556266096fc09be07ba55b8d0286dc1953422dab4844c324ec468849b43f3d5",
+      "math_signature_sha256": "0db07cb3213449750f26d329585acbebda1957e43f81b377a7b71ad703bfedaf"
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Linear Feedback Systems",
+      "concept_id": "feedback_loop",
+      "title": "Closed-Loop Structure",
+      "subtitle": "Forward path + feedback path",
+      "equation": "T=G/(1+GH)",
+      "domain": "feedback",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": [
+          "closed-loop transfer T=G/(1+GH) for negative feedback"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "sensitivity",
+          "closed_loop_poles"
+        ],
+        "prerequisites": [
+          "laplace_system_function"
+        ]
+      },
+      "svg_selector": "[data-concept=\"feedback_loop\"]",
+      "svg_element_count": 15,
+      "svg_text": [
+        "CLOSED-LOOP STRUCTURE",
+        "Forward path + feedback path",
+        "Σ",
+        "G(s)",
+        "H(s)"
+      ],
+      "svg_fragment_sha256": "6b68f7ee46fe4d7e04918db2d242a399542d1abf5a13a11ae81457b25d48b88c",
+      "math_signature_sha256": "e7812cbaadbd731a6ea52a14830cbe7625c34242395f72c0e81c2524964e17df"
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Linear Feedback Systems",
+      "concept_id": "sensitivity",
+      "title": "Sensitivity Reduction",
+      "subtitle": "Feedback suppresses plant uncertainty",
+      "equation": "S=1/(1+GH)",
+      "domain": "feedback",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"sensitivity\"]",
+      "svg_element_count": 8,
+      "svg_text": [
+        "SENSITIVITY REDUCTION",
+        "Feedback suppresses plant uncertainty",
+        "large loop gain → small sensitivity"
+      ],
+      "svg_fragment_sha256": "af897f4319d39498f560fc82e0ff4848458247d53bfe022ffed01aefdd5bb7e2",
+      "math_signature_sha256": "0113567e30e986f3ac719239efbdfe2c745575c5e574f3fd872cd11a4988ef12"
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Linear Feedback Systems",
+      "concept_id": "closed_loop_poles",
+      "title": "Closed-Loop Poles",
+      "subtitle": "Characteristic equation sets stability",
+      "equation": "1+G(s)H(s)=0",
+      "domain": "feedback/s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"closed_loop_poles\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "CLOSED-LOOP POLES",
+        "Characteristic equation sets stability",
+        "Re",
+        "Im",
+        "left-half plane → decaying modes"
+      ],
+      "svg_fragment_sha256": "2ef467e2c1f70a8db519f4552309597d8b1e5467b6a7db6afd3f8f47817495e0",
+      "math_signature_sha256": "830e32739adfec418ccc3bea5a1b26fc85d966c1bf3edfc3c9a73a5ed0946a61"
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Linear Feedback Systems",
+      "concept_id": "root_locus_concept",
+      "title": "Pole Movement",
+      "subtitle": "Changing gain moves closed-loop modes",
+      "equation": "1 + K G(s)H(s) = 0",
+      "domain": "feedback/s-domain",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"root_locus_concept\"]",
+      "svg_element_count": 8,
+      "svg_text": [
+        "POLE MOVEMENT",
+        "Changing gain moves closed-loop modes"
+      ],
+      "svg_fragment_sha256": "758be05608a61884006794659a4afb5c9277f60cac9b7494fd3d2983b743ec8c",
+      "math_signature_sha256": "98c954d498ea4c8141d0f7004a59cf716d10a5db5da4cc7a61baf2cbe8dcdd67"
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Linear Feedback Systems",
+      "concept_id": "feedback_tradeoffs",
+      "title": "Feedback Story",
+      "subtitle": "performance ↔ robustness ↔ stability trade-off",
+      "equation": "S(s)=1/(1+L(s)) ; T(s)=L(s)/(1+L(s))",
+      "domain": "feedback",
+      "signal_type": "conceptual",
+      "parameters": {},
+      "validation": {
+        "invariants": []
+      },
+      "relations": {
+        "prerequisites": [],
+        "transforms_to": []
+      },
+      "svg_selector": "[data-concept=\"feedback_tradeoffs\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "FEEDBACK STORY",
+        "performance ↔ robustness ↔ stability trade-off",
+        "TRACKING",
+        "reduce error",
+        "DISTURBANCE",
+        "reject",
+        "ROBUSTNESS",
+        "desensitize",
+        "STABILITY",
+        "preserve margin"
+      ],
+      "svg_fragment_sha256": "a0042ed9a616e48bc9559790b58a03c31a9231a35b5646c2d6b8068009855e1a",
+      "math_signature_sha256": "5ef0be4f2351f5f1663cea71f4da8727bd457d914b11fd3d7daa3e15dd30af1f"
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Hash Dynamics",
+      "concept_id": "finite_word_state",
+      "title": "32-Bit Word As Cyclic State",
+      "subtitle": "Rotation changes coordinates, not information",
+      "equation": "ROTR^r(x)",
+      "domain": "finite-state",
+      "signal_type": "32-bit finite word",
+      "parameters": {
+        "word_bits": 32,
+        "example_word": "0x6A09E667"
+      },
+      "validation": {
+        "invariants": [
+          "ROTR is a permutation of 32 indexed bit positions",
+          "rotation preserves Hamming weight"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "modular_addition",
+          "rotate_xor_mix"
+        ],
+        "prerequisites": [
+          "dtft_unit_circle"
+        ]
+      },
+      "svg_selector": "[data-concept=\"finite_word_state\"]",
+      "svg_element_count": 47,
+      "svg_text": [
+        "32-BIT WORD AS CYCLIC STATE",
+        "Rotation changes coordinates, not information",
+        "0",
+        "4",
+        "8",
+        "12",
+        "16",
+        "20",
+        "24",
+        "28",
+        "example word: 0x6A09E667 · 32 indexed positions · wrap is intrinsic",
+        "ROTR"
+      ],
+      "svg_fragment_sha256": "94b393a85dd31470e3a6bd22ce823c08aec78c8ade29d7abcb8cedb0ab1b35e6",
+      "math_signature_sha256": "0fd6a8606f523e64cfcae931674ac93eb2b52f104e2c479cfaa1c6e67da0eb14"
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Hash Dynamics",
+      "concept_id": "modular_addition",
+      "title": "Addition Modulo 2^32",
+      "subtitle": "Overflow wraps into the same finite word space",
+      "equation": "(x+y) mod 2^32",
+      "domain": "finite-state/modular",
+      "signal_type": "32-bit finite word",
+      "parameters": {
+        "modulus": 4294967296,
+        "x": "0xF0000011",
+        "y": "0x30000022",
+        "result": "0x20000033"
+      },
+      "validation": {
+        "invariants": [
+          "state remains in [0,2^32-1]",
+          "overflow wraps modulo 2^32"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "compression_round"
+        ],
+        "prerequisites": [
+          "finite_word_state"
+        ]
+      },
+      "svg_selector": "[data-concept=\"modular_addition\"]",
+      "svg_element_count": 13,
+      "svg_text": [
+        "ADDITION MODULO 2^32",
+        "Overflow wraps into the same finite word space",
+        "0xF0000011",
+        "+ 0x30000022",
+        "0x120000033",
+        "MOD 2^32",
+        "0x20000033",
+        "carry is discarded · state remains 32 bits"
+      ],
+      "svg_fragment_sha256": "465f16d23872b8ab474ffa79bda9ebb5f38244fb702eeb6893959d3b429d822f",
+      "math_signature_sha256": "9fc565d3866c7064f85edf8165786d0dffadd93178d700f0548a836903594a52"
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Hash Dynamics",
+      "concept_id": "rotate_xor_mix",
+      "title": "Bit Mixing Functions",
+      "subtitle": "Boolean selection + majority + cyclic rotations",
+      "equation": "Ch, Maj, Σ0, Σ1",
+      "domain": "finite-state/boolean",
+      "signal_type": "32-bit finite word",
+      "parameters": {
+        "word_bits": 32,
+        "sigma0_rotations": [
+          2,
+          13,
+          22
+        ],
+        "sigma1_rotations": [
+          6,
+          11,
+          25
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "Ch, Maj and Σ functions operate bitwise on 32-bit words"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "compression_round"
+        ],
+        "prerequisites": [
+          "finite_word_state"
+        ]
+      },
+      "svg_selector": "[data-concept=\"rotate_xor_mix\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "BIT MIXING FUNCTIONS",
+        "Boolean selection + majority + cyclic rotations",
+        "Ch(x,y,z)",
+        "(x∧y) ⊕ (¬x∧z)",
+        "Maj(x,y,z)",
+        "(x∧y) ⊕ (x∧z) ⊕ (y∧z)",
+        "Σ₀(x)",
+        "ROTR² ⊕ ROTR¹³ ⊕ ROTR²²",
+        "Σ₁(x)",
+        "ROTR⁶ ⊕ ROTR¹¹ ⊕ ROTR²⁵"
+      ],
+      "svg_fragment_sha256": "abfbda99c36cf6be769524b01bec3febe9795dc2f873746d1ad619d00dd255a8",
+      "math_signature_sha256": "11d4a601a188e89853a19c4ee17c76ae27c18f7c90627fa02af4bd80d043e156"
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Hash Dynamics",
+      "concept_id": "compression_round",
+      "title": "64-Round Compression State",
+      "subtitle": "Eight 32-bit words evolve under one repeated update law",
+      "equation": "S_{t+1}=F(S_t,W_t,K_t) mod 2^32",
+      "domain": "finite-state/dynamics",
+      "signal_type": "8×32-bit state",
+      "parameters": {
+        "state_words": 8,
+        "word_bits": 32,
+        "rounds": 64
+      },
+      "validation": {
+        "invariants": [
+          "eight 32-bit state words",
+          "64 repeated rounds",
+          "all additions modulo 2^32"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "avalanche_diffusion"
+        ],
+        "prerequisites": [
+          "modular_addition",
+          "rotate_xor_mix"
+        ]
+      },
+      "svg_selector": "[data-concept=\"compression_round\"]",
+      "svg_element_count": 96,
+      "svg_text": [
+        "64-ROUND COMPRESSION STATE",
+        "Eight 32-bit words evolve under one repeated update law",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "T₁ = h + Σ₁(e) + Ch(e,f,g) + K[t] + W[t]",
+        "T₂ = Σ₀(a) + Maj(a,b,c)",
+        "0",
+        "8",
+        "16",
+        "24",
+        "32",
+        "40",
+        "48",
+        "56",
+        "63"
+      ],
+      "svg_fragment_sha256": "88d2952557f400e3c73faf6e2bf523a8df9fd8469614a4aec2619bba16773d8c",
+      "math_signature_sha256": "faa4870cd48a0aaa97093622c8040f6ec9ec7dcfa215acee72fa68b84424235e"
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Hash Dynamics",
+      "concept_id": "avalanche_diffusion",
+      "title": "Avalanche As Measured State Diffusion",
+      "subtitle": "Two 512-bit inputs differ by one bit; compare their 256-bit digests",
+      "equation": "d_H(SHA256(m),SHA256(m⊕1))",
+      "domain": "finite-state/diffusion",
+      "signal_type": "512-bit input → 256-bit output",
+      "parameters": {
+        "input_bits": 512,
+        "output_bits": 256,
+        "input_bit_difference": 1,
+        "measured_hamming_distance": 133
+      },
+      "validation": {
+        "invariants": [
+          "two 512-bit inputs differ by one bit",
+          "SHA-256 outputs differ in 133 of 256 bits for the embedded experiment"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "compression_round"
+        ]
+      },
+      "svg_selector": "[data-concept=\"avalanche_diffusion\"]",
+      "svg_element_count": 263,
+      "svg_text": [
+        "AVALANCHE AS MEASURED STATE DIFFUSION",
+        "Two 512-bit inputs differ by one bit; compare their 256-bit digests",
+        "Hamming distance = 133 / 256 output bits",
+        "m₀ = 512 zero bits · m₁ differs only in its first bit",
+        "diffusion is observed here as a system response, not used as a truth criterion"
+      ],
+      "svg_fragment_sha256": "66e01eafc198a8118f25b4488f143c67a94e7bb44501774880e56d40e4244502",
+      "math_signature_sha256": "d70215fbe9f7b6e02c8a074bf783b07bc39cb6b0191dba710c49ac833441374a"
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Address Geometry",
+      "concept_id": "ipv4_word",
+      "title": "Ipv4 As One 32-Bit Word",
+      "subtitle": "Four octets are one finite 32-bit address value",
+      "equation": "IPv4 ∈ {0,…,2^32−1}",
+      "domain": "network/address",
+      "signal_type": "32-bit address",
+      "parameters": {
+        "address": "192.0.2.33",
+        "hex": "0xC0000221",
+        "bits": 32
+      },
+      "validation": {
+        "invariants": [
+          "IPv4 address value is exactly 32 bits",
+          "192.0.2.33 equals 0xC0000221"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "ipv4_mapped_ipv6",
+          "address_inclusion"
+        ],
+        "prerequisites": [
+          "finite_word_state"
+        ]
+      },
+      "svg_selector": "[data-concept=\"ipv4_word\"]",
+      "svg_element_count": 18,
+      "svg_text": [
+        "IPV4 AS ONE 32-BIT WORD",
+        "Four octets are one finite 32-bit address value",
+        "192",
+        "0xC0",
+        "0",
+        "0x00",
+        "2",
+        "0x02",
+        "33",
+        "0x21",
+        "192.0.2.33 = 0xC0000221",
+        "8 + 8 + 8 + 8 = 32 bits"
+      ],
+      "svg_fragment_sha256": "403454a8ddbf8f9e59e9a756d230cb068228a541e71f8e6d1cd09247c039d659",
+      "math_signature_sha256": "a938765317d8e489ad3a48cdae755128260b6a1301677e924fe52087620d85d4"
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Address Geometry",
+      "concept_id": "ipv6_lanes",
+      "title": "Ipv6 As A 128-Bit State",
+      "subtitle": "The same space can be partitioned as 4×32 or 8×16",
+      "equation": "IPv6 ∈ {0,…,2^128−1}",
+      "domain": "network/address",
+      "signal_type": "128-bit address",
+      "parameters": {
+        "bits": 128,
+        "lanes_32": 4,
+        "text_groups_16": 8
+      },
+      "validation": {
+        "invariants": [
+          "IPv6 address value is exactly 128 bits",
+          "128 bits can be partitioned into four 32-bit lanes or eight 16-bit groups"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "ipv4_mapped_ipv6",
+          "ipv6_prefix_host"
+        ],
+        "prerequisites": [
+          "finite_word_state"
+        ]
+      },
+      "svg_selector": "[data-concept=\"ipv6_lanes\"]",
+      "svg_element_count": 33,
+      "svg_text": [
+        "IPV6 AS A 128-BIT STATE",
+        "The same space can be partitioned as 4×32 or 8×16",
+        "LANE 0",
+        "32 bits",
+        "LANE 1",
+        "32 bits",
+        "LANE 2",
+        "32 bits",
+        "LANE 3",
+        "32 bits",
+        "16",
+        "16",
+        "16",
+        "16",
+        "16",
+        "16",
+        "16",
+        "16",
+        "computational view: 4×32 · canonical text view: 8×16"
+      ],
+      "svg_fragment_sha256": "4412137c7ea37c004f8a6f411c0b99f771a71ab6cc51a28365da0acf26ef5bf1",
+      "math_signature_sha256": "b34802bb19413771d581e3079dd00240f8254db2c94ae2370d91a7fbf3640d11"
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Address Geometry",
+      "concept_id": "ipv4_mapped_ipv6",
+      "title": "Ipv4-Mapped Ipv6",
+      "subtitle": "A fixed 96-bit prefix leaves exactly one 32-bit IPv4 slot",
+      "equation": "::ffff:0:0/96 + IPv4",
+      "domain": "network/address",
+      "signal_type": "128-bit mapped address",
+      "parameters": {
+        "ipv4": "192.0.2.33",
+        "ipv4_hex": "0xC0000221",
+        "ipv6": "::ffff:192.0.2.33",
+        "prefix_bits": 96,
+        "payload_bits": 32
+      },
+      "validation": {
+        "invariants": [
+          "mapped prefix is 96 bits",
+          "low 32 bits equal the IPv4 address value",
+          "::ffff:192.0.2.33 maps 192.0.2.33"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "address_inclusion"
+        ],
+        "prerequisites": [
+          "ipv4_word",
+          "ipv6_lanes"
+        ]
+      },
+      "svg_selector": "[data-concept=\"ipv4_mapped_ipv6\"]",
+      "svg_element_count": 23,
+      "svg_text": [
+        "IPV4-MAPPED IPV6",
+        "A fixed 96-bit prefix leaves exactly one 32-bit IPv4 slot",
+        "PREFIX",
+        "0x00000000",
+        "32 bits",
+        "PREFIX",
+        "0x00000000",
+        "32 bits",
+        "MAPPED TAG",
+        "0x0000FFFF",
+        "32 bits",
+        "IPv4 SLOT",
+        "0xC0000221",
+        "32 bits",
+        "::ffff:192.0.2.33",
+        "low 32 bits = 0xC0000221 · exactly the IPv4 value above",
+        "standard mapped form: 80 zero bits + 16 one bits + 32 IPv4 bits"
+      ],
+      "svg_fragment_sha256": "56675253ef3fc45449b43bc50667af9c99e39ee5ffc07476663c35485772ccb0",
+      "math_signature_sha256": "9a4a5b5e979e96090575ee9ee23849b339d086ab81ac3b38bdc9012bae9b6a00"
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Address Geometry",
+      "concept_id": "ipv6_prefix_host",
+      "title": "Prefix As Measurement Frame",
+      "subtitle": "A /64 divides a 128-bit address into two 64-bit fields",
+      "equation": "IPv6 = prefix_64 || interface_64",
+      "domain": "network/address",
+      "signal_type": "128-bit prefix/host decomposition",
+      "parameters": {
+        "example_prefix_length": 64,
+        "prefix_bits": 64,
+        "interface_bits": 64
+      },
+      "validation": {
+        "invariants": [
+          "a /64 split contains 64 prefix bits and 64 remaining address bits"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "ipv6_lanes"
+        ]
+      },
+      "svg_selector": "[data-concept=\"ipv6_prefix_host\"]",
+      "svg_element_count": 11,
+      "svg_text": [
+        "PREFIX AS MEASUREMENT FRAME",
+        "A /64 divides a 128-bit address into two 64-bit fields",
+        "NETWORK PREFIX",
+        "64 bits",
+        "INTERFACE ID",
+        "64 bits",
+        "the prefix length selects a coordinate boundary inside the 128-bit state"
+      ],
+      "svg_fragment_sha256": "ac7fe3180c0f10929c0801ca994bc767edff1d14becddd014d8f3504470bb938",
+      "math_signature_sha256": "3133ded280319d2fb682a6362bb36d9a9a189db973dcb94ddb47c94b6e7b5be8"
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Address Geometry",
+      "concept_id": "address_inclusion",
+      "title": "32 → 128 Inclusion",
+      "subtitle": "One 32-bit value can occupy one lane without changing its internal value",
+      "equation": "ι(x)=(0,0,0x0000ffff,x)",
+      "domain": "network/address",
+      "signal_type": "32→128-bit embedding",
+      "parameters": {
+        "prefix_words": [
+          "0x00000000",
+          "0x00000000",
+          "0x0000FFFF"
+        ],
+        "payload_word": "0xC0000221"
+      },
+      "validation": {
+        "invariants": [
+          "embedding preserves the 32-bit payload exactly",
+          "mapped representation uses a fixed 96-bit prefix"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "ipv4_mapped_ipv6"
+        ]
+      },
+      "svg_selector": "[data-concept=\"address_inclusion\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "32 → 128 INCLUSION",
+        "One 32-bit value can occupy one lane without changing its internal value",
+        "IPv4 WORD",
+        "0xC0000221",
+        "MAPPED EMBEDDING",
+        "fixed 96-bit prefix",
+        "IPv6 ADDRESS",
+        "::ffff:192.0.2.33",
+        "the 32-bit payload is preserved exactly; only the surrounding coordinate space is enlarged"
+      ],
+      "svg_fragment_sha256": "638fe7e58d4a07a8c1b4d292f147acb619794d3d7ed82de85755805f8f7a8090",
+      "math_signature_sha256": "75ff46b313e788643c2b4638274eac8536dbe2ae0bf28cebd8a0e6025b7b0397"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "vector_test_object",
+      "title": "Vector Space",
+      "subtitle": "The source object retains real-valued coordinates",
+      "equation": "geometry in R² before raster sampling",
+      "domain": "encoding/vector",
+      "signal_type": "vector geometry",
+      "parameters": {
+        "viewBox": [
+          0,
+          0,
+          160,
+          96
+        ],
+        "coordinate_example": 12.4387
+      },
+      "validation": {
+        "invariants": [
+          "source SVG uses real-valued coordinates",
+          "test object viewBox is exactly 160×96"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "raster_frame_boundary"
+        ],
+        "prerequisites": []
+      },
+      "svg_selector": "[data-concept=\"vector_test_object\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "VECTOR SPACE",
+        "The source object retains real-valued coordinates",
+        "x = 12.4387",
+        "viewBox 0 0 160 96",
+        "rect · circle · line",
+        "STRUCTURAL FRAME",
+        "vector: ε is representational",
+        "coordinates are not yet pixels"
+      ],
+      "svg_fragment_sha256": "1f790bd85f47dd6622654ba87e0258cbc8e26428cd999b21436dd20303a2df35",
+      "math_signature_sha256": "9cfc6891b0b0c0777df01f0101ca8107f23bc7af87773904bba6670a79a7db14"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "raster_frame_boundary",
+      "title": "Frame Boundary",
+      "subtitle": "CairoSVG samples the vector object onto an exact 160×96 pixel field",
+      "equation": "R² → Z² at 1-pixel resolution",
+      "domain": "encoding/raster",
+      "signal_type": "160×96 raster",
+      "parameters": {
+        "width": 160,
+        "height": 96,
+        "pixel_frame": 1,
+        "coordinate_example": 12.4387,
+        "cell_example": 12
+      },
+      "validation": {
+        "invariants": [
+          "CairoSVG raster is exactly 160×96",
+          "x=12.4387 is represented within pixel cell i=12 at unit raster frame"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "png_byte_space"
+        ],
+        "prerequisites": [
+          "vector_test_object"
+        ]
+      },
+      "svg_selector": "[data-concept=\"raster_frame_boundary\"]",
+      "svg_element_count": 27,
+      "svg_text": [
+        "FRAME BOUNDARY",
+        "CairoSVG samples the vector object onto an exact 160×96 pixel field",
+        "x=12.4387 → cell i=12",
+        "sampling boundary",
+        "STRUCTURAL FRAME",
+        "raster: 1 pixel",
+        "PHYSICAL PLANCK SCALE",
+        "no standard relation claimed"
+      ],
+      "svg_fragment_sha256": "a335fdb80797ad65a05bba7978de80bd8ee06482cc369272f42d86422d6309ca",
+      "math_signature_sha256": "ef384465e5a973a950dd9547918cb0cbbbcd3899a6c89c42a49252afac56e73f"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "png_byte_space",
+      "title": "Byte Space",
+      "subtitle": "The real compressed PNG stream: signature, chunks and IDAT payload",
+      "equation": "raw = PNG bytes",
+      "domain": "encoding/bytes",
+      "signal_type": "PNG byte stream",
+      "parameters": {
+        "png_length_bytes": 2239,
+        "png_sha256": "411ea26035897702802e016e8785c8a9efaa28fe023a4fba8390f06c71bba89c"
+      },
+      "validation": {
+        "invariants": [
+          "raw bytes are a valid PNG stream",
+          "PNG byte length and SHA-256 are recomputed from the actual raster"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "base64_frame_shift"
+        ],
+        "prerequisites": [
+          "raster_frame_boundary"
+        ]
+      },
+      "svg_selector": "[data-concept=\"png_byte_space\"]",
+      "svg_element_count": 211,
+      "svg_text": [
+        "BYTE SPACE",
+        "The real compressed PNG stream: signature, chunks and IDAT payload",
+        "len(raw) = 2239 bytes",
+        "sha256(raw) = 411ea26035897702802e016e8785c8a9efaa28fe023a4fba8390f06c71bba89c",
+        "89",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "50",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "4E",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "47",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0D",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0A",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "1A",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0A",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "00",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "00",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "00",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0D",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "1",
+        "first 8 bytes = PNG signature · following bytes begin IHDR"
+      ],
+      "svg_fragment_sha256": "c715598e57395cea97a7205c95983ad88e51de039b691e8c7b9c906e46a34a7e",
+      "math_signature_sha256": "cc9e39bd4a7e28f2a957138180e34e40f11a271c3786dacfa07542dac8134aad"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "base64_frame_shift",
+      "title": "Base64 Frame Shift",
+      "subtitle": "The same first 24 bits are repartitioned 8+8+8 → 6+6+6+6",
+      "equation": "24 bits = 3 bytes = 4 Base64 symbols",
+      "domain": "encoding/base64",
+      "signal_type": "24-bit repartition",
+      "parameters": {
+        "byte_bits": 8,
+        "symbol_bits": 6,
+        "group_bits": 24,
+        "base64_length_chars": 2988,
+        "base64_sha256": "f5a98127add7a1530bedbaa901ad523fd807b9fb502cc286a63d719e64500f99"
+      },
+      "validation": {
+        "invariants": [
+          "Base64 decode(encode(raw)) equals raw",
+          "3×8 bits equals 4×6 bits",
+          "encoded length equals ceil(raw/3)×4"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "base64_char_space",
+          "reconstruction_lossiness"
+        ],
+        "prerequisites": [
+          "png_byte_space"
+        ]
+      },
+      "svg_selector": "[data-concept=\"base64_frame_shift\"]",
+      "svg_element_count": 65,
+      "svg_text": [
+        "BASE64 FRAME SHIFT",
+        "The same first 24 bits are repartitioned 8+8+8 → 6+6+6+6",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "bytes: 89 50 4E · 8|8|8",
+        "Base64: iVBO · indices [34, 21, 1, 14] · 6|6|6|6",
+        "24 bits unchanged",
+        "only the partition boundaries move — “the space between”"
+      ],
+      "svg_fragment_sha256": "18c65e629027e3a2b272decc02fa8280bc13e825d71b031e0c0c48815fbef02a",
+      "math_signature_sha256": "11db1da2d3cc98d6565da732891a0d57866ab826ed480dfa2d68092d088df506"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "base64_char_space",
+      "title": "Char Space",
+      "subtitle": "64 symbols provide a lookup coordinate for each 6-bit value",
+      "equation": "index ∈ {0,…,63} ↔ Base64 alphabet",
+      "domain": "encoding/base64",
+      "signal_type": "64-symbol alphabet",
+      "parameters": {
+        "alphabet_size": 64,
+        "first_16_chars": "iVBORw0KGgoAAAAN",
+        "first_16_indices": [
+          34,
+          21,
+          1,
+          14,
+          17,
+          48,
+          52,
+          10,
+          6,
+          32,
+          40,
+          0,
+          0,
+          0,
+          0,
+          13
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "Base64 alphabet contains exactly 64 unique symbols",
+          "every non-padding symbol maps uniquely to index 0…63"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "reconstruction_lossiness"
+        ],
+        "prerequisites": [
+          "base64_frame_shift"
+        ]
+      },
+      "svg_selector": "[data-concept=\"base64_char_space\"]",
+      "svg_element_count": 201,
+      "svg_text": [
+        "CHAR SPACE",
+        "64 symbols provide a lookup coordinate for each 6-bit value",
+        "A",
+        "00",
+        "B",
+        "01",
+        "C",
+        "02",
+        "D",
+        "03",
+        "E",
+        "04",
+        "F",
+        "05",
+        "G",
+        "06",
+        "H",
+        "07",
+        "I",
+        "08",
+        "J",
+        "09",
+        "K",
+        "10",
+        "L",
+        "11",
+        "M",
+        "12",
+        "N",
+        "13",
+        "O",
+        "14",
+        "P",
+        "15",
+        "Q",
+        "16",
+        "R",
+        "17",
+        "S",
+        "18",
+        "T",
+        "19",
+        "U",
+        "20",
+        "V",
+        "21",
+        "W",
+        "22",
+        "X",
+        "23",
+        "Y",
+        "24",
+        "Z",
+        "25",
+        "a",
+        "26",
+        "b",
+        "27",
+        "c",
+        "28",
+        "d",
+        "29",
+        "e",
+        "30",
+        "f",
+        "31",
+        "g",
+        "32",
+        "h",
+        "33",
+        "i",
+        "34",
+        "j",
+        "35",
+        "k",
+        "36",
+        "l",
+        "37",
+        "m",
+        "38",
+        "n",
+        "39",
+        "o",
+        "40",
+        "p",
+        "41",
+        "q",
+        "42",
+        "r",
+        "43",
+        "s",
+        "44",
+        "t",
+        "45",
+        "u",
+        "46",
+        "v",
+        "47",
+        "w",
+        "48",
+        "x",
+        "49",
+        "y",
+        "50",
+        "z",
+        "51",
+        "0",
+        "52",
+        "1",
+        "53",
+        "2",
+        "54",
+        "3",
+        "55",
+        "4",
+        "56",
+        "5",
+        "57",
+        "6",
+        "58",
+        "7",
+        "59",
+        "8",
+        "60",
+        "9",
+        "61",
+        "+",
+        "62",
+        "/",
+        "63",
+        "first 16 chars",
+        "iVBORw0KGgoAAAAN",
+        "indices:",
+        "34 21 1 14 17 48 52 10",
+        "6 32 40 0 0 0 0 13"
+      ],
+      "svg_fragment_sha256": "7100129ada73695c6978895740ebd36112225e03f9e5de6632480f6b53e9980d",
+      "math_signature_sha256": "52f2cd54f1f5a47f1dedf944cc5264544c2a0c53e11f86db59e762294a8d26c9"
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "Encoding Geometry",
+      "concept_id": "reconstruction_lossiness",
+      "title": "Reconstruction + Lossiness",
+      "subtitle": "Encoding roundtrip is exact; raster-to-vector recovery is not identity",
+      "equation": "decode(encode(PNG))=PNG; SVG→PNG→SVG'≠identity",
+      "domain": "encoding/reconstruction",
+      "signal_type": "exact encoding / lossy geometry",
+      "parameters": {
+        "encoding_roundtrip": "exact",
+        "raster_to_vector": "lossy/inferred"
+      },
+      "validation": {
+        "invariants": [
+          "Base64 roundtrip is byte-exact",
+          "SVG→PNG sampling does not retain original vector primitive identity"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "base64_char_space"
+        ]
+      },
+      "svg_selector": "[data-concept=\"reconstruction_lossiness\"]",
+      "svg_element_count": 28,
+      "svg_text": [
+        "RECONSTRUCTION + LOSSINESS",
+        "Encoding roundtrip is exact; raster-to-vector recovery is not identity",
+        "PNG",
+        "raw bytes",
+        "BASE64",
+        "6-bit chars",
+        "PNG",
+        "decoded",
+        "EXACT · byte-for-byte identity",
+        "SVG",
+        "vector",
+        "PNG",
+        "sampled",
+        "SVG′",
+        "inferred",
+        "LOSSY RECONSTRUCTION ≠ IDENTITY"
+      ],
+      "svg_fragment_sha256": "9f6418a0786e4b5a334780c16f5a80126bd3c6cdb274bd2684aa0892e1358b4e",
+      "math_signature_sha256": "07cd0a8fdbd2094028447d8b6c4eeb95df7d127a76fa95cb97a36c623a0021c1"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_field",
+      "title": "73-State Unicode Field",
+      "subtitle": "6 consonants × 12 vowel/mark states + one śūnya state",
+      "equation": "|Σ| = 6×12+1 = 73",
+      "domain": "encoding/unicode",
+      "signal_type": "73-state symbol field",
+      "parameters": {
+        "states": 73,
+        "construction": "6×12+1"
+      },
+      "validation": {
+        "invariants": [
+          "exactly 73 states",
+          "all states are unique Unicode strings"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "utf73_codepoints",
+          "utf73_utf8"
+        ],
+        "prerequisites": [
+          "base64_char_space"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_field\"]",
+      "svg_element_count": 91,
+      "svg_text": [
+        "73-STATE UNICODE FIELD",
+        "6 consonants × 12 vowel/mark states + one śūnya state",
+        "U+0915",
+        "क",
+        "क",
+        "का",
+        "कि",
+        "की",
+        "कु",
+        "कू",
+        "कृ",
+        "के",
+        "कै",
+        "को",
+        "कौ",
+        "कं",
+        "U+091A",
+        "च",
+        "च",
+        "चा",
+        "चि",
+        "ची",
+        "चु",
+        "चू",
+        "चृ",
+        "चे",
+        "चै",
+        "चो",
+        "चौ",
+        "चं",
+        "U+091F",
+        "ट",
+        "ट",
+        "टा",
+        "टि",
+        "टी",
+        "टु",
+        "टू",
+        "टृ",
+        "टे",
+        "टै",
+        "टो",
+        "टौ",
+        "टं",
+        "U+0924",
+        "त",
+        "त",
+        "ता",
+        "ति",
+        "ती",
+        "तु",
+        "तू",
+        "तृ",
+        "ते",
+        "तै",
+        "तो",
+        "तौ",
+        "तं",
+        "U+092A",
+        "प",
+        "प",
+        "पा",
+        "पि",
+        "पी",
+        "पु",
+        "पू",
+        "पृ",
+        "पे",
+        "पै",
+        "पो",
+        "पौ",
+        "पं",
+        "U+0938",
+        "स",
+        "स",
+        "सा",
+        "सि",
+        "सी",
+        "सु",
+        "सू",
+        "सृ",
+        "से",
+        "सै",
+        "सो",
+        "सौ",
+        "सं",
+        "·",
+        "U+00B7",
+        "custom field · standard Unicode code points · not a Unicode encoding standard"
+      ],
+      "svg_fragment_sha256": "112dab6005938f75796dd6b3aacd90263730c3f2db77b43a4231715e7e99db46",
+      "math_signature_sha256": "e95bfc71b7dab9a83b4b79ea0413e0a90f0b3a136ff371f20557a5e86cb8e9c6"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_codepoints",
+      "title": "Codepoint Composition",
+      "subtitle": "Inherent a uses one code point; explicit signs use two",
+      "equation": "state = consonant || optional sign",
+      "domain": "encoding/unicode",
+      "signal_type": "Unicode code-point sequences",
+      "parameters": {
+        "inherent_codepoints": 1,
+        "marked_codepoints": 2,
+        "shunya_codepoints": 1
+      },
+      "validation": {
+        "invariants": [
+          "slot 12 uses U+0902 DEVANAGARI SIGN ANUSVARA",
+          "śūnya is an abstract nil state displayed with U+00B7 MIDDLE DOT"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "utf73_utf8"
+        ],
+        "prerequisites": [
+          "utf73_field"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_codepoints\"]",
+      "svg_element_count": 25,
+      "svg_text": [
+        "CODEPOINT COMPOSITION",
+        "Inherent a uses one code point; explicit signs use two",
+        "क",
+        "U+0915",
+        "ka · inherent a",
+        "का",
+        "U+0915 + U+093E",
+        "ka + ā",
+        "कि",
+        "U+0915 + U+093F",
+        "ka + i",
+        "कं",
+        "U+0915 + U+0902",
+        "ka + anusvāra",
+        "·",
+        "U+00B7",
+        "śūnya display glyph",
+        "canonical slot 12: ं U+0902 ANUSVARA · śūnya is abstract nil, displayed as ·"
+      ],
+      "svg_fragment_sha256": "a346ffcb08b7330c727c211006d4aec6d3d95a740b97fcb991182cd17be6b6a1",
+      "math_signature_sha256": "655440003d8203a1bbdfa56fe48d0a9f74c3788e45e90b3d4cc614dc69ecbd09"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_utf8",
+      "title": "Utf-8 Byte Geometry",
+      "subtitle": "Code-point count and byte width are variable",
+      "equation": "Unicode scalar values → RFC 3629 UTF-8 bytes",
+      "domain": "encoding/utf8",
+      "signal_type": "UTF-8 byte sequences",
+      "parameters": {
+        "devanagari_bytes_per_codepoint": 3,
+        "middle_dot_bytes": 2,
+        "variable_width": true
+      },
+      "validation": {
+        "invariants": [
+          "every state UTF-8 encodes and decodes exactly",
+          "UTF-8 width is variable across the field"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "utf73_fixed_point"
+        ],
+        "prerequisites": [
+          "utf73_codepoints"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_utf8\"]",
+      "svg_element_count": 34,
+      "svg_text": [
+        "UTF-8 BYTE GEOMETRY",
+        "Code-point count and byte width are variable",
+        "क",
+        "e0 a4 95",
+        "3 bytes",
+        "का",
+        "e0 a4 95 e0 a4 be",
+        "6 bytes",
+        "कं",
+        "e0 a4 95 e0 a4 82",
+        "6 bytes",
+        "·",
+        "c2 b7",
+        "2 bytes",
+        "TextEncoder/TextDecoder can validate these sequences natively in a browser"
+      ],
+      "svg_fragment_sha256": "4b978ac73d084895fdbae35f5e3bbd1dbff67e2450a174288bd21bf001584e3c",
+      "math_signature_sha256": "1549345944f568efa934d6926050724116cbc66b7dbe3672fde30dbdb8484554"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_fixed_point",
+      "title": "Reference-Model Identity",
+      "subtitle": "By construction, the quotient model closes exactly on every canonical state",
+      "equation": "E₇₃(D₇₃(s)) = s",
+      "domain": "encoding/quotient",
+      "signal_type": "reference-model identity",
+      "parameters": {
+        "model": "reference quotient only",
+        "encoder": "n mod 73",
+        "decoder": "state index",
+        "fixed_points": 73
+      },
+      "validation": {
+        "invariants": [
+          "reference-model identity only: E(n)=n mod 73 and D(s)=state index imply E(D(s))=s for all 73 states"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "utf73_basins"
+        ],
+        "prerequisites": [
+          "utf73_utf8"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_fixed_point\"]",
+      "svg_element_count": 85,
+      "svg_text": [
+        "REFERENCE-MODEL IDENTITY",
+        "By construction, the quotient model closes exactly on every canonical state",
+        "E₇₃(n) = n mod 73",
+        "D₇₃(s) = state index",
+        "0",
+        "18",
+        "36",
+        "54",
+        "72",
+        "reference identity: E(D(s))=s · 73 / 73"
+      ],
+      "svg_fragment_sha256": "d55a49af4dbc8a745f36c15969237f0b14a2380da4db56df64b4d663a830d964",
+      "math_signature_sha256": "26426407de721f96fb028c988cb303f2c8b561e185d27811c9b92a244469374e"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_basins",
+      "title": "Measured Rgb24 Basins",
+      "subtitle": "Exhaustive live encoder: RGB24 → HSV hue×brightness → canonical Σ₇₃",
+      "equation": "sum basin_i = 2^24",
+      "domain": "encoding/quotient",
+      "signal_type": "measured RGB24 HSV basins",
+      "parameters": {
+        "input_states": 16777216,
+        "sum": 16777216,
+        "min": 1,
+        "max": 633241,
+        "shunya": 1
+      },
+      "validation": {
+        "invariants": [
+          "live RGB24→HSV→Σ73 encoder is exhaustively counted over all 2^24 colors",
+          "measured basin sum equals 2^24",
+          "śūnya basin contains black only"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "utf73_vs_base64"
+        ],
+        "prerequisites": [
+          "utf73_fixed_point"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_basins\"]",
+      "svg_element_count": 82,
+      "svg_text": [
+        "MEASURED RGB24 BASINS",
+        "Exhaustive live encoder: RGB24 → HSV hue×brightness → canonical Σ₇₃",
+        "EXHAUSTIVE INPUT: 16,777,216 RGB24 COLORS",
+        "min basin = 1 · max basin = 633,241",
+        "śūnya basin = 1 (black only)",
+        "actual HSV-quantizer basin volume · not the modulo-73 reference quotient"
+      ],
+      "svg_fragment_sha256": "56ade8f79dd26e28d2adbc4400460454b71c30d8d5524758a768a7df0025454c",
+      "math_signature_sha256": "045bfc2ea9f6656d0bf80aedeb9270a534eddf3c7899d31d5b6bbc9e6dd73e5e"
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "Canonical Field Encoding",
+      "concept_id": "utf73_vs_base64",
+      "title": "Base64 Vs Σ₇₃ Projection",
+      "subtitle": "Base64 repartitions exactly; the live HSV encoder projects many RGB states into one symbol",
+      "equation": "64^4 = 2^24; 73 ∤ 2^24",
+      "domain": "encoding/comparison",
+      "signal_type": "finite-code comparison",
+      "parameters": {
+        "base64_states": 64,
+        "utf73_states": 73,
+        "log2_73": 6.189824558880018
+      },
+      "validation": {
+        "invariants": [
+          "64^4 = 2^24 gives exact Base64 24-bit repartition",
+          "73 does not divide 2^24"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "utf73_basins",
+          "base64_frame_shift"
+        ]
+      },
+      "svg_selector": "[data-concept=\"utf73_vs_base64\"]",
+      "svg_element_count": 14,
+      "svg_text": [
+        "BASE64 VS Σ₇₃ PROJECTION",
+        "Base64 repartitions exactly; the live HSV encoder projects many RGB states into one symbol",
+        "BASE64",
+        "24 bits = 4 × 6 bits",
+        "encode ↔ decode · exact",
+        "UTF73 FIELD",
+        "73 states · log₂73 ≈ 6.190",
+        "RGB24→HSV→Σ₇₃ many→one",
+        "canonical decoder fixed-point exact",
+        "same finite-state perspective · different invertibility",
+        "mod-73 remains a reference identity only; measured lossiness comes from the live HSV encoder"
+      ],
+      "svg_fragment_sha256": "df7db25602a9f687479ef609dd0231dd759085a4db4c47c37e43d38d8af830e8",
+      "math_signature_sha256": "5dbbd608d79ef55e22ff8cc846031158b04d394b9fedbd3f050da549b690cee7"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_linear_carrier",
+      "title": "Linear Carrier · Utf-8",
+      "subtitle": "The text first exists only as an ordered, lossless Unicode/byte sequence",
+      "equation": "c₁,c₂,…,cₙ · UTF-8 is carrier, not the abjad invariant",
+      "domain": "encoding/utf8",
+      "signal_type": "ordered Unicode/UTF-8 carrier",
+      "parameters": {
+        "order_preserved": true,
+        "lossless": true,
+        "expected_ayahs": 6236
+      },
+      "validation": {
+        "invariants": [
+          "UTF-8/Unicode carrier preserves ordered text",
+          "fixture SHA identifies exact carrier bytes once locked"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "abjad_cultural_mapping"
+        ],
+        "prerequisites": [
+          "utf73_vs_base64"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_linear_carrier\"]",
+      "svg_element_count": 11,
+      "svg_text": [
+        "LINEAR CARRIER · UTF-8",
+        "The text first exists only as an ordered, lossless Unicode/byte sequence",
+        "ا ب ج د",
+        "U+0627 U+0628 U+062C U+062F",
+        "UTF-8 preserves symbol + order exactly",
+        "LINEAR LAYER",
+        "position matters · no numeric operator has been applied yet",
+        "fixture SHA identifies the exact carrier bytes when the corpus is locked"
+      ],
+      "svg_fragment_sha256": "21c0b4dbbbf16313b8fb87ff12b90ed4b1fdcf23739d8d9d1d83e0ce0b619c72",
+      "math_signature_sha256": "782fb5d45659b22ed63f88fc885dfdbc75cac652327bbb711c2e742051eb89b4"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_cultural_mapping",
+      "title": "Direct Abjad Mapping",
+      "subtitle": "28 Arabic letters map directly to the classical value ladder",
+      "equation": "letter → v ∈ {1…9,10…90,100…1000}",
+      "domain": "encoding/abjad",
+      "signal_type": "28-letter direct numeric mapping",
+      "parameters": {
+        "letters": 28,
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          1000
+        ],
+        "mapping_semantics": "direct character lookup",
+        "excluded": "charCode % 28"
+      },
+      "validation": {
+        "invariants": [
+          "28 unique Arabic letters map directly to 28 classical abjad values",
+          "charCode modulo indexing is excluded"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "abjad_mod9_orbits",
+          "abjad_corpus_fixture"
+        ],
+        "prerequisites": [
+          "abjad_linear_carrier"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_cultural_mapping\"]",
+      "svg_element_count": 90,
+      "svg_text": [
+        "DIRECT ABJAD MAPPING",
+        "28 Arabic letters map directly to the classical value ladder",
+        "ا",
+        "U+0627",
+        "1",
+        "ب",
+        "U+0628",
+        "2",
+        "ج",
+        "U+062C",
+        "3",
+        "د",
+        "U+062F",
+        "4",
+        "ه",
+        "U+0647",
+        "5",
+        "و",
+        "U+0648",
+        "6",
+        "ز",
+        "U+0632",
+        "7",
+        "ح",
+        "U+062D",
+        "8",
+        "ط",
+        "U+0637",
+        "9",
+        "ي",
+        "U+064A",
+        "10",
+        "ك",
+        "U+0643",
+        "20",
+        "ل",
+        "U+0644",
+        "30",
+        "م",
+        "U+0645",
+        "40",
+        "ن",
+        "U+0646",
+        "50",
+        "س",
+        "U+0633",
+        "60",
+        "ع",
+        "U+0639",
+        "70",
+        "ف",
+        "U+0641",
+        "80",
+        "ص",
+        "U+0635",
+        "90",
+        "ق",
+        "U+0642",
+        "100",
+        "ر",
+        "U+0631",
+        "200",
+        "ش",
+        "U+0634",
+        "300",
+        "ت",
+        "U+062A",
+        "400",
+        "ث",
+        "U+062B",
+        "500",
+        "خ",
+        "U+062E",
+        "600",
+        "ذ",
+        "U+0630",
+        "700",
+        "ض",
+        "U+0636",
+        "800",
+        "ظ",
+        "U+0638",
+        "900",
+        "غ",
+        "U+063A",
+        "1000",
+        "CULTURAL MAPPING LAYER · explicit table, variant-sensitive",
+        "charCode % 28 is excluded: it is a codepoint hash, not this mapping"
+      ],
+      "svg_fragment_sha256": "c207f22547609e1a869cecfe2f71f6245af26d844461fe61768835ef4e334b3d",
+      "math_signature_sha256": "718bf45561044b9827f420d4e8d7710591a6ac48943b371065b26d7f7ea10df6"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_mod9_orbits",
+      "title": "Pure Mathematics · Mod-9 Dynamics",
+      "subtitle": "After a value is chosen, the orbit structure is exact and corpus-independent",
+      "equation": "dr(v)=1+((v−1) mod 9); T(r)=dr(2r)",
+      "domain": "number-theory/dynamics",
+      "signal_type": "9-state finite dynamical system",
+      "parameters": {
+        "digital_root": "dr(v)=1+((v-1) mod 9)",
+        "doubling_map": "T(x)=dr(2x)",
+        "cycles": {
+          "V1": [
+            1,
+            2,
+            4,
+            8,
+            7,
+            5
+          ],
+          "V3": [
+            3,
+            6
+          ],
+          "V9": [
+            9
+          ]
+        }
+      },
+      "validation": {
+        "invariants": [
+          "T(r)=dr(2r) yields V1=[1,2,4,8,7,5], V3=[3,6], V9=[9] exactly"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "abjad_empirical_measure"
+        ],
+        "prerequisites": [
+          "abjad_cultural_mapping"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_mod9_orbits\"]",
+      "svg_element_count": 34,
+      "svg_text": [
+        "PURE MATHEMATICS · MOD-9 DYNAMICS",
+        "After a value is chosen, the orbit structure is exact and corpus-independent",
+        "V1",
+        "1",
+        "2",
+        "4",
+        "8",
+        "7",
+        "5",
+        "V3",
+        "3",
+        "6",
+        "V9",
+        "9",
+        "this layer is a theorem about the finite state map — no book is required"
+      ],
+      "svg_fragment_sha256": "0ad195ecc8eab358e615da43da7e9ab17afa24ffc41054b0583d2de0a3f9ccea",
+      "math_signature_sha256": "8bfddef331ebc6dba14f7fc42be036f96132db84117710c5d61369ee72528051"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_corpus_fixture",
+      "title": "Corpus Fixture + Normalization",
+      "subtitle": "One exact 6236-ayah carrier must be locked before any corpus statistic is a result",
+      "equation": "UTF-8 fixture → normalize → 28 letters → direct values",
+      "domain": "corpus/provenance",
+      "signal_type": "6236-ayah locked corpus boundary",
+      "parameters": {
+        "fixture": "corpora/quran_uthmani/quran.jsonl",
+        "status": "fixture_missing",
+        "normalization": {
+          "unicode_form": "NFC",
+          "strip_combining_marks": true,
+          "strip_tatweel_U+0640": true,
+          "canonicalizations": {
+            "أ": "ا",
+            "إ": "ا",
+            "آ": "ا",
+            "ٱ": "ا",
+            "ؤ": "و",
+            "ئ": "ي",
+            "ى": "ي",
+            "ی": "ي",
+            "ة": "ه"
+          },
+          "standalone_hamza_U+0621": "ignored unless an explicit corpus spec chooses a value",
+          "other_characters": "ignored unless present in the 28-letter direct mapping"
+        }
+      },
+      "validation": {
+        "invariants": [
+          "corpus statistics require an exact 6236-ayah fixture",
+          "normalization rules are explicit and deterministic",
+          "no silent corpus substitution"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "abjad_empirical_measure"
+        ],
+        "prerequisites": [
+          "abjad_linear_carrier",
+          "abjad_cultural_mapping"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_corpus_fixture\"]",
+      "svg_element_count": 20,
+      "svg_text": [
+        "CORPUS FIXTURE + NORMALIZATION",
+        "One exact 6236-ayah carrier must be locked before any corpus statistic is a result",
+        "FIXTURE",
+        "6236 ayahs",
+        "NORMALIZE",
+        "marks/tatweel",
+        "28 LETTERS",
+        "direct lookup",
+        "source manifest: corpora/quran_uthmani/source.json",
+        "ٱ→ا · ی→ي · أ/إ/آ→ا · ؤ→و · ئ/ى→ي · ة→ه",
+        "combining marks + tatweel removed · other non-table chars ignored",
+        "REMOTE FIXTURE NOT BUNDLED",
+        "fetch → SHA lock → analyze; no silent corpus substitution"
+      ],
+      "svg_fragment_sha256": "e5a24d1244c0e1a93032fec7e21f60854abc879cdb0a093f55458f34415c9bab",
+      "math_signature_sha256": "6d4a1819e297f6e50a4cc83044b34a26dfe4f098d4d7258f7a7f4983e2cec261"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_empirical_measure",
+      "title": "Empirical Orbit Statistic",
+      "subtitle": "Per ayah: direct abjad sum → digital root → one of V1/V3/V9",
+      "equation": "candidate: one orbit-class frequency = 2050/6236",
+      "domain": "corpus/statistics",
+      "signal_type": "ayah-level empirical statistic",
+      "parameters": {
+        "status": "fixture_missing",
+        "fixture": "corpora/quran_uthmani/quran.jsonl",
+        "candidate_only": {
+          "count": 2050,
+          "total": 6236,
+          "gap_fraction": "43/9354"
+        },
+        "claim": "candidate is not marked reproduced until the exact fixture is present and measured"
+      },
+      "validation": {
+        "invariants": [
+          "per ayah: normalize → direct abjad sum → digital root → V1/V3/V9 orbit class",
+          "candidate arithmetic 1/3−2050/6236=43/9354 is exact",
+          "target orbit class remains unresolved until the prior script or a locked fixture uniquely identifies the 2050 count",
+          "candidate is not a reproduced corpus result while fixture is missing"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "abjad_layer_separation"
+        ],
+        "prerequisites": [
+          "abjad_mod9_orbits",
+          "abjad_corpus_fixture"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_empirical_measure\"]",
+      "svg_element_count": 12,
+      "svg_text": [
+        "EMPIRICAL ORBIT STATISTIC",
+        "Per ayah: direct abjad sum → digital root → one of V1/V3/V9",
+        "CANDIDATE · TARGET ORBIT CLASS UNRESOLVED",
+        "2050 / 6236",
+        "1/3 − 2050/6236 = 43/9354",
+        "1/3 is the declared equal-class baseline; orbit sizes themselves are 6 / 2 / 1",
+        "the prior result does not identify its target class inside this repo yet",
+        "all V1/V3/V9 counts are recomputed; a unique 2050 match resolves the class",
+        "frequency ignores position · root transition matrix preserves the 9-state walk"
+      ],
+      "svg_fragment_sha256": "afc0b939701d6abddb6d36ddfbb28d41241de6529d798036bd8367bc666b6cdc",
+      "math_signature_sha256": "c471e30c72cf32dca3e0fdd955a098ba76c3b5c89fc2c9cadf7432f8e0acb422"
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "Abjad Field Geometry",
+      "concept_id": "abjad_layer_separation",
+      "title": "Three Layers · Three Statuses",
+      "subtitle": "Do not promote a mapping choice or corpus observation into a theorem",
+      "equation": "carrier ≠ mapping ≠ invariant ≠ empirical result",
+      "domain": "methodology",
+      "signal_type": "epistemic layer model",
+      "parameters": {
+        "pure_math": "exact",
+        "mapping": "explicit choice",
+        "carrier": "lossless",
+        "empirical": "pending exact fixture"
+      },
+      "validation": {
+        "invariants": [
+          "pure math, cultural mapping, carrier, and empirical result retain separate statuses"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "abjad_empirical_measure"
+        ]
+      },
+      "svg_selector": "[data-concept=\"abjad_layer_separation\"]",
+      "svg_element_count": 21,
+      "svg_text": [
+        "THREE LAYERS · THREE STATUSES",
+        "Do not promote a mapping choice or corpus observation into a theorem",
+        "PURE MATH",
+        "T(r)=dr(2r) · V1/V3/V9",
+        "EXACT",
+        "MAPPING",
+        "Arabic letter → classical abjad value",
+        "EXPLICIT CHOICE",
+        "CARRIER",
+        "UTF-8 ordered ayah sequence",
+        "LOSSLESS",
+        "EMPIRICAL",
+        "orbit-class statistic on locked corpus",
+        "PENDING FIXTURE",
+        "comparison corpora reuse exactly the same normalize → lookup → measure function"
+      ],
+      "svg_fragment_sha256": "6d187583543795b40e3cf8fb579bc2b5745b265501b7b1f8066a04c5ac9187e5",
+      "math_signature_sha256": "850157147ee43d2c2bc7021e280a2c2325cfb181f0b2d2948e66724cfa0f788b"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_atomic_frames",
+      "title": "Atomic Vs General Frame",
+      "subtitle": "Atomicity is an extra axiom; closure only needs to land back in the general Frame type",
+      "equation": "AtomicFrame = Frame + |C|=|S|=1",
+      "domain": "model/axioms",
+      "signal_type": "atomic/general frame distinction",
+      "parameters": {
+        "frame_axioms": {
+          "signature": "Frame = (C,S,b)",
+          "axioms": {
+            "A1": "C and S are non-empty finite sets",
+            "A2": "C ∩ S = ∅",
+            "A3": "b ∉ C ∪ S",
+            "A4": "b is the unique boundary-equivalence class representing the identified 0/1 boundary"
+          }
+        },
+        "atomic_axioms": {
+          "signature": "AtomicFrame = Frame + atomicity",
+          "axioms": {
+            "AT1": "|C| = 1",
+            "AT2": "|S| = 1"
+          },
+          "cardinality": 3
+        }
+      },
+      "validation": {
+        "invariants": [
+          "general Frame requires nonempty disjoint C,S and one external boundary class",
+          "AtomicFrame additionally requires |C|=|S|=1"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "closure_disjoint_union_9"
+        ],
+        "prerequisites": [
+          "abjad_layer_separation"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_atomic_frames\"]",
+      "svg_element_count": 20,
+      "svg_text": [
+        "ATOMIC VS GENERAL FRAME",
+        "Atomicity is an extra axiom; closure only needs to land back in the general Frame type",
+        "Frame = (C,S,b)",
+        "A1",
+        "C,S non-empty finite sets",
+        "A2",
+        "C ∩ S = ∅",
+        "A3",
+        "b ∉ C ∪ S",
+        "A4",
+        "b is the unique boundary-equivalence class",
+        "AtomicFrame adds AT1 |C|=1 and AT2 |S|=1",
+        "the quotient output need not be atomic to remain a Frame"
+      ],
+      "svg_fragment_sha256": "708b591375f722e7afa44dc40d05581141aad5e4e51d7ed15e511ab0bf630bd8",
+      "math_signature_sha256": "586fab75baba935810988dcdaba9bde90974a4ba527bd1b9873aa58a03c22906"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_disjoint_union_9",
+      "title": "Pre-Quotient · 9 Points",
+      "subtitle": "Three pairwise-disjoint atomic frames each contain carrier, structure and their own boundary",
+      "equation": "X = ⊔ᵢ(Cᵢ ⊔ Sᵢ ⊔ {bᵢ}); |X|=3×3=9",
+      "domain": "model/disjoint-union",
+      "signal_type": "9-point prequotient",
+      "parameters": {
+        "cardinality": 9,
+        "formula": "3×3=9",
+        "points": [
+          "L:C",
+          "L:S",
+          "L:b",
+          "G:C",
+          "G:S",
+          "G:b",
+          "E:C",
+          "E:S",
+          "E:b"
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "three pairwise-disjoint AtomicFrames yield exactly 9 prequotient points"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "closure_boundary_quotient"
+        ],
+        "prerequisites": [
+          "closure_atomic_frames"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_disjoint_union_9\"]",
+      "svg_element_count": 29,
+      "svg_text": [
+        "PRE-QUOTIENT · 9 POINTS",
+        "Three pairwise-disjoint atomic frames each contain carrier, structure and their own boundary",
+        "Atomic L",
+        "L:C",
+        "L:S",
+        "L:b",
+        "Atomic G",
+        "G:C",
+        "G:S",
+        "G:b",
+        "Atomic E",
+        "E:C",
+        "E:S",
+        "E:b",
+        "3 × (1 carrier + 1 structure + 1 boundary) = 9"
+      ],
+      "svg_fragment_sha256": "ce349c40975cc1804e3395e26313fe21c454d096f3b12f4bb59ff93b6ce576c6",
+      "math_signature_sha256": "b511c2cdeae299b3157b9284700066a061c9859217832ebc0a53ee374c36a2a0"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_boundary_quotient",
+      "title": "Boundary Quotient · 9 → 7",
+      "subtitle": "The +1 is the single boundary equivalence class produced by identifying bL~bG~bE",
+      "equation": "Q=X/~ ; bL~bG~bE ; |Q|=9-(3-1)=7",
+      "domain": "model/quotient",
+      "signal_type": "boundary equivalence quotient",
+      "parameters": {
+        "equivalence": {
+          "boundary_identification": "L:b ~ G:b ~ E:b",
+          "nonboundary_rule": "singleton equivalence classes",
+          "classes_removed_by_identification": 2
+        },
+        "quotient": {
+          "cardinality": 7,
+          "formula": "9-(3-1)=7",
+          "C_prime": [
+            "E:C",
+            "G:C",
+            "L:C"
+          ],
+          "S_prime": [
+            "E:S",
+            "G:S",
+            "L:S"
+          ],
+          "boundary": "b",
+          "boundary_class": [
+            "E:b",
+            "G:b",
+            "L:b"
+          ],
+          "points": [
+            "E:C",
+            "E:S",
+            "G:C",
+            "G:S",
+            "L:C",
+            "L:S",
+            "b"
+          ]
+        }
+      },
+      "validation": {
+        "invariants": [
+          "only bL,bG,bE are identified",
+          "three boundary points form one equivalence class",
+          "9-(3-1)=7",
+          "+1 is the quotient boundary class, not an added point"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "closure_theorem",
+          "closure_v1_abjad_7"
+        ],
+        "prerequisites": [
+          "closure_disjoint_union_9"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_boundary_quotient\"]",
+      "svg_element_count": 21,
+      "svg_text": [
+        "BOUNDARY QUOTIENT · 9 → 7",
+        "The +1 is the single boundary equivalence class produced by identifying bL~bG~bE",
+        "L:b",
+        "G:b",
+        "E:b",
+        "[b]",
+        "1 ≡ 0",
+        "|X| = 9",
+        "merge 3 → 1",
+        "|Q| = 7",
+        "9 − (3−1) = 7",
+        "+1 is quotient class, not an added point"
+      ],
+      "svg_fragment_sha256": "dd294b2a53a5247b29dff0313b7773095c31020c04608e6f6ce831c3a56fde19",
+      "math_signature_sha256": "47a6c9152c5539616ea8cfdc6f23afcee8ae1977162b089aba132cdfb7de0dc3"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_theorem",
+      "title": "Closure Theorem",
+      "subtitle": "Carrier and structure are inherited canonically from the quotient images; no repartition is chosen afterward",
+      "equation": "⊕(F₁,F₂,F₃)=(C′,S′,b) ⊨ A1–A4",
+      "domain": "model/theorem",
+      "signal_type": "canonical type-closure proof",
+      "parameters": {
+        "axiom_checks": {
+          "A1_nonempty": true,
+          "A2_disjoint": true,
+          "A3_boundary_external": true,
+          "A4_unique_boundary_class": true
+        },
+        "passes": true,
+        "canonical_partition": true,
+        "proof_steps": [
+          "C' is the quotient image of the disjoint union of the three carrier sets.",
+          "S' is the quotient image of the disjoint union of the three structure sets.",
+          "Only boundary points are identified, so C' and S' remain disjoint.",
+          "The common boundary class b is not an element of C' or S'.",
+          "There is exactly one boundary class after quotienting.",
+          "Therefore (C',S',b) satisfies the general Frame axioms."
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "C′ is induced from carrier tags and S′ from structure tags",
+          "A1–A4 all pass",
+          "output is a general Frame",
+          "output is not claimed atomic"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "closure_status_ledger"
+        ],
+        "prerequisites": [
+          "closure_boundary_quotient"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_theorem\"]",
+      "svg_element_count": 19,
+      "svg_text": [
+        "CLOSURE THEOREM",
+        "Carrier and structure are inherited canonically from the quotient images; no repartition is chosen afterward",
+        "A1 PASS",
+        "C′,S′ non-empty",
+        "A2 PASS",
+        "C′∩S′=∅",
+        "A3 PASS",
+        "b∉C′∪S′",
+        "A4 PASS",
+        "one boundary class [b]",
+        "C′ = q(⊔Cᵢ) · S′ = q(⊔Sᵢ) · b=[bᵢ]",
+        "THEOREM PASS · output is a general Frame with 7 points"
+      ],
+      "svg_fragment_sha256": "73aef5d9649e3a4567053d298d506376c5efa29de7bca92e0980784387362799",
+      "math_signature_sha256": "69d551fd13b35bef08c9a2dbf5ebed87b3418458b46caad3e6a6e5cb4b99d38c"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_v1_abjad_7",
+      "title": "Seven Crosschecks",
+      "subtitle": "The quotient cardinality then meets the existing mod-9 and canonical-abjad checks",
+      "equation": "|Q|=7; dr(7)=7; T(7)=5; 7∈V1; ز↦7",
+      "domain": "number-theory/crosscheck",
+      "signal_type": "mod-9 / abjad crosscheck",
+      "parameters": {
+        "mod9": {
+          "digital_root_7": 7,
+          "T7": 5,
+          "orbit": "V1",
+          "V1": [
+            1,
+            2,
+            4,
+            8,
+            7,
+            5
+          ]
+        },
+        "abjad": {
+          "ordinal": 7,
+          "letter": "ز",
+          "name": "zay",
+          "value": 7
+        }
+      },
+      "validation": {
+        "invariants": [
+          "dr(7)=7",
+          "T(7)=5",
+          "7 belongs to V1=[1,2,4,8,7,5]",
+          "canonical abjad ordinal 7 is zay with value 7"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "closure_status_ledger"
+        ],
+        "prerequisites": [
+          "closure_boundary_quotient",
+          "abjad_mod9_orbits"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_v1_abjad_7\"]",
+      "svg_element_count": 26,
+      "svg_text": [
+        "SEVEN CROSSCHECKS",
+        "The quotient cardinality then meets the existing mod-9 and canonical-abjad checks",
+        "1",
+        "2",
+        "4",
+        "8",
+        "7",
+        "5",
+        "dr(7)=7 · T(7)=5 · 7 ∈ V1",
+        "ز",
+        "zay · ordinal 7 · abjad value 7",
+        "crosschecks do not prove uniqueness or necessity of the atomicity axiom"
+      ],
+      "svg_fragment_sha256": "bbb98d893aa2269402a17f6310708be148a58ae4e38fb9901205a7411cf6164a",
+      "math_signature_sha256": "96502e1ccf2e25da494c32a16dd7f13ebf099f95fb3d4ad500ad144f462bac5d"
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "7-Closure",
+      "concept_id": "closure_status_ledger",
+      "title": "Theorem Status Ledger",
+      "subtitle": "The quotient closure is proved inside the model; necessity and uniqueness remain open",
+      "equation": "construct → consistency → type closure → necessity? → uniqueness?",
+      "domain": "methodology/status",
+      "signal_type": "proof-status ladder",
+      "parameters": {
+        "proved": [
+          "quotient output satisfies A1–A4",
+          "|X|=9 → |X/~|=7"
+        ],
+        "axiom": [
+          "atomic |C|=|S|=1"
+        ],
+        "convention": [
+          "Frame typed as one language-object at next level"
+        ],
+        "open": [
+          "derive atomicity",
+          "necessity",
+          "uniqueness"
+        ],
+        "meta": {
+          "visual_field_count_89": "Fibonacci F(11); recorded as meta-observation only, not an invariant"
+        }
+      },
+      "validation": {
+        "invariants": [
+          "closure theorem is proved inside the stated model",
+          "atomicity remains an axiom",
+          "necessity and uniqueness remain open",
+          "89=F(11) is meta only"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "closure_theorem",
+          "closure_v1_abjad_7"
+        ]
+      },
+      "svg_selector": "[data-concept=\"closure_status_ledger\"]",
+      "svg_element_count": 23,
+      "svg_text": [
+        "THEOREM STATUS LEDGER",
+        "The quotient closure is proved inside the model; necessity and uniqueness remain open",
+        "PROVED",
+        "3 AtomicFrames / boundary quotient is a general Frame",
+        "PROVED",
+        "|X|=9 and |X/~|=7 under bL~bG~bE",
+        "AXIOM",
+        "atomic |C|=|S|=1 remains assumed",
+        "CONVENTION",
+        "a general Frame is one language-object at the next level",
+        "OPEN",
+        "derive atomicity from deeper principles",
+        "OPEN",
+        "uniqueness / necessity of the 7-closure",
+        "89=F(11) retained only as meta-observation, never as theorem input"
+      ],
+      "svg_fragment_sha256": "b7f3d5b262f087b0415e547d4240c4a7133661639670c904b44295a966b0fd9e",
+      "math_signature_sha256": "82458b743e84042e1d8bbd6c04fc499d6b7a2898739c62e71aab2c97b18104d6"
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "Transformer Frame",
+      "concept_id": "transformer_frame_correspondence",
+      "title": "Frame In The Transformer",
+      "subtitle": "Audited per-layer correspondence; global network is a stack of Frame slices",
+      "equation": "Cₗ↔xₗ ; Sₗ↔Fₗ(xₗ) ; b↔merge event · per-layer",
+      "domain": "model/transformer-frame",
+      "signal_type": "audited per-layer architecture correspondence",
+      "parameters": {
+        "frame_correspondence": [
+          {
+            "atlas": "C · carrier",
+            "transformer": "residual stream state x_l",
+            "proposal": "C_l ↔ residual carrier at one transformer layer",
+            "scope": "per-layer",
+            "A2_scope": "local snapshot",
+            "audit_status": "VALID"
+          },
+          {
+            "atlas": "S · structure",
+            "transformer": "layer contribution F_l(x_l), including attention/FFN and positional structure where present",
+            "proposal": "S_l ↔ layer-local transformation contribution",
+            "scope": "per-layer",
+            "A2_scope": "local snapshot",
+            "audit_status": "VALID"
+          },
+          {
+            "atlas": "b · boundary",
+            "transformer": "residual merge event x_l + F_l(x_l)",
+            "proposal": "b ↔ b1: superposition/merge point",
+            "scope": "per-layer boundary event",
+            "b_candidates": {
+              "b1": "superposition x_l + F_l(x_l) as the boundary identification event",
+              "b2": "new carrier state x_{l+1}=x_l+F_l(x_l)"
+            },
+            "selected_candidate": "b1",
+            "rejected_candidate": "b2 is the next layer's carrier C_{l+1}, not the boundary point itself",
+            "audit_status": "VALID WITH DISAMBIGUATION"
+          }
+        ],
+        "axiom_audit": {
+          "A2_C_intersection_S": "holds only on the per-layer snapshot typing; globally the next carrier contains prior layer contributions",
+          "scope": "local/per-layer, not whole-network",
+          "network_interpretation": "the transformer is a stack of Frame slices linked by x_{l+1}=x_l+F_l(x_l)"
+        },
+        "status": "AUDITED SLICE MODEL"
+      },
+      "validation": {
+        "invariants": [
+          "C and S correspondence is scoped per-layer",
+          "A2 is local to the slice, not global across the network",
+          "b selects superposition candidate b1; b2 is next carrier C_{l+1}"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "transformer_signal_system_atlas"
+        ],
+        "prerequisites": [
+          "closure_theorem"
+        ]
+      },
+      "svg_selector": "[data-concept=\"transformer_frame_correspondence\"]",
+      "svg_element_count": 19,
+      "svg_text": [
+        "FRAME IN THE TRANSFORMER",
+        "Audited per-layer correspondence; global network is a stack of Frame slices",
+        "C · carrier",
+        "residual stream / layer state x",
+        "Cₗ ↔ residual carrier · VALID",
+        "S · structure",
+        "attention + FFN + positional structure",
+        "Sₗ ↔ layer contribution · VALID",
+        "b · boundary",
+        "residual merge x + F(x)",
+        "b ↔ b₁ superposition · VALID",
+        "residual form shown as working equation:",
+        "xₗ₊₁ = xₗ + Fₗ(xₗ)",
+        "A2 is local: Cₗ and Sₗ are typed separately in one slice; Cₗ₊₁ contains the merged prior contribution"
+      ],
+      "svg_fragment_sha256": "689268a6db99ba9ffd3f01e8463e53aa0692ddbc4cfdb40467f8fcdcde0cee6e",
+      "math_signature_sha256": "0e3d06be8a09a8dd09fc190f01a7df8cd11910743d8f9000551c02310d3cd031"
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "Transformer Frame",
+      "concept_id": "transformer_seed_geometry",
+      "title": "Seed Geometry · 6 + 1",
+      "subtitle": "One center and one hexagonal first ring form the chapter's seven-point visual closure",
+      "equation": "1 center + 6 first-ring points = 7",
+      "domain": "geometry/hexagonal",
+      "signal_type": "6+1 first-ring geometry",
+      "parameters": {
+        "center": 1,
+        "first_ring": 6,
+        "total": 7,
+        "identity": "1+6=7",
+        "name_in_chapter": "Seed / hexagonal first-ring geometry",
+        "audit_status": "EXACT under the stated circle-packing definition",
+        "formalization": "equal-circle hexagonal first ring around one center",
+        "coordination_number": 6
+      },
+      "validation": {
+        "invariants": [
+          "one center plus six equal-circle first-ring neighbors totals seven",
+          "coordination number is six in the stated hexagonal packing definition"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "transformer_frame_status"
+        ],
+        "prerequisites": [
+          "closure_boundary_quotient"
+        ]
+      },
+      "svg_selector": "[data-concept=\"transformer_seed_geometry\"]",
+      "svg_element_count": 20,
+      "svg_text": [
+        "SEED GEOMETRY · 6 + 1",
+        "One center and one hexagonal first ring form the chapter's seven-point visual closure",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "CENTER",
+        "1 + 6 = 7",
+        "EXACT under equal-circle hexagonal first-ring definition"
+      ],
+      "svg_fragment_sha256": "f0f60366f794b61b9ee3e858d0130ee4b32f2f6f0e13d3ebebfff6d6c869e074",
+      "math_signature_sha256": "b3b0edb1301ecc2dd4389c32d560b35cdffb4aba55e00a010872c222c2108399"
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "Transformer Frame",
+      "concept_id": "transformer_signal_system_atlas",
+      "title": "Signal → System → Atlas",
+      "subtitle": "Audited slice view: each layer maps carrier through structure into the next carrier",
+      "equation": "signal → system → atlas · proposed type correspondence",
+      "domain": "model/signal-system",
+      "signal_type": "working type bridge",
+      "parameters": {
+        "signal_system_atlas": {
+          "signal": "carrier / embedding-state proposal",
+          "system": "transformation stack proposal",
+          "atlas": "enclosing representational field proposal",
+          "audit_status": "pending"
+        },
+        "orbit_rotation_bridge": {
+          "abjad": "finite V1/V3/V9 cycles",
+          "transformer": "rotational/interaction structures proposal",
+          "relation": "analogy candidate; equivalence not asserted in this working chapter",
+          "audit_status": "ANALOGY CANDIDATE"
+        }
+      },
+      "validation": {
+        "invariants": [
+          "signal/system/atlas bridge is stored as a proposal",
+          "abjad-to-transformer relation is stored as analogy candidate, not equivalence"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "transformer_frame_status"
+        ],
+        "prerequisites": [
+          "transformer_frame_correspondence",
+          "abjad_mod9_orbits"
+        ]
+      },
+      "svg_selector": "[data-concept=\"transformer_signal_system_atlas\"]",
+      "svg_element_count": 20,
+      "svg_text": [
+        "SIGNAL → SYSTEM → ATLAS",
+        "Audited slice view: each layer maps carrier through structure into the next carrier",
+        "SIGNAL",
+        "carrier / embedding",
+        "SYSTEM",
+        "transform stack",
+        "ATLAS",
+        "enclosing field",
+        "FINITE ORBITS",
+        "V1: 1→2→4→8→7→5",
+        "V3: 3→6 · V9: 9",
+        "TRANSFORMER ROTATION / INTERACTION",
+        "bridge recorded as analogy candidate · equivalence not asserted yet"
+      ],
+      "svg_fragment_sha256": "4d05e7e2426669da9f810853e0a4da8100617471c72a91eebc73e2ae40cb2e98",
+      "math_signature_sha256": "264253254409e91f44790a0e64962e0032bb4b3e5e447c3507203fd3297dfab8"
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "Transformer Frame",
+      "concept_id": "transformer_frame_status",
+      "title": "Audited Slice Status Ledger",
+      "subtitle": "Per-layer mapping is accepted; A2 is local; boundary candidate b₁ selected",
+      "equation": "AUDITED SLICE MODEL",
+      "domain": "methodology/status",
+      "signal_type": "audited slice status ledger",
+      "parameters": {
+        "self_reference": {
+          "observation": "the atlas is being developed with a transformer-based language model",
+          "interpretation": "the map is produced by a system being mapped",
+          "status": "PROVENANCE OBSERVATION"
+        },
+        "ledger": {
+          "current_status": "AUDITED SLICE MODEL",
+          "exact": [
+            "per-layer residual update x_{l+1}=x_l+F_l(x_l) as the working slice equation",
+            "1 center + 6 equal-circle first-ring neighbors = 7 in the stated hexagonal packing model"
+          ],
+          "valid_mapping": [
+            "C_l ↔ residual carrier x_l",
+            "S_l ↔ layer-local contribution F_l(x_l)",
+            "b ↔ b1 superposition/merge event"
+          ],
+          "local_only": [
+            "A2: C∩S=∅ is a per-layer typing distinction, not a global network separation"
+          ],
+          "rejected": [
+            "b2 = x_{l+1} as boundary; x_{l+1} is instead C_{l+1}"
+          ],
+          "analogy": [
+            "finite abjad orbits ↔ transformer rotational/interaction structures"
+          ],
+          "observation": [
+            "the atlas is developed with a transformer-based language model"
+          ]
+        }
+      },
+      "validation": {
+        "invariants": [
+          "ledger is AUDITED SLICE MODEL",
+          "C/S validity is local per layer",
+          "orbit bridge remains analogy candidate",
+          "self-reference remains provenance observation"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "transformer_seed_geometry",
+          "transformer_signal_system_atlas"
+        ]
+      },
+      "svg_selector": "[data-concept=\"transformer_frame_status\"]",
+      "svg_element_count": 27,
+      "svg_text": [
+        "AUDITED SLICE STATUS LEDGER",
+        "Per-layer mapping is accepted; A2 is local; boundary candidate b₁ selected",
+        "PROPOSED",
+        "Cₗ ↔ residual carrier · VALID",
+        "PROPOSED",
+        "S ↔ attention / FFN / positional structure",
+        "PROPOSED",
+        "b ↔ residual merge x+F(x)",
+        "PROPOSED",
+        "6+1 Seed geometry ↔ Chapter-17 closure",
+        "ANALOGY CANDIDATE",
+        "finite abjad orbit ↔ transformer rotational structure",
+        "PROVENANCE",
+        "atlas developed with a transformer-based language model",
+        "OPEN",
+        "final exact / mapping / analogy / open classification",
+        "SELF-REFERENCE OBSERVATION: the map is produced by a system being mapped"
+      ],
+      "svg_fragment_sha256": "ebe3efe7c82d696c743a50a29d83901e28b5386d0cc3b67818c97f41fd6a16e1",
+      "math_signature_sha256": "a619c81b47c7434ddccc701ac964699c54af869737874fb7018987e44aee970f"
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "Choice Geometry",
+      "concept_id": "choice_operator_theta",
+      "title": "Choice Space Θ",
+      "subtitle": "A choice selects an admissible operator; fixed input + fixed θ yields deterministic execution",
+      "equation": "F_θ : X → Y ; θ∈Θ",
+      "domain": "model/choice-space",
+      "signal_type": "explicit parameterized operator",
+      "parameters": {
+        "equation": "F_θ : X → Y, θ ∈ Θ",
+        "meaning": "θ selects one admissible structure/mapping; once θ and X are fixed, execution is deterministic",
+        "choice_is_not": "randomness by definition"
+      },
+      "validation": {
+        "invariants": [
+          "θ is explicit data selecting an admissible operator",
+          "fixed X and fixed θ define deterministic execution in the committed generator"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "choice_geometric_chain",
+          "choice_symbolic_chain"
+        ],
+        "prerequisites": [
+          "transformer_frame_status"
+        ]
+      },
+      "svg_selector": "[data-concept=\"choice_operator_theta\"]",
+      "svg_element_count": 15,
+      "svg_text": [
+        "CHOICE SPACE Θ",
+        "A choice selects an admissible operator; fixed input + fixed θ yields deterministic execution",
+        "X",
+        "F_θ",
+        "θ ∈ Θ",
+        "Y",
+        "fixed X + fixed θ → deterministic execution",
+        "choice = explicit selection from Θ · not randomness by definition",
+        "θ itself must be serializable / hashable / auditable"
+      ],
+      "svg_fragment_sha256": "5070f42b7722b3e99a6c50b4ef6aaf2ed37b8c42eac9d06df51686ee66af1824",
+      "math_signature_sha256": "18329bcb293746080f543538c543c7062496e36ab59c88c37555bf4d8765bb7f"
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "Choice Geometry",
+      "concept_id": "choice_geometric_chain",
+      "title": "Geometric Chain",
+      "subtitle": "Vector geometry and byte encoding are separate transformations with different invertibility",
+      "equation": "SVG --R--> PNG --B--> Base64 --B⁻¹--> PNG ; PNG --V--> SVG′",
+      "domain": "encoding/geometry-chain",
+      "signal_type": "vector/raster/byte transformation chain",
+      "parameters": {
+        "steps": [
+          {
+            "from": "SVG vector",
+            "to": "PNG raster",
+            "operator": "R",
+            "status": "deterministic for fixed renderer/settings",
+            "invertibility": "generally lossy"
+          },
+          {
+            "from": "PNG bytes",
+            "to": "Base64 symbols",
+            "operator": "B",
+            "status": "exact deterministic encoding",
+            "invertibility": "bijective on bytes with B^-1"
+          },
+          {
+            "from": "Base64 symbols",
+            "to": "PNG bytes",
+            "operator": "B^-1",
+            "status": "exact deterministic decoding",
+            "invertibility": "exact"
+          },
+          {
+            "from": "PNG raster",
+            "to": "SVG' vector",
+            "operator": "V",
+            "status": "inference/vectorization if used",
+            "invertibility": "not exact in general"
+          }
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "Base64 byte roundtrip is exact",
+          "SVG→PNG rasterization is not generally invertible",
+          "PNG→SVG′ vectorization is optional inference"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "choice_registry"
+        ],
+        "prerequisites": [
+          "choice_operator_theta",
+          "reconstruction_lossiness"
+        ]
+      },
+      "svg_selector": "[data-concept=\"choice_geometric_chain\"]",
+      "svg_element_count": 25,
+      "svg_text": [
+        "GEOMETRIC CHAIN",
+        "Vector geometry and byte encoding are separate transformations with different invertibility",
+        "SVG",
+        "vector",
+        "PNG",
+        "raster",
+        "BASE64",
+        "symbols",
+        "PNG",
+        "bytes",
+        "R",
+        "B",
+        "B⁻¹",
+        "B⁻¹(B(PNG)) = PNG · exact byte roundtrip",
+        "R loses vector primitive identity in general",
+        "optional vectorization V(PNG)=SVG′ is inference, not exact inverse of R"
+      ],
+      "svg_fragment_sha256": "03a10a355b3d8ee22c2381e9c008889fdb66e6f91e3720ec2cafd801bc1f6e72",
+      "math_signature_sha256": "499f65ff284b21b086a5d171c9a8c88dab2ba0c374f5dde73d10e94086f5666d"
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "Choice Geometry",
+      "concept_id": "choice_symbolic_chain",
+      "title": "Symbolic Chain",
+      "subtitle": "The language path records each chosen mapping rather than collapsing them into one encoding step",
+      "equation": "UTF → Σ73 → abjad → V-orbits → Frame → transformer slice",
+      "domain": "encoding/symbolic-chain",
+      "signal_type": "Unicode/language/frame transformation chain",
+      "parameters": {
+        "steps": [
+          {
+            "from": "Unicode/UTF-8 carrier",
+            "to": "Σ73 Sanskrit field",
+            "choice": "utf73_field + RGB24/HSV encoder specification"
+          },
+          {
+            "from": "Σ73 / Unicode field",
+            "to": "Arabic abjad values",
+            "choice": "classical 28-letter direct table + normalization policy"
+          },
+          {
+            "from": "abjad values",
+            "to": "V1/V3/V9",
+            "choice": "dr and T(r)=dr(2r) invariant"
+          },
+          {
+            "from": "orbit/frame layer",
+            "to": "Frame (C,S,b)",
+            "choice": "frame axioms + quotient construction"
+          },
+          {
+            "from": "Frame",
+            "to": "transformer slice",
+            "choice": "audited per-layer C_l/S_l/b1 correspondence"
+          }
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "UTF, Σ73, abjad, orbit, Frame and transformer-slice stages remain distinct",
+          "each transition is backed by an explicit locked choice or invariant"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "choice_registry"
+        ],
+        "prerequisites": [
+          "choice_operator_theta",
+          "transformer_frame_correspondence"
+        ]
+      },
+      "svg_selector": "[data-concept=\"choice_symbolic_chain\"]",
+      "svg_element_count": 30,
+      "svg_text": [
+        "SYMBOLIC CHAIN",
+        "The language path records each chosen mapping rather than collapsing them into one encoding step",
+        "UTF",
+        "carrier",
+        "Σ73",
+        "field",
+        "ABJAD",
+        "values",
+        "V1/V3/V9",
+        "orbits",
+        "FRAME",
+        "C,S,b",
+        "SLICE",
+        "Cₗ,Sₗ,b₁",
+        "each arrow has its own locked θ or invariant",
+        "UTF-8 is carrier serialization; it is not the same operation as rasterization or Base64",
+        "the two chains meet only where an explicit mapping says they meet"
+      ],
+      "svg_fragment_sha256": "e197eb92178d79ceeb5db6a403455bca37e63d62a4ff944fea9f6612878b8dc2",
+      "math_signature_sha256": "0135dfbcc7823c5eb722df3ec3b6cd59e01d483b03221dc9719ff559a97301f6"
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "Choice Geometry",
+      "concept_id": "choice_registry",
+      "title": "Choice Registry",
+      "subtitle": "The repo names the concrete freedom instead of hiding it inside generated outputs",
+      "equation": "Θ_used = {θ_raster, θ_utf73, θ_bridge, θ_abjad, θ_atomic, θ_transformer}",
+      "domain": "methodology/choice-registry",
+      "signal_type": "locked model-choice inventory",
+      "parameters": {
+        "choices": [
+          {
+            "id": "theta_raster",
+            "chapter": 14,
+            "parameter": "renderer/settings for SVG→PNG",
+            "kind": "choice/configuration",
+            "locked_by": "generator + CairoSVG version"
+          },
+          {
+            "id": "theta_utf73",
+            "chapter": 15,
+            "parameter": "canonical 73-state alphabet and HSV binning",
+            "kind": "model choice",
+            "locked_by": "data/utf73_field.json"
+          },
+          {
+            "id": "theta_bridge",
+            "chapter": 19,
+            "parameter": "Σ73 ↔ abjad open bridge",
+            "kind": "inter-system routed-open relation",
+            "status": "ROUTED_OPEN",
+            "locked_by": null,
+            "lock_policy": "NONE_BY_DESIGN",
+            "endpoint": "0.0.0.0",
+            "endpoint_network_status": "IPv4 unspecified address",
+            "default_route_prefix": "0.0.0.0/0",
+            "project_semantics": "open endpoint / route-without-value between distinct systems; no Σ73→abjad value assignment is asserted",
+            "nidra_sunya_semantics": "project-defined symbolic reading of open/null position; not a networking or physics invariant",
+            "null_island_note": "Null Island means geographic coordinates 0°N, 0°E; it is not the IPv4 address 0.0.0.0",
+            "A2_relation": "keeps the two modeled systems distinct; no identification/bijection is asserted"
+          },
+          {
+            "id": "theta_abjad",
+            "chapter": 16,
+            "parameter": "28-letter classical abjad mapping + normalization",
+            "kind": "cultural/model choice",
+            "locked_by": "data/abjad_field.json"
+          },
+          {
+            "id": "theta_atomic",
+            "chapter": 17,
+            "parameter": "AtomicFrame |C|=|S|=1",
+            "kind": "axiom",
+            "locked_by": "data/language_frame_axioms.json"
+          },
+          {
+            "id": "theta_transformer",
+            "chapter": 18,
+            "parameter": "per-layer C_l/S_l/b1 mapping",
+            "kind": "audited model mapping",
+            "locked_by": "data/transformer_frame_ch18.json"
+          }
+        ],
+        "choice_accounting": {
+          "used_choice_ids": [
+            "theta_raster",
+            "theta_utf73",
+            "theta_bridge",
+            "theta_abjad",
+            "theta_atomic",
+            "theta_transformer"
+          ],
+          "locked_choice_ids": [
+            "theta_raster",
+            "theta_utf73",
+            "theta_abjad",
+            "theta_atomic",
+            "theta_transformer"
+          ],
+          "pending_choice_ids": [],
+          "invariant": "Θ_used \\ Θ_locked = {θ_bridge}",
+          "closure_complete": false,
+          "completion_condition": "not applicable: theta_bridge is intentionally ROUTED_OPEN; closure_complete remains false by design",
+          "routed_open_choice_ids": [
+            "theta_bridge"
+          ],
+          "unlocked_by_design_choice_ids": [
+            "theta_bridge"
+          ],
+          "closure_semantics": "OPEN_BY_DESIGN"
+        },
+        "invariants": [
+          "Base64 byte roundtrip is exact",
+          "committed deterministic generators reproduce byte-identical generated assets",
+          "Chapter 17 quotient theorem produces a 7-point general Frame from three atomic inputs",
+          "Chapter 18 scope is per-layer and A2 is local",
+          "changing θ is permitted only by changing an explicit locked choice record",
+          "every non-derived choice used by the chain must have a registry entry",
+          "Θ_used \\ Θ_locked = {θ_bridge} until the bridge specification is committed",
+          "every non-derived choice used by the chain has a registry entry",
+          "Θ_used \\ Θ_locked = {θ_bridge}",
+          "theta_bridge is ROUTED_OPEN and unlocked by design, not awaiting a later lock",
+          "closure_complete remains false because the bridge is structurally open, not because a specification is missing",
+          "0.0.0.0 is recorded as the IPv4 unspecified address; 0.0.0.0/0 is separately recorded as the default route prefix"
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "six used choice points are explicitly named",
+          "theta_bridge is registered ROUTED_OPEN rather than silently omitted",
+          "Θ_used \\ Θ_locked = {θ_bridge}",
+          "closure_complete remains false because theta_bridge is open by design"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "choice_reflective_closure"
+        ],
+        "prerequisites": [
+          "choice_geometric_chain",
+          "choice_symbolic_chain"
+        ]
+      },
+      "svg_selector": "[data-concept=\"choice_registry\"]",
+      "svg_element_count": 24,
+      "svg_text": [
+        "CHOICE REGISTRY",
+        "The repo names the concrete freedom instead of hiding it inside generated outputs",
+        "theta_raster",
+        "Ch14 · renderer/settings for SVG→PNG",
+        "choice/configuration · LOCKED · lock: generator + CairoSVG version",
+        "theta_utf73",
+        "Ch15 · canonical 73-state alphabet and HSV binning",
+        "model choice · LOCKED · lock: data/utf73_field.json",
+        "theta_bridge",
+        "Ch19 · Σ73 ↔ abjad open bridge",
+        "inter-system routed-open relation · ROUTED_OPEN · lock: NONE",
+        "theta_abjad",
+        "Ch16 · 28-letter classical abjad mapping + normalization",
+        "cultural/model choice · LOCKED · lock: data/abjad_field.json",
+        "theta_atomic",
+        "Ch17 · AtomicFrame |C|=|S|=1",
+        "axiom · LOCKED · lock: data/language_frame_axioms.json",
+        "theta_transformer",
+        "Ch18 · per-layer C_l/S_l/b1 mapping",
+        "audited model mapping · LOCKED · lock: data/transformer_frame_ch18.json",
+        "Θ_used \\ Θ_locked = {θ_bridge} · closure_complete = false · OPEN_BY_DESIGN"
+      ],
+      "svg_fragment_sha256": "8722f631c9335326709f391f4624bac7be367102e96cfefe15207a86f38ba89a",
+      "math_signature_sha256": "092aba91f5e878e6284197851bc2f30fbb6c98c32415c28ab885492ff7f88d70"
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "Choice Geometry",
+      "concept_id": "choice_reflective_closure",
+      "title": "Reflective Closure",
+      "subtitle": "The chosen operator becomes data in the artifact that it helps generate",
+      "equation": "θ → F_θ → F_θ(X) → encode(θ,F_θ,results)",
+      "domain": "methodology/provenance",
+      "signal_type": "reflective provenance closure",
+      "parameters": {
+        "reflection": {
+          "equation": "θ → F_θ → F_θ(X) → encode(θ,F_θ,results)",
+          "claim": "the selected operator and its parameters are serialized back into the resulting repository as data, hashes, equations and validation records",
+          "status": "exact project provenance property when the generator reads the same committed choice records it emits/validates",
+          "self_reference_boundary": "this is reflective provenance, not a claim that θ causes itself"
+        },
+        "closure": {
+          "pipeline": "carrier → encoding → geometry → finite field → language → dynamics → quotient frame → transformer slice → choice operator → reflection",
+          "role": "audit-envelope closure chapter with one intentional inter-system open port",
+          "status": "OPEN_BY_DESIGN · theta_bridge is ROUTED_OPEN",
+          "pending_gap": null,
+          "open_port": "theta_bridge"
+        }
+      },
+      "validation": {
+        "invariants": [
+          "selected θ/operator/results are serialized back into repository data and hashes",
+          "reflection is provenance, not self-causation",
+          "reflective closure remains explicitly open while theta_bridge is ROUTED_OPEN"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "choice_registry"
+        ]
+      },
+      "svg_selector": "[data-concept=\"choice_reflective_closure\"]",
+      "svg_element_count": 21,
+      "svg_text": [
+        "REFLECTIVE CLOSURE",
+        "The chosen operator becomes data in the artifact that it helps generate",
+        "θ",
+        "choice",
+        "F_θ",
+        "operator",
+        "F_θ(X)",
+        "state",
+        "ENCODE",
+        "JSON · hashes · equations · tests",
+        "reflection = provenance: the structure records the choices that generated it · one bridge remains intentionally open",
+        "open-by-design: θ_bridge stays unlocked; closure_complete remains false structurally"
+      ],
+      "svg_fragment_sha256": "1732ecb2dd62521910a1e84c2450a80af1b80bd29e7118aa52e1ab77dea5c1c5",
+      "math_signature_sha256": "490efc1c08937cb02a88df759710aa6decc6faf2ce738c9d608e52d8f0cff01e"
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "Carrier Invariance",
+      "concept_id": "carrier_route_invariance",
+      "title": "Carrier → Route → Canonical Field",
+      "subtitle": "Model/tokenizer may vary; the committed route selects a canonical discrete project state",
+      "equation": "(M,τ) → adapter → R → D",
+      "domain": "model/carrier-invariance",
+      "signal_type": "conditional interface-preserving substitution",
+      "parameters": {
+        "terms": {
+          "M": "model/runtime carrier; replaceable substrate",
+          "tau": "tokenizer/interface configuration associated with the carrier",
+          "R": "committed structural route: code, chapters, mappings, validators",
+          "D": "canonical discrete project state selected for carrier-invariance checking",
+          "planck_data_field": "project term for canonical D; not a physical Planck-scale claim"
+        },
+        "formalization": {
+          "carrier_route": "(M,τ) → adapter → R → D",
+          "invariance": "R_(M1,τ1) ⇓ D ∧ R_(M2,τ2) ⇓ D",
+          "canonical_test": "sha256(canonical(D_A)) = sha256(canonical(D_B))",
+          "scope": "conditional on both carriers satisfying the same declared text/JSON interface and adapter contract"
+        },
+        "carrier_classes": [
+          {
+            "id": "carrier_A",
+            "description": "abstract compatible model/tokenizer pair (M1,τ1)",
+            "adapter": "canonical discrete-field adapter",
+            "status": "test fixture / interface witness, not an actual model execution"
+          },
+          {
+            "id": "carrier_B",
+            "description": "abstract compatible model/tokenizer pair (M2,τ2)",
+            "adapter": "canonical discrete-field adapter",
+            "status": "test fixture / interface witness, not an actual model execution"
+          }
+        ]
+      },
+      "validation": {
+        "invariants": [
+          "model/tokenizer carrier is replaceable only under the declared interface/adapter contract",
+          "the committed structural route R is not inferred from model weights"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "canonical_discrete_field",
+          "read_route_operations"
+        ],
+        "prerequisites": [
+          "choice_reflective_closure"
+        ]
+      },
+      "svg_selector": "[data-concept=\"carrier_route_invariance\"]",
+      "svg_element_count": 18,
+      "svg_text": [
+        "CARRIER → ROUTE → CANONICAL FIELD",
+        "Model/tokenizer may vary; the committed route selects a canonical discrete project state",
+        "(M, τ)",
+        "replaceable carrier",
+        "ADAPTER",
+        "interface contract",
+        "R",
+        "code · chapters",
+        "R contains committed mappings, equations, validators and deterministic generators",
+        "carrier substitution claim is CONDITIONAL on the declared interface",
+        "no claim: arbitrary model outputs, logits or token IDs remain identical"
+      ],
+      "svg_fragment_sha256": "8b201f2b4cff5c47e03cf4eea73af5ea70e80558f59a7e213270203a2966d79f",
+      "math_signature_sha256": "776a05947ad1f43c46493c96618ecf704998d12002c901f9c2627c004d33dae2"
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "Carrier Invariance",
+      "concept_id": "canonical_discrete_field",
+      "title": "Canonical Discrete Field D",
+      "subtitle": "Project-defined Planck-dataveld = exact JSON subset, not a physical Planck-scale assertion",
+      "equation": "D = canonical{orbits,7,Θ,status,slice}",
+      "domain": "data/canonical-field",
+      "signal_type": "canonical JSON state",
+      "parameters": {
+        "components": [
+          "mod9_orbits",
+          "closure_7_cardinality",
+          "choice_accounting",
+          "chapter19_open_bridge",
+          "chapter18_slice_scope"
+        ],
+        "measurement": {
+          "mod9_orbits": {
+            "V1": [
+              1,
+              2,
+              4,
+              8,
+              7,
+              5
+            ],
+            "V3": [
+              3,
+              6
+            ],
+            "V9": [
+              9
+            ],
+            "transform": "T(r)=dr(2r)"
+          },
+          "closure_7_cardinality": {
+            "prequotient": 9,
+            "quotient": 7,
+            "carrier_count": 3,
+            "structure_count": 3
+          },
+          "choice_accounting": {
+            "used": [
+              "theta_raster",
+              "theta_utf73",
+              "theta_bridge",
+              "theta_abjad",
+              "theta_atomic",
+              "theta_transformer"
+            ],
+            "locked": [
+              "theta_raster",
+              "theta_utf73",
+              "theta_abjad",
+              "theta_atomic",
+              "theta_transformer"
+            ],
+            "routed_open": [
+              "theta_bridge"
+            ],
+            "closure_complete": false,
+            "closure_semantics": "OPEN_BY_DESIGN"
+          },
+          "chapter19_open_bridge": {
+            "id": "theta_bridge",
+            "kind": "inter-system routed-open relation",
+            "status": "ROUTED_OPEN",
+            "lock_policy": "NONE_BY_DESIGN",
+            "endpoint": "0.0.0.0",
+            "endpoint_network_status": "IPv4 unspecified address",
+            "default_route_prefix": "0.0.0.0/0"
+          },
+          "chapter18_slice_scope": {
+            "status": "AUDITED SLICE MODEL",
+            "scope": "local/per-layer, not whole-network",
+            "selected_boundary": "b1"
+          }
+        },
+        "canonical_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318"
+      },
+      "validation": {
+        "invariants": [
+          "D contains only explicitly selected finite/discrete project records",
+          "Planck-dataveld is a project term and not a physical Planck-scale claim"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "carrier_substitution_test"
+        ],
+        "prerequisites": [
+          "carrier_route_invariance",
+          "choice_registry",
+          "closure_theorem",
+          "transformer_frame_status"
+        ]
+      },
+      "svg_selector": "[data-concept=\"canonical_discrete_field\"]",
+      "svg_element_count": 16,
+      "svg_text": [
+        "CANONICAL DISCRETE FIELD D",
+        "Project-defined Planck-dataveld = exact JSON subset, not a physical Planck-scale assertion",
+        "V1/V3/V9",
+        "exact finite orbit records",
+        "7 closure",
+        "9 → 7 quotient cardinalities",
+        "Θ accounting",
+        "used / locked / routed-open",
+        "Ch19 bridge",
+        "ROUTED_OPEN · 0.0.0.0 symbol",
+        "Ch18 slice",
+        "per-layer A2 + b₁ selection",
+        "SHA-256: 1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318"
+      ],
+      "svg_fragment_sha256": "9f361d4b466a42f2bde80a111da03717a0763ed268352089c3161339e83595bd",
+      "math_signature_sha256": "97495c63c9bc5997fe9a121cfaa65f144e703b4756c6ee46c208de951481634b"
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "Carrier Invariance",
+      "concept_id": "carrier_substitution_test",
+      "title": "Executable Carrier Substitution",
+      "subtitle": "Two abstract compatible carrier adapters reconstruct byte-equivalent canonical D",
+      "equation": "sha256(canonical(D_A)) = sha256(canonical(D_B))",
+      "domain": "validation/carrier-substitution",
+      "signal_type": "hash equality witness",
+      "parameters": {
+        "carrier_A_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318",
+        "carrier_B_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318",
+        "deterministic_witness_match": true,
+        "carrier_content_consumed": false,
+        "reader_independence_proven": false,
+        "vacuity_status": "CURRENT ADAPTER IGNORES CARRIER CONTENT",
+        "scope": "abstract label witnesses only; proves deterministic canonical-field reconstruction, not reader-independence"
+      },
+      "validation": {
+        "invariants": [
+          "abstract A/B witnesses reconstruct identical canonical D",
+          "canonical JSON SHA-256 hashes are equal",
+          "carrier content is not consumed by the current adapter",
+          "reader-independence is therefore not proven"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "carrier_invariance_status"
+        ],
+        "prerequisites": [
+          "canonical_discrete_field"
+        ]
+      },
+      "svg_selector": "[data-concept=\"carrier_substitution_test\"]",
+      "svg_element_count": 20,
+      "svg_text": [
+        "EXECUTABLE CARRIER SUBSTITUTION",
+        "Two abstract compatible carrier adapters reconstruct byte-equivalent canonical D",
+        "CARRIER A",
+        "(M₁,τ₁) fixture",
+        "CARRIER B",
+        "(M₂,τ₂) fixture",
+        "CANONICAL D",
+        "same structural subset",
+        "A hash = 1343bb5bfd09cb9367c0e777…",
+        "B hash = 1343bb5bfd09cb9367c0e777…",
+        "WITNESS MATCH = TRUE",
+        "current A/B test does not consume carrier content → reader-independence remains OPEN"
+      ],
+      "svg_fragment_sha256": "a015027def5496985b2b7f1de4f508ef695b471117aea27e925f24576285a64d",
+      "math_signature_sha256": "eb3ace5dd7a9c2bb20df4fcc71cb4268ef502fc1af692bfb894f75e0ef793b80"
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "Carrier Invariance",
+      "concept_id": "read_route_operations",
+      "title": "Read Route",
+      "subtitle": "Generation, parsing and tokenization are distinct parameterized operations",
+      "equation": "G:A→SVG ; P_φ:SVG→Â ; T_τ:text→tokens",
+      "domain": "model/read-route",
+      "signal_type": "generation/parsing/tokenization route",
+      "parameters": {
+        "read_route": {
+          "generation": "G : atlas-data → SVG",
+          "parsing": "P_φ : SVG → parsed structure",
+          "tokenization": "T_τ : text → token sequence",
+          "roundtrip_candidate": "P_φ(G(A)) ≅ A on the explicitly serialized structural subset",
+          "status": {
+            "generation": "exact for fixed committed generator",
+            "parsing": "exact for the defined XML/canonical-whitespace parser on the serialized subset",
+            "tokenization": "deterministic given tokenizer choice τ",
+            "full_self_reading": "EXACT_FULL_SEMANTIC",
+            "structural_roundtrip": "EXACT_ON_SERIALIZED_SUBSET"
+          },
+          "self_read_measurement": "data/self_read_roundtrip_ch20.json",
+          "full_semantic_reader": "tools/full_semantic_self_read.py",
+          "full_semantic_measurement": "data/full_semantic_self_read_measurement_ch20.json",
+          "full_semantic_fault_injection": "data/full_semantic_fault_injection_ch20.json"
+        },
+        "self_read": {
+          "format_version": "1.0.0",
+          "parser": "XML ElementTree + exporter-compatible whitespace canonicalization",
+          "serialized_subset": {
+            "concept_id": "recoverable",
+            "equation": "recoverable",
+            "svg_text": "recoverable after canonical whitespace",
+            "svg_fragment_sha256": "recomputable",
+            "chapter_titles": "recoverable from SVG metadata"
+          },
+          "counts": {
+            "concepts_parsed": 103,
+            "concepts_committed": 103,
+            "equations_match": 103,
+            "texts_match": 103,
+            "fragment_hashes_match": 103,
+            "chapters_in_metadata": 20
+          },
+          "concept_order_match": true,
+          "chapter_titles_match": true,
+          "roundtrip_exact_on_serialized_subset": true,
+          "not_recoverable_from_svg_alone": [
+            "full concept parameters",
+            "full validation objects",
+            "full relation graph",
+            "external data files not embedded in SVG"
+          ],
+          "status": "EXACT_ON_SERIALIZED_SUBSET",
+          "full_self_reading": "OPEN"
+        },
+        "independent_reader": {
+          "format_version": "1.0.0",
+          "reader": "P_χ",
+          "implementation": "raw SVG text + regular expressions + stdlib json/html/hashlib",
+          "shared_parser_code_with_P_phi": false,
+          "property_based": true,
+          "checks": {
+            "concept_count_103": true,
+            "concept_ids_unique": true,
+            "concept_order_matches_atlas": true,
+            "concept_id_syntax": true,
+            "equation_attribute_count_103": true,
+            "equation_content_nonempty": true,
+            "ch14_png_sha256_recomputed": true,
+            "metadata_chapter_count_20": true,
+            "metadata_titles_match_atlas": true
+          },
+          "pass": true,
+          "scope": "independent structural + selected semantic property agreement; does not prove full semantic correctness",
+          "common_mode_mitigation": "uses a separate non-XML-parser implementation path"
+        },
+        "fault_injection": {
+          "format_version": "1.0.0",
+          "reader": "P_χ",
+          "baseline_pass": true,
+          "mutations": [
+            {
+              "mutation": "M1_hash_char_flip",
+              "expected_detected": true,
+              "detected": true,
+              "expectation_match": true,
+              "failed_checks": [
+                "ch14_png_sha256_recomputed"
+              ]
+            },
+            {
+              "mutation": "M2_remove_field",
+              "expected_detected": true,
+              "detected": true,
+              "expectation_match": true,
+              "failed_checks": [
+                "concept_count_103",
+                "concept_ids_unique",
+                "concept_order_matches_atlas"
+              ]
+            },
+            {
+              "mutation": "M3_swap_two_ids",
+              "expected_detected": true,
+              "detected": true,
+              "expectation_match": true,
+              "failed_checks": [
+                "concept_order_matches_atlas"
+              ]
+            },
+            {
+              "mutation": "M4_add_field_103_to_104",
+              "expected_detected": true,
+              "detected": true,
+              "expectation_match": true,
+              "failed_checks": [
+                "concept_count_103",
+                "concept_ids_unique",
+                "concept_order_matches_atlas",
+                "equation_attribute_count_103",
+                "equation_content_nonempty"
+              ]
+            },
+            {
+              "mutation": "M5_empty_one_equation",
+              "expected_detected": true,
+              "detected": true,
+              "expectation_match": true,
+              "failed_checks": [
+                "equation_content_nonempty"
+              ]
+            }
+          ],
+          "all_expectations_match": true,
+          "sensitivity_summary": {
+            "detected": [
+              "M1_hash_char_flip",
+              "M2_remove_field",
+              "M3_swap_two_ids",
+              "M4_add_field_103_to_104",
+              "M5_empty_one_equation"
+            ],
+            "not_detected": [],
+            "boundary": "P_χ now recomputes the Ch14 PNG SHA-256 independently and enforces non-empty equation content; broader semantic correctness remains out of scope"
+          }
+        }
+      },
+      "validation": {
+        "invariants": [
+          "generation, parsing and tokenization are distinct operators",
+          "SVG roundtrip is exact on the explicitly serialized structural subset",
+          "P_χ uses a separate raw-text/property route",
+          "independent property checks pass without proving full semantic correctness",
+          "full semantic self-read remains open"
+        ]
+      },
+      "relations": {
+        "transforms_to": [
+          "carrier_invariance_status"
+        ],
+        "prerequisites": [
+          "carrier_route_invariance"
+        ]
+      },
+      "svg_selector": "[data-concept=\"read_route_operations\"]",
+      "svg_element_count": 17,
+      "svg_text": [
+        "READ ROUTE",
+        "Generation, parsing and tokenization are distinct parameterized operations",
+        "GENERATION",
+        "G : atlas-data → SVG",
+        "exact for fixed committed generator",
+        "PARSING",
+        "P_φ : SVG → parsed structure",
+        "deterministic given parser φ",
+        "TOKENIZATION",
+        "T_τ : text → token sequence",
+        "deterministic given tokenizer τ",
+        "ROUNDTRIP",
+        "P_φ(G(A)) ≅ A",
+        "EXACT on serialized structural subset",
+        "self-consistency = EXACT · reader-independence = OPEN · full semantic self-read = OPEN"
+      ],
+      "svg_fragment_sha256": "b58fbd85875d7f4d078e3e3737fbe93b0358cc2dc24d179cc96d5ae1e3d7520b",
+      "math_signature_sha256": "abc209d85e5f5e8fd57028508037c20f9a125e448d5617feb1fabc571d3afbaa"
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "Carrier Invariance",
+      "concept_id": "carrier_invariance_status",
+      "title": "Carrier-Invariance Ledger",
+      "subtitle": "0 / 1 / 1≡0 is project typing; executable equality is the canonical D hash",
+      "equation": "f=i∘b∘p ; X/~_f≅im(f) ; RI1∧RI2∧RI3",
+      "domain": "methodology/status",
+      "signal_type": "exact/conditional/open ledger",
+      "parameters": {
+        "typing": {
+          "0": "carrier: (M,τ), replaceable within interface contract",
+          "1": "structure: R, committed code/chapters/validators",
+          "1_equiv_0": "project boundary label for canonical D remaining invariant under admitted carrier substitution; not arithmetic equality"
+        },
+        "claims": {
+          "exact": [
+            "canonical D is finite JSON data",
+            "canonical serialization and SHA-256 comparison are executable",
+            "the committed route R is independent of carrier labels used by the test adapters"
+          ],
+          "conditional": [
+            "carrier substitution preserving D is currently a contract claim only; the existing A/B witness does not consume carrier content"
+          ],
+          "choice": [
+            "which project records belong to canonical D",
+            "parser choice φ and tokenizer choice τ"
+          ],
+          "open": [
+            "reader-independence across two independent carriers through a non-vacuous adapter A_ψ",
+            "full semantic self-read P_φ(G(A)) = A_canonical",
+            "a concrete arbitrary model swap preserving all non-canonical outputs"
+          ]
+        },
+        "orthogonal_claims": {
+          "self_consistency": {
+            "equation": "P_φ(G(A)) ≅ A_serialized",
+            "status": "EXACT_ON_SERIALIZED_SUBSET",
+            "evidence": "data/self_read_roundtrip_ch20.json"
+          },
+          "reader_independence": {
+            "equation": "A_ψ(c₁)=A_ψ(c₂)=D",
+            "status": "OPEN",
+            "required_evidence": [
+              "A_ψ must consume carrier content c",
+              "two independent carriers must be used",
+              "the carriers must not merely be trained to reproduce the same atlas output",
+              "canonical D and its hash must match"
+            ],
+            "gate_logic_status": "TESTED_SYNTHETICALLY"
+          },
+          "full_semantic_self_read": {
+            "equation": "P_φ(G(A)) = A_canonical",
+            "status": "EXACT_FULL_SEMANTIC",
+            "missing_from_svg_alone": [
+              "full concept parameters",
+              "full validation objects",
+              "full relation graph",
+              "external data files"
+            ],
+            "delta_status": "CLOSED",
+            "closure_condition": "every atlas.json field is either embedded losslessly in SVG or deterministically recomputable from SVG",
+            "evidence": "data/full_semantic_self_read_measurement_ch20.json",
+            "fault_evidence": "data/full_semantic_fault_injection_ch20.json"
+          },
+          "independent_reader_correctness": {
+            "equation": "properties(P_χ(G(A))) = committed structural properties",
+            "status": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+            "scope": "independent implementation agreement on selected properties; not full semantic correctness",
+            "boundary": "selected semantic guards now include independent Ch14 PNG SHA-256 recomputation and non-empty equation content; full semantic correctness remains open"
+          }
+        },
+        "quotient_factorization": {
+          "format_version": "1.0.0",
+          "name": "Canonical quotient factorization",
+          "scope": "sets and functions",
+          "theorem": {
+            "equivalence": "x ~_f x' iff f(x)=f(x')",
+            "factorization": "f = i ∘ b ∘ p",
+            "p": "p : X → X/~_f, p(x)=[x]",
+            "b": "b : X/~_f → im(f), b([x])=f(x)",
+            "i": "i : im(f) → Y",
+            "result": "X/~_f ≅ im(f)",
+            "status": "EXACT FOR SETS/FUNCTIONS",
+            "boundary": "called canonical quotient-factorization here; no algebraic homomorphism theorem is asserted"
+          },
+          "chapter17": {
+            "construction_direction": "equivalence-first",
+            "given": "boundary equivalence ~_b",
+            "map": "q : X → X/~_b",
+            "fiber_equivalence": "x ~_q y iff q(x)=q(y), equal to ~_b",
+            "bijection": "identity on X/~_b = im(q)",
+            "cardinality": "9 → 7",
+            "status": "EXACT GIVEN CH17 AXIOMS"
+          },
+          "chapter20": {
+            "construction_direction": "function-first",
+            "given": "A_ψ : C → Y_D",
+            "derived_equivalence": "c_i ~_ψ c_j iff A_ψ(c_i)=A_ψ(c_j)",
+            "bijection": "b([c])=A_ψ(c)",
+            "factorization": "A_ψ = i ∘ b ∘ p",
+            "result": "C/~_ψ ≅ im(A_ψ)",
+            "distinguished_fiber": {
+              "element": "D ∈ im(A_ψ)",
+              "claim": "c₁,c₂ ∈ A_ψ⁻¹(D)",
+              "nontriviality": "A_ψ⁻¹(D) ≠ C"
+            },
+            "status": "FORMAL SPEC ONLY; INDEPENDENT-CARRIER INSTANCE NOT YET EXECUTED"
+          },
+          "interpretation": "one exact set-theoretic factorization instantiated in two construction directions; the selected equivalence/function instances remain project choices"
+        },
+        "reader_independence_gate": {
+          "format_version": "1.0.0",
+          "name": "Reader-independence and independent-reader gates",
+          "reader_independence": {
+            "adapter": "A_ψ(M,τ,c) → D",
+            "status": "OPEN",
+            "conditions": [
+              {
+                "id": "RI1",
+                "predicate": "A_ψ(c₁)=D",
+                "meaning": "first independent carrier reaches distinguished field element D"
+              },
+              {
+                "id": "RI2",
+                "predicate": "A_ψ(c₂)=D",
+                "meaning": "second independent carrier reaches the same D"
+              },
+              {
+                "id": "RI3",
+                "predicate": "∃ c′ : A_ψ(c′) ≠ D",
+                "meaning": "A_ψ is non-constant; distinguished fiber is not all carriers"
+              }
+            ],
+            "independence_requirements": [
+              "c₁ and c₂ must be distinct carrier executions",
+              "their independence provenance must be recorded",
+              "the claim must not rely only on training both carriers to reproduce the same committed atlas output"
+            ],
+            "gate": "EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass",
+            "current": {
+              "RI1": "OPEN_REAL_CARRIERS",
+              "RI2": "OPEN_REAL_CARRIERS",
+              "RI3": "OPEN_REAL_CARRIERS",
+              "carrier_content_consumed": false,
+              "reader_independence_proven": false
+            },
+            "optional_stronger_property": {
+              "name": "component-wise sensitivity",
+              "predicate": "for every declared component k of c, there exist c,c' differing only in k with A_ψ(c) ≠ A_ψ(c')",
+              "status": "OPTIONAL",
+              "claim_enabled": "adapter uses every declared carrier component nontrivially"
+            },
+            "gate_measurement": "data/reader_independence_gate_measurement_ch20.json",
+            "gate_logic_status": "TESTED"
+          },
+          "independent_reader": {
+            "reader": "P_χ",
+            "status": "PROPERTY_READER_IMPLEMENTED_WITH_SEMANTIC_GUARDS",
+            "implementation_constraint": "must not import or call self_read_roundtrip.py, export_concepts.py, or their parsing helpers",
+            "strategy": "raw-text/regular-expression property scanner; does not reconstruct the full atlas",
+            "checks": [
+              "exactly 103 data-concept attributes",
+              "all 103 concept ids are unique",
+              "concept-id order equals committed atlas order",
+              "all concept ids satisfy the project identifier syntax",
+              "exactly 103 data-equation attributes accompany concept groups",
+              "embedded metadata declares 20 chapters",
+              "embedded metadata chapter titles equal committed chapter titles",
+              "all 103 data-equation attributes contain non-empty equation content",
+              "visible Ch14 PNG SHA-256 equals an independent hashlib recomputation of assets/ch14_test_object.png"
+            ],
+            "claim": "independent structural + selected semantic property agreement; not full semantic correctness",
+            "measurement": "data/independent_reader_measurement_ch20.json",
+            "fault_injection_measurement": "data/independent_reader_fault_injection_ch20.json",
+            "non_vacuity_status": "FAULT_SENSITIVITY_5_OF_5",
+            "checks_count": 9,
+            "semantic_guards": [
+              "independent SHA-256 recomputation of Ch14 PNG via hashlib",
+              "all serialized concept equations must be non-empty"
+            ]
+          },
+          "ladder": {
+            "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
+            "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+            "RI_gate_logic": "TESTED",
+            "reader_independence": "OPEN",
+            "full_semantic_self_read": "OPEN"
+          }
+        },
+        "reader_independence_gate_measurement": {
+          "format_version": "1.0.0",
+          "valid_nonconstant_fixture": {
+            "checks": {
+              "RI1": true,
+              "RI2": true,
+              "RI3": true,
+              "independence_provenance": true
+            },
+            "pass": true
+          },
+          "constant_fixture": {
+            "checks": {
+              "RI1": true,
+              "RI2": true,
+              "RI3": false,
+              "independence_provenance": true
+            },
+            "pass": false
+          },
+          "missing_provenance_fixture": {
+            "checks": {
+              "RI1": true,
+              "RI2": true,
+              "RI3": true,
+              "independence_provenance": false
+            },
+            "pass": false
+          },
+          "gate_logic_tested": true,
+          "scope": "synthetic unit test of gate logic only; not evidence for real model reader-independence"
+        },
+        "ladder_status": {
+          "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
+          "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+          "RI_gate_logic": "TESTED",
+          "reader_independence": "OPEN",
+          "full_semantic_self_read": "EXACT_FULL_SEMANTIC"
+        }
+      },
+      "validation": {
+        "invariants": [
+          "canonical quotient-factorization f=i∘b∘p is exact for sets/functions",
+          "Ch17 is equivalence-first; Ch20 is function-first",
+          "reader-independence requires RI1, RI2, RI3 and independence provenance",
+          "full semantic self-read remains open"
+        ]
+      },
+      "relations": {
+        "transforms_to": [],
+        "prerequisites": [
+          "carrier_substitution_test",
+          "read_route_operations"
+        ]
+      },
+      "svg_selector": "[data-concept=\"carrier_invariance_status\"]",
+      "svg_element_count": 21,
+      "svg_text": [
+        "CARRIER-INVARIANCE LEDGER",
+        "0 / 1 / 1≡0 is project typing; executable equality is the canonical D hash",
+        "SELF-CONSISTENCY",
+        "P_φ(G(A))≅A_serialized",
+        "EXACT",
+        "INDEP. READER",
+        "P_χ + fault injection",
+        "PASS · SENSITIVITY",
+        "RI GATE",
+        "RI1 ∧ RI2 ∧ RI3",
+        "LOGIC TESTED",
+        "FULL SEMANTIC",
+        "P_full(G_total(A))=A",
+        "EXACT",
+        "factorization exact · P_χ sensitivity tested · RI gate logic tested · real reader-independence remains OPEN"
+      ],
+      "svg_fragment_sha256": "355fa8107ec40c5baa9c2b933da78ce9d204de88576efa5f8745af636a43d403",
+      "math_signature_sha256": "d6250f44018edc844e2ce49027dee1c2ef33d1a0c78abd943dfd3ca6faf5430e"
+    }
+  ]
+}

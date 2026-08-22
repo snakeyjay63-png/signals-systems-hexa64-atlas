@@ -1,0 +1,153 @@
+{
+  "format_version": "1.0.0",
+  "name": "Carrier Invariance / Read Route",
+  "status": "self-consistent serialized atlas; reader-independence open",
+  "terms": {
+    "M": "model/runtime carrier; replaceable substrate",
+    "tau": "tokenizer/interface configuration associated with the carrier",
+    "R": "committed structural route: code, chapters, mappings, validators",
+    "D": "canonical discrete project state selected for carrier-invariance checking",
+    "planck_data_field": "project term for canonical D; not a physical Planck-scale claim"
+  },
+  "formalization": {
+    "carrier_route": "(M,τ) → adapter → R → D",
+    "invariance": "R_(M1,τ1) ⇓ D ∧ R_(M2,τ2) ⇓ D",
+    "canonical_test": "sha256(canonical(D_A)) = sha256(canonical(D_B))",
+    "scope": "conditional on both carriers satisfying the same declared text/JSON interface and adapter contract"
+  },
+  "read_route": {
+    "generation": "G : atlas-data → SVG",
+    "parsing": "P_φ : SVG → parsed structure",
+    "tokenization": "T_τ : text → token sequence",
+    "roundtrip_candidate": "P_φ(G(A)) ≅ A on the explicitly serialized structural subset",
+    "status": {
+      "generation": "exact for fixed committed generator",
+      "parsing": "exact for the defined XML/canonical-whitespace parser on the serialized subset",
+      "tokenization": "deterministic given tokenizer choice τ",
+      "full_self_reading": "EXACT_FULL_SEMANTIC",
+      "structural_roundtrip": "EXACT_ON_SERIALIZED_SUBSET"
+    },
+    "self_read_measurement": "data/self_read_roundtrip_ch20.json",
+    "full_semantic_reader": "tools/full_semantic_self_read.py",
+    "full_semantic_measurement": "data/full_semantic_self_read_measurement_ch20.json",
+    "full_semantic_fault_injection": "data/full_semantic_fault_injection_ch20.json"
+  },
+  "canonical_field_components": [
+    "mod9_orbits",
+    "closure_7_cardinality",
+    "choice_accounting",
+    "chapter19_open_bridge",
+    "chapter18_slice_scope"
+  ],
+  "carrier_classes": [
+    {
+      "id": "carrier_A",
+      "description": "abstract compatible model/tokenizer pair (M1,τ1)",
+      "adapter": "canonical discrete-field adapter",
+      "status": "test fixture / interface witness, not an actual model execution"
+    },
+    {
+      "id": "carrier_B",
+      "description": "abstract compatible model/tokenizer pair (M2,τ2)",
+      "adapter": "canonical discrete-field adapter",
+      "status": "test fixture / interface witness, not an actual model execution"
+    }
+  ],
+  "typing": {
+    "0": "carrier: (M,τ), replaceable within interface contract",
+    "1": "structure: R, committed code/chapters/validators",
+    "1_equiv_0": "project boundary label for canonical D remaining invariant under admitted carrier substitution; not arithmetic equality"
+  },
+  "claims": {
+    "exact": [
+      "canonical D is finite JSON data",
+      "canonical serialization and SHA-256 comparison are executable",
+      "the committed route R is independent of carrier labels used by the test adapters"
+    ],
+    "conditional": [
+      "carrier substitution preserving D is currently a contract claim only; the existing A/B witness does not consume carrier content"
+    ],
+    "choice": [
+      "which project records belong to canonical D",
+      "parser choice φ and tokenizer choice τ"
+    ],
+    "open": [
+      "reader-independence across two independent carriers through a non-vacuous adapter A_ψ",
+      "full semantic self-read P_φ(G(A)) = A_canonical",
+      "a concrete arbitrary model swap preserving all non-canonical outputs"
+    ]
+  },
+  "orthogonal_claims": {
+    "self_consistency": {
+      "equation": "P_φ(G(A)) ≅ A_serialized",
+      "status": "EXACT_ON_SERIALIZED_SUBSET",
+      "evidence": "data/self_read_roundtrip_ch20.json"
+    },
+    "reader_independence": {
+      "equation": "A_ψ(c₁)=A_ψ(c₂)=D",
+      "status": "OPEN",
+      "required_evidence": [
+        "A_ψ must consume carrier content c",
+        "two independent carriers must be used",
+        "the carriers must not merely be trained to reproduce the same atlas output",
+        "canonical D and its hash must match"
+      ],
+      "gate_logic_status": "TESTED_SYNTHETICALLY"
+    },
+    "full_semantic_self_read": {
+      "equation": "P_φ(G(A)) = A_canonical",
+      "status": "EXACT_FULL_SEMANTIC",
+      "missing_from_svg_alone": [
+        "full concept parameters",
+        "full validation objects",
+        "full relation graph",
+        "external data files"
+      ],
+      "delta_status": "CLOSED",
+      "closure_condition": "every atlas.json field is either embedded losslessly in SVG or deterministically recomputable from SVG",
+      "evidence": "data/full_semantic_self_read_measurement_ch20.json",
+      "fault_evidence": "data/full_semantic_fault_injection_ch20.json"
+    },
+    "independent_reader_correctness": {
+      "equation": "properties(P_χ(G(A))) = committed structural properties",
+      "status": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+      "scope": "independent implementation agreement on selected properties; not full semantic correctness",
+      "boundary": "selected semantic guards now include independent Ch14 PNG SHA-256 recomputation and non-empty equation content; full semantic correctness remains open"
+    }
+  },
+  "quotient_correspondence": {
+    "formal_source": "data/quotient_factorization_ch20.json",
+    "general_form": "f = i ∘ b ∘ p ; X/~_f ≅ im(f)",
+    "chapter17_direction": "equivalence-first",
+    "chapter20_direction": "function-first",
+    "status": "EXACT SET-THEORETIC FACTORIZATION; CH20 INDEPENDENT-CARRIER INSTANCE OPEN"
+  },
+  "reader_independence_test_plan": {
+    "formal_source": "data/reader_independence_gate_ch20.json",
+    "gate": "RI1 ∧ RI2 ∧ RI3 ∧ independence_provenance",
+    "RI1": "A_ψ(c₁)=D",
+    "RI2": "A_ψ(c₂)=D",
+    "RI3": "∃ c′ : A_ψ(c′) ≠ D",
+    "claim_gate": "reader_independence may become EXACT only after all three conditions and independence provenance pass"
+  },
+  "ladder_status": {
+    "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
+    "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+    "RI_gate_logic": "TESTED",
+    "reader_independence": "OPEN",
+    "full_semantic_self_read": "EXACT_FULL_SEMANTIC"
+  },
+  "quotient_factorization": "data/quotient_factorization_ch20.json",
+  "reader_independence_gate": "data/reader_independence_gate_ch20.json",
+  "independent_reader_measurement": "data/independent_reader_measurement_ch20.json",
+  "fault_injection_measurement": "data/independent_reader_fault_injection_ch20.json",
+  "RI_gate_measurement": "data/reader_independence_gate_measurement_ch20.json",
+  "equation_content_policy": {
+    "status": "REQUIRED",
+    "invariant": "every serialized concept data-equation attribute must contain non-empty content",
+    "scope": "project specification choice; enforced by independent reader and validator"
+  },
+  "full_semantic_delta": "data/full_semantic_self_read_delta_ch20.json",
+  "full_semantic_delta_measurement": "data/full_semantic_self_read_delta_measurement_ch20.json",
+  "canonical_json": "data/canonical_json_spec_ch20.json"
+}

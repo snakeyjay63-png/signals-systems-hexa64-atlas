@@ -1,0 +1,31 @@
+name: validate-quran-corpus
+
+on:
+  workflow_dispatch:
+
+jobs:
+  empirical-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -r requirements.txt
+      - name: Fetch and SHA-lock exact 6236-ayah fixture
+        run: python tools/fetch_quran_fixture.py
+      - name: Recompute empirical abjad statistic
+        run: python tools/analyze_quran_abjad.py --require-candidate --no-detail
+      - name: Rebuild atlas from measured status
+        run: |
+          python tools/generate_signals_systems_full_atlas.py
+          python tools/export_concepts.py
+          python tools/validate_atlas.py
+      - name: Preserve fixture lock and measurement
+        uses: actions/upload-artifact@v4
+        with:
+          name: quran-abjad-reproduction
+          path: |
+            corpora/quran_uthmani/fixture.lock.json
+            data/quran_abjad_measurement.json
+            verification.txt

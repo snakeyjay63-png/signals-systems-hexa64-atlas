@@ -1,0 +1,21 @@
+{
+  "format_version": "1.0.0",
+  "reader": "P_χ",
+  "implementation": "raw SVG text + regular expressions + stdlib json/html/hashlib",
+  "shared_parser_code_with_P_phi": false,
+  "property_based": true,
+  "checks": {
+    "concept_count_103": true,
+    "concept_ids_unique": true,
+    "concept_order_matches_atlas": true,
+    "concept_id_syntax": true,
+    "equation_attribute_count_103": true,
+    "equation_content_nonempty": true,
+    "ch14_png_sha256_recomputed": true,
+    "metadata_chapter_count_20": true,
+    "metadata_titles_match_atlas": true
+  },
+  "pass": true,
+  "scope": "independent structural + selected semantic property agreement; does not prove full semantic correctness",
+  "common_mode_mitigation": "uses a separate non-XML-parser implementation path"
+}

@@ -1,0 +1,119 @@
+{
+  "format_version": "2.0.0",
+  "source_axioms": "data/language_frame_axioms.json",
+  "theorem": "Three-Atomic-Frame Quotient Closure",
+  "input_frames": [
+    {
+      "name": "L",
+      "carrier": "L:C",
+      "structure": "L:S",
+      "boundary": "L:b"
+    },
+    {
+      "name": "G",
+      "carrier": "G:C",
+      "structure": "G:S",
+      "boundary": "G:b"
+    },
+    {
+      "name": "E",
+      "carrier": "E:C",
+      "structure": "E:S",
+      "boundary": "E:b"
+    }
+  ],
+  "prequotient": {
+    "cardinality": 9,
+    "formula": "3×3=9",
+    "points": [
+      "L:C",
+      "L:S",
+      "L:b",
+      "G:C",
+      "G:S",
+      "G:b",
+      "E:C",
+      "E:S",
+      "E:b"
+    ]
+  },
+  "equivalence_relation": {
+    "boundary_identification": "L:b ~ G:b ~ E:b",
+    "nonboundary_rule": "singleton equivalence classes",
+    "classes_removed_by_identification": 2
+  },
+  "quotient": {
+    "cardinality": 7,
+    "formula": "9-(3-1)=7",
+    "C_prime": [
+      "E:C",
+      "G:C",
+      "L:C"
+    ],
+    "S_prime": [
+      "E:S",
+      "G:S",
+      "L:S"
+    ],
+    "boundary": "b",
+    "boundary_class": [
+      "E:b",
+      "G:b",
+      "L:b"
+    ],
+    "points": [
+      "E:C",
+      "E:S",
+      "G:C",
+      "G:S",
+      "L:C",
+      "L:S",
+      "b"
+    ]
+  },
+  "closure_theorem": {
+    "axiom_checks": {
+      "A1_nonempty": true,
+      "A2_disjoint": true,
+      "A3_boundary_external": true,
+      "A4_unique_boundary_class": true
+    },
+    "passes": true,
+    "canonical_partition": true,
+    "proof_steps": [
+      "C' is the quotient image of the disjoint union of the three carrier sets.",
+      "S' is the quotient image of the disjoint union of the three structure sets.",
+      "Only boundary points are identified, so C' and S' remain disjoint.",
+      "The common boundary class b is not an element of C' or S'.",
+      "There is exactly one boundary class after quotienting.",
+      "Therefore (C',S',b) satisfies the general Frame axioms."
+    ]
+  },
+  "atomicity_status": "|C_i|=|S_i|=1 is an AtomicFrame axiom, not derived here",
+  "recursive_typing": {
+    "status": "the quotient is now proven to be a general Frame; treating a Frame as one language-object at the next level is the project type convention",
+    "not_claimed": "the quotient is not AtomicFrame and no cardinality isomorphism is claimed"
+  },
+  "mod9": {
+    "digital_root_7": 7,
+    "T7": 5,
+    "orbit": "V1",
+    "V1": [
+      1,
+      2,
+      4,
+      8,
+      7,
+      5
+    ]
+  },
+  "abjad_crosscheck": {
+    "ordinal": 7,
+    "letter": "ز",
+    "name": "zay",
+    "value": 7
+  },
+  "meta_observation": {
+    "visual_field_count_89": "Fibonacci F(11); recorded as meta-observation only, not an invariant"
+  }
+}

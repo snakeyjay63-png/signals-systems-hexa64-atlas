@@ -1,0 +1,79 @@
+{
+  "format_version": "1.0.0",
+  "name": "Reader-independence and independent-reader gates",
+  "reader_independence": {
+    "adapter": "A_ψ(M,τ,c) → D",
+    "status": "OPEN",
+    "conditions": [
+      {
+        "id": "RI1",
+        "predicate": "A_ψ(c₁)=D",
+        "meaning": "first independent carrier reaches distinguished field element D"
+      },
+      {
+        "id": "RI2",
+        "predicate": "A_ψ(c₂)=D",
+        "meaning": "second independent carrier reaches the same D"
+      },
+      {
+        "id": "RI3",
+        "predicate": "∃ c′ : A_ψ(c′) ≠ D",
+        "meaning": "A_ψ is non-constant; distinguished fiber is not all carriers"
+      }
+    ],
+    "independence_requirements": [
+      "c₁ and c₂ must be distinct carrier executions",
+      "their independence provenance must be recorded",
+      "the claim must not rely only on training both carriers to reproduce the same committed atlas output"
+    ],
+    "gate": "EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass",
+    "current": {
+      "RI1": "OPEN_REAL_CARRIERS",
+      "RI2": "OPEN_REAL_CARRIERS",
+      "RI3": "OPEN_REAL_CARRIERS",
+      "carrier_content_consumed": false,
+      "reader_independence_proven": false
+    },
+    "optional_stronger_property": {
+      "name": "component-wise sensitivity",
+      "predicate": "for every declared component k of c, there exist c,c' differing only in k with A_ψ(c) ≠ A_ψ(c')",
+      "status": "OPTIONAL",
+      "claim_enabled": "adapter uses every declared carrier component nontrivially"
+    },
+    "gate_measurement": "data/reader_independence_gate_measurement_ch20.json",
+    "gate_logic_status": "TESTED"
+  },
+  "independent_reader": {
+    "reader": "P_χ",
+    "status": "PROPERTY_READER_IMPLEMENTED_WITH_SEMANTIC_GUARDS",
+    "implementation_constraint": "must not import or call self_read_roundtrip.py, export_concepts.py, or their parsing helpers",
+    "strategy": "raw-text/regular-expression property scanner; does not reconstruct the full atlas",
+    "checks": [
+      "exactly 103 data-concept attributes",
+      "all 103 concept ids are unique",
+      "concept-id order equals committed atlas order",
+      "all concept ids satisfy the project identifier syntax",
+      "exactly 103 data-equation attributes accompany concept groups",
+      "embedded metadata declares 20 chapters",
+      "embedded metadata chapter titles equal committed chapter titles",
+      "all 103 data-equation attributes contain non-empty equation content",
+      "visible Ch14 PNG SHA-256 equals an independent hashlib recomputation of assets/ch14_test_object.png"
+    ],
+    "claim": "independent structural + selected semantic property agreement; not full semantic correctness",
+    "measurement": "data/independent_reader_measurement_ch20.json",
+    "fault_injection_measurement": "data/independent_reader_fault_injection_ch20.json",
+    "non_vacuity_status": "FAULT_SENSITIVITY_5_OF_5",
+    "checks_count": 9,
+    "semantic_guards": [
+      "independent SHA-256 recomputation of Ch14 PNG via hashlib",
+      "all serialized concept equations must be non-empty"
+    ]
+  },
+  "ladder": {
+    "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
+    "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
+    "RI_gate_logic": "TESTED",
+    "reader_independence": "OPEN",
+    "full_semantic_self_read": "OPEN"
+  }
+}

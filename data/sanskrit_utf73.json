@@ -1,0 +1,974 @@
+{
+  "format": "Sanskrit-UTF73 canonical field",
+  "status": "custom 73-state field using standard Unicode code points; not a Unicode encoding standard",
+  "state_count": 73,
+  "construction": "6 consonants × (inherent a + 11 explicit signs, anusvāra U+0902 in slot 12) + abstract śūnya displayed as U+00B7",
+  "canonical_source": "data/utf73_field.json",
+  "live_rgb24_encoder": "RGB24 → HSV hue sector × V bin; black → śūnya",
+  "reference_quotient_model": {
+    "status": "reference-model identity only; not the live pixel encoder",
+    "encoder": "E73(n) = n mod 73",
+    "decoder": "D73(s) = state index",
+    "fixed_point_identity": "E73(D73(s)) = s",
+    "basin_division": {
+      "input_states": 16777216,
+      "quotient": 229824,
+      "remainder": 64,
+      "large_basins": 64,
+      "large_size": 229825,
+      "small_basins": 9,
+      "small_size": 229824
+    }
+  },
+  "measured_rgb24_basins": {
+    "input_states": 16777216,
+    "sum": 16777216,
+    "min": 1,
+    "max": 633241,
+    "shunya": 1
+  },
+  "states": [
+    {
+      "index": 0,
+      "symbol": "क",
+      "consonant": "ka",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+0915"
+      ],
+      "utf8_hex": "e0 a4 95",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1792
+    },
+    {
+      "index": 1,
+      "symbol": "का",
+      "consonant": "ka",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+0915",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11494
+    },
+    {
+      "index": 2,
+      "symbol": "कि",
+      "consonant": "ka",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+0915",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30457
+    },
+    {
+      "index": 3,
+      "symbol": "की",
+      "consonant": "ka",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+0915",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62337
+    },
+    {
+      "index": 4,
+      "symbol": "कु",
+      "consonant": "ka",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+0915",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98182
+    },
+    {
+      "index": 5,
+      "symbol": "कू",
+      "consonant": "ka",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+0915",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145369
+    },
+    {
+      "index": 6,
+      "symbol": "कृ",
+      "consonant": "ka",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+0915",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212993
+    },
+    {
+      "index": 7,
+      "symbol": "के",
+      "consonant": "ka",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+0915",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270886
+    },
+    {
+      "index": 8,
+      "symbol": "कै",
+      "consonant": "ka",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+0915",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346297
+    },
+    {
+      "index": 9,
+      "symbol": "को",
+      "consonant": "ka",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+0915",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453761
+    },
+    {
+      "index": 10,
+      "symbol": "कौ",
+      "consonant": "ka",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+0915",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529606
+    },
+    {
+      "index": 11,
+      "symbol": "कं",
+      "consonant": "ka",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+0915",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 95 e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633241
+    },
+    {
+      "index": 12,
+      "symbol": "च",
+      "consonant": "ca",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+091A"
+      ],
+      "utf8_hex": "e0 a4 9a",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 13,
+      "symbol": "चा",
+      "consonant": "ca",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+091A",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 14,
+      "symbol": "चि",
+      "consonant": "ca",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+091A",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 15,
+      "symbol": "ची",
+      "consonant": "ca",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+091A",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 16,
+      "symbol": "चु",
+      "consonant": "ca",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+091A",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 17,
+      "symbol": "चू",
+      "consonant": "ca",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+091A",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 18,
+      "symbol": "चृ",
+      "consonant": "ca",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+091A",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 19,
+      "symbol": "चे",
+      "consonant": "ca",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+091A",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 20,
+      "symbol": "चै",
+      "consonant": "ca",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+091A",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 21,
+      "symbol": "चो",
+      "consonant": "ca",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+091A",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 22,
+      "symbol": "चौ",
+      "consonant": "ca",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+091A",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 23,
+      "symbol": "चं",
+      "consonant": "ca",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+091A",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 9a e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 24,
+      "symbol": "ट",
+      "consonant": "ṭa",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+091F"
+      ],
+      "utf8_hex": "e0 a4 9f",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 25,
+      "symbol": "टा",
+      "consonant": "ṭa",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+091F",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 26,
+      "symbol": "टि",
+      "consonant": "ṭa",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+091F",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 27,
+      "symbol": "टी",
+      "consonant": "ṭa",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+091F",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 28,
+      "symbol": "टु",
+      "consonant": "ṭa",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+091F",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 29,
+      "symbol": "टू",
+      "consonant": "ṭa",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+091F",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 30,
+      "symbol": "टृ",
+      "consonant": "ṭa",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+091F",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 31,
+      "symbol": "टे",
+      "consonant": "ṭa",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+091F",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 32,
+      "symbol": "टै",
+      "consonant": "ṭa",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+091F",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 33,
+      "symbol": "टो",
+      "consonant": "ṭa",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+091F",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 34,
+      "symbol": "टौ",
+      "consonant": "ṭa",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+091F",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 35,
+      "symbol": "टं",
+      "consonant": "ṭa",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+091F",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 9f e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 36,
+      "symbol": "त",
+      "consonant": "ta",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+0924"
+      ],
+      "utf8_hex": "e0 a4 a4",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 37,
+      "symbol": "ता",
+      "consonant": "ta",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+0924",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 38,
+      "symbol": "ति",
+      "consonant": "ta",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+0924",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 39,
+      "symbol": "ती",
+      "consonant": "ta",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+0924",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 40,
+      "symbol": "तु",
+      "consonant": "ta",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+0924",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 41,
+      "symbol": "तू",
+      "consonant": "ta",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+0924",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 42,
+      "symbol": "तृ",
+      "consonant": "ta",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+0924",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 43,
+      "symbol": "ते",
+      "consonant": "ta",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+0924",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 44,
+      "symbol": "तै",
+      "consonant": "ta",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+0924",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 45,
+      "symbol": "तो",
+      "consonant": "ta",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+0924",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 46,
+      "symbol": "तौ",
+      "consonant": "ta",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+0924",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 47,
+      "symbol": "तं",
+      "consonant": "ta",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+0924",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 a4 e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 48,
+      "symbol": "प",
+      "consonant": "pa",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+092A"
+      ],
+      "utf8_hex": "e0 a4 aa",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 49,
+      "symbol": "पा",
+      "consonant": "pa",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+092A",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 50,
+      "symbol": "पि",
+      "consonant": "pa",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+092A",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 51,
+      "symbol": "पी",
+      "consonant": "pa",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+092A",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 52,
+      "symbol": "पु",
+      "consonant": "pa",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+092A",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 53,
+      "symbol": "पू",
+      "consonant": "pa",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+092A",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 54,
+      "symbol": "पृ",
+      "consonant": "pa",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+092A",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 55,
+      "symbol": "पे",
+      "consonant": "pa",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+092A",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 56,
+      "symbol": "पै",
+      "consonant": "pa",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+092A",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 57,
+      "symbol": "पो",
+      "consonant": "pa",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+092A",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 58,
+      "symbol": "पौ",
+      "consonant": "pa",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+092A",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 59,
+      "symbol": "पं",
+      "consonant": "pa",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+092A",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 aa e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 60,
+      "symbol": "स",
+      "consonant": "sa",
+      "vowel_state": "a",
+      "codepoints": [
+        "U+0938"
+      ],
+      "utf8_hex": "e0 a4 b8",
+      "utf8_length": 3,
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 61,
+      "symbol": "सा",
+      "consonant": "sa",
+      "vowel_state": "ā",
+      "codepoints": [
+        "U+0938",
+        "U+093E"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a4 be",
+      "utf8_length": 6,
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 62,
+      "symbol": "सि",
+      "consonant": "sa",
+      "vowel_state": "i",
+      "codepoints": [
+        "U+0938",
+        "U+093F"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a4 bf",
+      "utf8_length": 6,
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 63,
+      "symbol": "सी",
+      "consonant": "sa",
+      "vowel_state": "ī",
+      "codepoints": [
+        "U+0938",
+        "U+0940"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 80",
+      "utf8_length": 6,
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 64,
+      "symbol": "सु",
+      "consonant": "sa",
+      "vowel_state": "u",
+      "codepoints": [
+        "U+0938",
+        "U+0941"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 81",
+      "utf8_length": 6,
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 65,
+      "symbol": "सू",
+      "consonant": "sa",
+      "vowel_state": "ū",
+      "codepoints": [
+        "U+0938",
+        "U+0942"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 66,
+      "symbol": "सृ",
+      "consonant": "sa",
+      "vowel_state": "ṛ",
+      "codepoints": [
+        "U+0938",
+        "U+0943"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 83",
+      "utf8_length": 6,
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 67,
+      "symbol": "से",
+      "consonant": "sa",
+      "vowel_state": "e",
+      "codepoints": [
+        "U+0938",
+        "U+0947"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 87",
+      "utf8_length": 6,
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 68,
+      "symbol": "सै",
+      "consonant": "sa",
+      "vowel_state": "ai",
+      "codepoints": [
+        "U+0938",
+        "U+0948"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 88",
+      "utf8_length": 6,
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 69,
+      "symbol": "सो",
+      "consonant": "sa",
+      "vowel_state": "o",
+      "codepoints": [
+        "U+0938",
+        "U+094B"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 8b",
+      "utf8_length": 6,
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 70,
+      "symbol": "सौ",
+      "consonant": "sa",
+      "vowel_state": "au",
+      "codepoints": [
+        "U+0938",
+        "U+094C"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a5 8c",
+      "utf8_length": 6,
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 71,
+      "symbol": "सं",
+      "consonant": "sa",
+      "vowel_state": "anusvāra",
+      "codepoints": [
+        "U+0938",
+        "U+0902"
+      ],
+      "utf8_hex": "e0 a4 b8 e0 a4 82",
+      "utf8_length": 6,
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 72,
+      "symbol": "·",
+      "consonant": null,
+      "vowel_state": "śūnya",
+      "codepoints": [
+        "U+00B7"
+      ],
+      "utf8_hex": "c2 b7",
+      "utf8_length": 2,
+      "rgb24_basin_size": 1
+    }
+  ]
+}

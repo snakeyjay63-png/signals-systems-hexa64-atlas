@@ -1,0 +1,32 @@
+{
+  "format_version": "1.0.0",
+  "valid_nonconstant_fixture": {
+    "checks": {
+      "RI1": true,
+      "RI2": true,
+      "RI3": true,
+      "independence_provenance": true
+    },
+    "pass": true
+  },
+  "constant_fixture": {
+    "checks": {
+      "RI1": true,
+      "RI2": true,
+      "RI3": false,
+      "independence_provenance": true
+    },
+    "pass": false
+  },
+  "missing_provenance_fixture": {
+    "checks": {
+      "RI1": true,
+      "RI2": true,
+      "RI3": true,
+      "independence_provenance": false
+    },
+    "pass": false
+  },
+  "gate_logic_tested": true,
+  "scope": "synthetic unit test of gate logic only; not evidence for real model reader-independence"
+}

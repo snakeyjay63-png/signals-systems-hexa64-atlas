@@ -1,0 +1,375 @@
+{
+  "encoder": "RGB24 → HSV hue sector × V bin; black → śūnya",
+  "input_states": 16777216,
+  "state_count": 73,
+  "sum": 16777216,
+  "min": 1,
+  "max": 633241,
+  "states": [
+    {
+      "index": 0,
+      "symbol": "क",
+      "rgb24_basin_size": 1792
+    },
+    {
+      "index": 1,
+      "symbol": "का",
+      "rgb24_basin_size": 11494
+    },
+    {
+      "index": 2,
+      "symbol": "कि",
+      "rgb24_basin_size": 30457
+    },
+    {
+      "index": 3,
+      "symbol": "की",
+      "rgb24_basin_size": 62337
+    },
+    {
+      "index": 4,
+      "symbol": "कु",
+      "rgb24_basin_size": 98182
+    },
+    {
+      "index": 5,
+      "symbol": "कू",
+      "rgb24_basin_size": 145369
+    },
+    {
+      "index": 6,
+      "symbol": "कृ",
+      "rgb24_basin_size": 212993
+    },
+    {
+      "index": 7,
+      "symbol": "के",
+      "rgb24_basin_size": 270886
+    },
+    {
+      "index": 8,
+      "symbol": "कै",
+      "rgb24_basin_size": 346297
+    },
+    {
+      "index": 9,
+      "symbol": "को",
+      "rgb24_basin_size": 453761
+    },
+    {
+      "index": 10,
+      "symbol": "कौ",
+      "rgb24_basin_size": 529606
+    },
+    {
+      "index": 11,
+      "symbol": "कं",
+      "rgb24_basin_size": 633241
+    },
+    {
+      "index": 12,
+      "symbol": "च",
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 13,
+      "symbol": "चा",
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 14,
+      "symbol": "चि",
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 15,
+      "symbol": "ची",
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 16,
+      "symbol": "चु",
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 17,
+      "symbol": "चू",
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 18,
+      "symbol": "चृ",
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 19,
+      "symbol": "चे",
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 20,
+      "symbol": "चै",
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 21,
+      "symbol": "चो",
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 22,
+      "symbol": "चौ",
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 23,
+      "symbol": "चं",
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 24,
+      "symbol": "ट",
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 25,
+      "symbol": "टा",
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 26,
+      "symbol": "टि",
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 27,
+      "symbol": "टी",
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 28,
+      "symbol": "टु",
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 29,
+      "symbol": "टू",
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 30,
+      "symbol": "टृ",
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 31,
+      "symbol": "टे",
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 32,
+      "symbol": "टै",
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 33,
+      "symbol": "टो",
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 34,
+      "symbol": "टौ",
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 35,
+      "symbol": "टं",
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 36,
+      "symbol": "त",
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 37,
+      "symbol": "ता",
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 38,
+      "symbol": "ति",
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 39,
+      "symbol": "ती",
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 40,
+      "symbol": "तु",
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 41,
+      "symbol": "तू",
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 42,
+      "symbol": "तृ",
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 43,
+      "symbol": "ते",
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 44,
+      "symbol": "तै",
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 45,
+      "symbol": "तो",
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 46,
+      "symbol": "तौ",
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 47,
+      "symbol": "तं",
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 48,
+      "symbol": "प",
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 49,
+      "symbol": "पा",
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 50,
+      "symbol": "पि",
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 51,
+      "symbol": "पी",
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 52,
+      "symbol": "पु",
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 53,
+      "symbol": "पू",
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 54,
+      "symbol": "पृ",
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 55,
+      "symbol": "पे",
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 56,
+      "symbol": "पै",
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 57,
+      "symbol": "पो",
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 58,
+      "symbol": "पौ",
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 59,
+      "symbol": "पं",
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 60,
+      "symbol": "स",
+      "rgb24_basin_size": 1771
+    },
+    {
+      "index": 61,
+      "symbol": "सा",
+      "rgb24_basin_size": 11473
+    },
+    {
+      "index": 62,
+      "symbol": "सि",
+      "rgb24_basin_size": 30436
+    },
+    {
+      "index": 63,
+      "symbol": "सी",
+      "rgb24_basin_size": 62315
+    },
+    {
+      "index": 64,
+      "symbol": "सु",
+      "rgb24_basin_size": 98161
+    },
+    {
+      "index": 65,
+      "symbol": "सू",
+      "rgb24_basin_size": 145348
+    },
+    {
+      "index": 66,
+      "symbol": "सृ",
+      "rgb24_basin_size": 212971
+    },
+    {
+      "index": 67,
+      "symbol": "से",
+      "rgb24_basin_size": 270865
+    },
+    {
+      "index": 68,
+      "symbol": "सै",
+      "rgb24_basin_size": 346276
+    },
+    {
+      "index": 69,
+      "symbol": "सो",
+      "rgb24_basin_size": 453739
+    },
+    {
+      "index": 70,
+      "symbol": "सौ",
+      "rgb24_basin_size": 529585
+    },
+    {
+      "index": 71,
+      "symbol": "सं",
+      "rgb24_basin_size": 633220
+    },
+    {
+      "index": 72,
+      "symbol": "·",
+      "rgb24_basin_size": 1
+    }
+  ]
+}

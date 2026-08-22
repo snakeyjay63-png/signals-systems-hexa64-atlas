@@ -1,0 +1,15 @@
+{
+  "format_version": "1.0.0",
+  "name": "Quran Uthmani 6236-ayah corpus fixture",
+  "fixture_file": "corpora/quran_uthmani/quran.jsonl",
+  "lock_file": "corpora/quran_uthmani/fixture.lock.json",
+  "source_page": "https://github.com/mjmirza/quran-dataset/blob/main/data/quran.jsonl",
+  "source_url": "https://raw.githubusercontent.com/mjmirza/quran-dataset/refs/heads/main/data/quran.jsonl",
+  "source_project": "mjmirza/quran-dataset",
+  "source_description": "6236-ayah Uthmani Quran dataset derived from Tanzil/QPC and independently validated by the upstream project",
+  "expected_ayahs": 6236,
+  "license": "CC BY 4.0 for the upstream dataset; see upstream LICENSE/NOTICE. Tanzil source attribution applies upstream.",
+  "pinning": "The downloaded bytes are pinned locally by SHA-256 in fixture.lock.json. The repo does not treat an un-fetched branch URL as a content hash.",
+  "bundled": false,
+  "reason_not_bundled": "This build environment can verify the public source and metadata but cannot materialize the 4.74 MB remote file. Run tools/fetch_quran_fixture.py once in a networked checkout to create the exact local fixture and lock."
+}

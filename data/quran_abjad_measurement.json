@@ -1,0 +1,10 @@
+{
+  "status": "fixture_missing",
+  "fixture": "corpora/quran_uthmani/quran.jsonl",
+  "candidate_only": {
+    "count": 2050,
+    "total": 6236,
+    "gap_fraction": "43/9354"
+  },
+  "claim": "candidate is not marked reproduced until the exact fixture is present and measured"
+}

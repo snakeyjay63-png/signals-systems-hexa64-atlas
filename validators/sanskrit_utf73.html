@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UTF73 Canonical Field Validator</title>
+<style>
+:root{--bg:#04060b;--panel:#07101b;--c:#65f4ff;--g:#6c7a94;--w:#edf6ff;--ok:#7dffb2}
+body{margin:0;background:var(--bg);color:var(--w);font:14px ui-monospace,monospace}main{max-width:1200px;margin:auto;padding:28px}
+.card{background:var(--panel);border:1px solid #6c7a9440;border-radius:14px;padding:16px;margin:14px 0}.ok{color:var(--ok)}.g{color:var(--g)}
+table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid #6c7a9430;text-align:left}th{color:var(--c)}.sym{font:22px system-ui}
+</style></head><body><main>
+<h1>UTF73 · CANONICAL FIELD VALIDATOR</h1>
+<p class="g">Custom field using standard Unicode code points. Not a Unicode/UTF standard. Canonical source: <code>data/utf73_field.json</code>.</p>
+<div class="card" id="proof"></div><div class="card" id="basin"></div>
+<div class="card"><table><thead><tr><th>#</th><th>symbol</th><th>codepoints</th><th>UTF-8</th><th>real RGB24 basin</th></tr></thead><tbody id="rows"></tbody></table></div>
+<script>
+const states=[{"i":0,"symbol":"क","name":"a","c":"ka","basin":1792},{"i":1,"symbol":"का","name":"ā","c":"ka","basin":11494},{"i":2,"symbol":"कि","name":"i","c":"ka","basin":30457},{"i":3,"symbol":"की","name":"ī","c":"ka","basin":62337},{"i":4,"symbol":"कु","name":"u","c":"ka","basin":98182},{"i":5,"symbol":"कू","name":"ū","c":"ka","basin":145369},{"i":6,"symbol":"कृ","name":"ṛ","c":"ka","basin":212993},{"i":7,"symbol":"के","name":"e","c":"ka","basin":270886},{"i":8,"symbol":"कै","name":"ai","c":"ka","basin":346297},{"i":9,"symbol":"को","name":"o","c":"ka","basin":453761},{"i":10,"symbol":"कौ","name":"au","c":"ka","basin":529606},{"i":11,"symbol":"कं","name":"anusvāra","c":"ka","basin":633241},{"i":12,"symbol":"च","name":"a","c":"ca","basin":1771},{"i":13,"symbol":"चा","name":"ā","c":"ca","basin":11473},{"i":14,"symbol":"चि","name":"i","c":"ca","basin":30436},{"i":15,"symbol":"ची","name":"ī","c":"ca","basin":62315},{"i":16,"symbol":"चु","name":"u","c":"ca","basin":98161},{"i":17,"symbol":"चू","name":"ū","c":"ca","basin":145348},{"i":18,"symbol":"चृ","name":"ṛ","c":"ca","basin":212971},{"i":19,"symbol":"चे","name":"e","c":"ca","basin":270865},{"i":20,"symbol":"चै","name":"ai","c":"ca","basin":346276},{"i":21,"symbol":"चो","name":"o","c":"ca","basin":453739},{"i":22,"symbol":"चौ","name":"au","c":"ca","basin":529585},{"i":23,"symbol":"चं","name":"anusvāra","c":"ca","basin":633220},{"i":24,"symbol":"ट","name":"a","c":"ṭa","basin":1771},{"i":25,"symbol":"टा","name":"ā","c":"ṭa","basin":11473},{"i":26,"symbol":"टि","name":"i","c":"ṭa","basin":30436},{"i":27,"symbol":"टी","name":"ī","c":"ṭa","basin":62315},{"i":28,"symbol":"टु","name":"u","c":"ṭa","basin":98161},{"i":29,"symbol":"टू","name":"ū","c":"ṭa","basin":145348},{"i":30,"symbol":"टृ","name":"ṛ","c":"ṭa","basin":212971},{"i":31,"symbol":"टे","name":"e","c":"ṭa","basin":270865},{"i":32,"symbol":"टै","name":"ai","c":"ṭa","basin":346276},{"i":33,"symbol":"टो","name":"o","c":"ṭa","basin":453739},{"i":34,"symbol":"टौ","name":"au","c":"ṭa","basin":529585},{"i":35,"symbol":"टं","name":"anusvāra","c":"ṭa","basin":633220},{"i":36,"symbol":"त","name":"a","c":"ta","basin":1771},{"i":37,"symbol":"ता","name":"ā","c":"ta","basin":11473},{"i":38,"symbol":"ति","name":"i","c":"ta","basin":30436},{"i":39,"symbol":"ती","name":"ī","c":"ta","basin":62315},{"i":40,"symbol":"तु","name":"u","c":"ta","basin":98161},{"i":41,"symbol":"तू","name":"ū","c":"ta","basin":145348},{"i":42,"symbol":"तृ","name":"ṛ","c":"ta","basin":212971},{"i":43,"symbol":"ते","name":"e","c":"ta","basin":270865},{"i":44,"symbol":"तै","name":"ai","c":"ta","basin":346276},{"i":45,"symbol":"तो","name":"o","c":"ta","basin":453739},{"i":46,"symbol":"तौ","name":"au","c":"ta","basin":529585},{"i":47,"symbol":"तं","name":"anusvāra","c":"ta","basin":633220},{"i":48,"symbol":"प","name":"a","c":"pa","basin":1771},{"i":49,"symbol":"पा","name":"ā","c":"pa","basin":11473},{"i":50,"symbol":"पि","name":"i","c":"pa","basin":30436},{"i":51,"symbol":"पी","name":"ī","c":"pa","basin":62315},{"i":52,"symbol":"पु","name":"u","c":"pa","basin":98161},{"i":53,"symbol":"पू","name":"ū","c":"pa","basin":145348},{"i":54,"symbol":"पृ","name":"ṛ","c":"pa","basin":212971},{"i":55,"symbol":"पे","name":"e","c":"pa","basin":270865},{"i":56,"symbol":"पै","name":"ai","c":"pa","basin":346276},{"i":57,"symbol":"पो","name":"o","c":"pa","basin":453739},{"i":58,"symbol":"पौ","name":"au","c":"pa","basin":529585},{"i":59,"symbol":"पं","name":"anusvāra","c":"pa","basin":633220},{"i":60,"symbol":"स","name":"a","c":"sa","basin":1771},{"i":61,"symbol":"सा","name":"ā","c":"sa","basin":11473},{"i":62,"symbol":"सि","name":"i","c":"sa","basin":30436},{"i":63,"symbol":"सी","name":"ī","c":"sa","basin":62315},{"i":64,"symbol":"सु","name":"u","c":"sa","basin":98161},{"i":65,"symbol":"सू","name":"ū","c":"sa","basin":145348},{"i":66,"symbol":"सृ","name":"ṛ","c":"sa","basin":212971},{"i":67,"symbol":"से","name":"e","c":"sa","basin":270865},{"i":68,"symbol":"सै","name":"ai","c":"sa","basin":346276},{"i":69,"symbol":"सो","name":"o","c":"sa","basin":453739},{"i":70,"symbol":"सौ","name":"au","c":"sa","basin":529585},{"i":71,"symbol":"सं","name":"anusvāra","c":"sa","basin":633220},{"i":72,"symbol":"·","name":"śūnya","c":null,"basin":1}];
+const enc=new TextEncoder(),dec=new TextDecoder('utf-8',{fatal:true});
+const cp=s=>[...s].map(ch=>'U+'+ch.codePointAt(0).toString(16).toUpperCase().padStart(4,'0'));
+const hx=a=>[...a].map(x=>x.toString(16).padStart(2,'0')).join(' ');
+const unique=new Set(states.map(s=>s.symbol)).size===73;
+const utf8=states.every(s=>dec.decode(enc.encode(s.symbol))===s.symbol);
+const E=n=>n%73,D=i=>i;
+const fixed=states.every(s=>E(D(s.i))===s.i);
+const basinSum=states.reduce((a,s)=>a+s.basin,0);
+const q=Math.floor(2**24/73),r=(2**24)%73;
+const b64Alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+const sample=String.fromCharCode(0x89,0x50,0x4e);
+const sample64=btoa(sample);
+const sampleBack=atob(sample64);
+const b64Exact=sampleBack===sample;
+document.querySelector('#proof').innerHTML=`<b>canonical states:</b> ${states.length} · unique: <span class="ok">${unique}</span> · UTF-8 roundtrip: <span class="ok">${utf8}</span><br>
+<b>reference-model identity:</b> E(D(s))=s → <span class="ok">${fixed?'73/73 PASS':'FAIL'}</span><br>
+<span class="g">This fixed-point is a construction identity, not the live encoder's lossiness proof.</span><br>
+<b>native Base64 control:</b> ${sample64} · roundtrip=<span class="ok">${b64Exact}</span>`;
+document.querySelector('#basin').innerHTML=`<b>live RGB24→HSV→Σ73 exhaustive basin sum:</b> <span class="ok">${basinSum.toLocaleString()}</span> = 2²⁴<br>
+min=${Math.min(...states.map(s=>s.basin)).toLocaleString()} · max=${Math.max(...states.map(s=>s.basin)).toLocaleString()} · śūnya=${states[72].basin}<br>
+<span class="g">reference quotient only: 2²⁴ = 73×${q.toLocaleString()} + ${r}</span>`;
+document.querySelector('#rows').innerHTML=states.map(s=>{const u=enc.encode(s.symbol);return `<tr><td>${s.i}</td><td class="sym">${s.symbol}</td><td>${cp(s.symbol).join(' + ')}</td><td>${hx(u)}</td><td>${s.basin.toLocaleString()}</td></tr>`}).join('');
+window.UTF73_VALIDATION={unique,utf8,fixed,basinSum,q,r,b64Exact};
+</script></main></body></html>

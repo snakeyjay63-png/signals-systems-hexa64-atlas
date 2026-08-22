@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Signals & Systems HEXA_64 concept record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chapter",
+    "chapter_title",
+    "concept_id",
+    "title",
+    "subtitle",
+    "equation",
+    "domain",
+    "signal_type",
+    "parameters",
+    "validation",
+    "relations",
+    "svg_selector",
+    "svg_element_count",
+    "svg_text",
+    "svg_fragment_sha256",
+    "math_signature_sha256"
+  ],
+  "properties": {
+    "chapter": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "chapter_title": {
+      "type": "string"
+    },
+    "concept_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "equation": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "signal_type": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "invariants"
+      ],
+      "properties": {
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "relations": {
+      "type": "object",
+      "required": [
+        "prerequisites",
+        "transforms_to"
+      ],
+      "properties": {
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "transforms_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "svg_selector": {
+      "type": "string"
+    },
+    "svg_element_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "svg_text": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "svg_fragment_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "math_signature_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

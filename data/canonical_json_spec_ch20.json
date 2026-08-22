@@ -1,0 +1,51 @@
+{
+  "format_version": "1.0.0",
+  "name": "canonicalJSON",
+  "spec": "canonical-json-v1",
+  "rules": {
+    "unicode": "NFC recursively on strings and keys",
+    "keys": "sorted lexicographically after NFC",
+    "whitespace": "none outside strings",
+    "encoding": "UTF-8",
+    "floats": "finite binary64 using Python JSON shortest round-trippable decimal; NaN/Infinity rejected",
+    "json": "ensure_ascii=false; separators comma/colon"
+  },
+  "known_answer_vectors": [
+    {
+      "name": "key_order",
+      "input": {
+        "b": 2,
+        "a": 1
+      },
+      "canonical": "{\"a\":1,\"b\":2}"
+    },
+    {
+      "name": "unicode_nfc",
+      "input": {
+        "s": "é"
+      },
+      "canonical": "{\"s\":\"é\"}"
+    },
+    {
+      "name": "nested",
+      "input": {
+        "z": [
+          3,
+          {
+            "b": false,
+            "a": null
+          }
+        ],
+        "n": 1.25
+      },
+      "canonical": "{\"n\":1.25,\"z\":[3,{\"a\":null,\"b\":false}]}"
+    },
+    {
+      "name": "escaping",
+      "input": {
+        "s": "a\\n\\\"b"
+      },
+      "canonical": "{\"s\":\"a\\\\n\\\\\\\"b\"}"
+    }
+  ]
+}

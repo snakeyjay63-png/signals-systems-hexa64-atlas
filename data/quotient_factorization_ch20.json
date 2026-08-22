@@ -1,0 +1,39 @@
+{
+  "format_version": "1.0.0",
+  "name": "Canonical quotient factorization",
+  "scope": "sets and functions",
+  "theorem": {
+    "equivalence": "x ~_f x' iff f(x)=f(x')",
+    "factorization": "f = i ∘ b ∘ p",
+    "p": "p : X → X/~_f, p(x)=[x]",
+    "b": "b : X/~_f → im(f), b([x])=f(x)",
+    "i": "i : im(f) → Y",
+    "result": "X/~_f ≅ im(f)",
+    "status": "EXACT FOR SETS/FUNCTIONS",
+    "boundary": "called canonical quotient-factorization here; no algebraic homomorphism theorem is asserted"
+  },
+  "chapter17": {
+    "construction_direction": "equivalence-first",
+    "given": "boundary equivalence ~_b",
+    "map": "q : X → X/~_b",
+    "fiber_equivalence": "x ~_q y iff q(x)=q(y), equal to ~_b",
+    "bijection": "identity on X/~_b = im(q)",
+    "cardinality": "9 → 7",
+    "status": "EXACT GIVEN CH17 AXIOMS"
+  },
+  "chapter20": {
+    "construction_direction": "function-first",
+    "given": "A_ψ : C → Y_D",
+    "derived_equivalence": "c_i ~_ψ c_j iff A_ψ(c_i)=A_ψ(c_j)",
+    "bijection": "b([c])=A_ψ(c)",
+    "factorization": "A_ψ = i ∘ b ∘ p",
+    "result": "C/~_ψ ≅ im(A_ψ)",
+    "distinguished_fiber": {
+      "element": "D ∈ im(A_ψ)",
+      "claim": "c₁,c₂ ∈ A_ψ⁻¹(D)",
+      "nontriviality": "A_ψ⁻¹(D) ≠ C"
+    },
+    "status": "FORMAL SPEC ONLY; INDEPENDENT-CARRIER INSTANCE NOT YET EXECUTED"
+  },
+  "interpretation": "one exact set-theoretic factorization instantiated in two construction directions; the selected equivalence/function instances remain project choices"
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#04060b" />
+  <title>Signals & Systems · HEXA_64 Visual Atlas</title>
+  <style>
+    :root { color-scheme: dark; --bg:#04060b; --panel:#07101b; --text:#edf6ff; --muted:#6c7a94; --cyan:#65f4ff; --purple:#b48cff; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    header { position:sticky; top:0; z-index:10; display:flex; gap:16px; align-items:center; justify-content:space-between; padding:14px 18px; background:rgba(4,6,11,.94); border-bottom:1px solid rgba(108,122,148,.25); backdrop-filter:blur(10px); }
+    .title { font-weight:700; letter-spacing:.02em; }
+    .sub { color:var(--muted); font:12px ui-monospace,SFMono-Regular,Menlo,monospace; margin-top:3px; }
+    nav { display:flex; gap:9px; flex-wrap:wrap; justify-content:flex-end; }
+    a.button { color:var(--text); text-decoration:none; background:var(--panel); border:1px solid rgba(108,122,148,.35); border-radius:10px; padding:8px 11px; font:12px ui-monospace,SFMono-Regular,Menlo,monospace; }
+    a.button:hover { border-color:var(--cyan); color:var(--cyan); }
+    main { max-width:1680px; margin:0 auto; padding:16px; }
+    .viewer { overflow:auto; border:1px solid rgba(108,122,148,.22); border-radius:14px; background:#04060b; min-height:80vh; }
+    object { display:block; width:100%; min-height:calc(100vh - 95px); background:#04060b; }
+    footer { color:var(--muted); text-align:center; padding:24px; font:11px ui-monospace,SFMono-Regular,Menlo,monospace; }
+    @media (max-width:800px) { header { align-items:flex-start; flex-direction:column; } nav { justify-content:flex-start; } main { padding:8px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="title">Signals & Systems · HEXA_64 Visual Atlas</div>
+      <div class="sub">20 chapters · 103 visual fields · one self-contained master SVG</div>
+    </div>
+    <nav>
+      <a class="button" href="assets/signals_systems_full_atlas_master.svg" target="_blank" rel="noopener">Open SVG</a>
+      <a class="button" href="assets/signals_systems_full_atlas_master.svg" download>Download SVG</a>
+      <a class="button" href="data/atlas.json">Atlas JSON</a>
+      <a class="button" href="data/concepts.ndjson">NDJSON</a>
+      <a class="button" href="data/token_corpus.md">Token corpus</a>
+      <a class="button" href="verification.txt">Verification</a>
+      <a class="button" href="tools/generate_signals_systems_full_atlas.py">Generator</a>
+    </nav>
+  </header>
+  <main>
+    <div class="viewer">
+      <object data="assets/signals_systems_full_atlas_master.svg" type="image/svg+xml" aria-label="Signals and Systems Visual Atlas">
+        <p>Your browser could not embed the SVG. <a href="assets/signals_systems_full_atlas_master.svg">Open it directly.</a></p>
+      </object>
+    </div>
+  </main>
+  <footer>Original educational visual atlas · NPN // SIGNAL FIELD · HEXA_64</footer>
+<p style="text-align:center"><a href="validators/sanskrit_utf73.html">Open Chapter 15 UTF73 native validator</a></p>
+</body>
+</html>

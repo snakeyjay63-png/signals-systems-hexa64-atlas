@@ -1,0 +1,43 @@
+{
+  "format_version": "1.0.0",
+  "name": "Quran abjad orbit empirical hypothesis",
+  "status": "candidate empirical result; requires exact corpus fixture reproduction",
+  "carrier_layer": "UTF-8/Unicode ayah sequence; lossless positional carrier",
+  "mapping_layer": "direct 28-letter classical abjad lookup from data/abjad_field.json",
+  "math_layer": {
+    "digital_root": "dr(v)=1+((v-1) mod 9)",
+    "operator": "T(r)=dr(2r)",
+    "orbits": {
+      "V1": [
+        1,
+        2,
+        4,
+        8,
+        7,
+        5
+      ],
+      "V3": [
+        3,
+        6
+      ],
+      "V9": [
+        9
+      ]
+    }
+  },
+  "measurement": {
+    "unit": "ayah",
+    "per_ayah_value": "sum of normalized direct abjad letter values",
+    "per_ayah_root": "digital root of the ayah abjad sum",
+    "baseline_fraction": "1/3 (declared equal-class baseline; not implied by the unequal orbit cardinalities 6/2/1)",
+    "candidate_count": 2050,
+    "candidate_total": 6236,
+    "candidate_fraction": "2050/6236",
+    "candidate_gap": "1/3 - 2050/6236 = 43/9354",
+    "interpretation": "empirical corpus statistic; not implied by the abjad table or mod-9 dynamics",
+    "tested_statistic": "one orbit-class frequency among V1/V3/V9 from the prior analyze_quran_vortex.py result",
+    "target_orbit_class": "unresolved in this repository until the prior script or locked fixture identifies it"
+  },
+  "fixture": "corpora/quran_uthmani/quran.jsonl",
+  "fixture_status": "missing in this package; fetch and lock before claiming reproduction"
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.0.0",
+  "baseline_exact": true,
+  "M6_parameter_corruption": {
+    "detected": true,
+    "canonical_equal": false,
+    "local_math_failures": [
+      "dt_sinusoid"
+    ]
+  },
+  "M7_record_reorder": {
+    "detected": true,
+    "canonical_equal": false,
+    "chapter_crosscheck_failures": [
+      "convolution_sum",
+      "system_properties"
+    ]
+  },
+  "pass": true,
+  "scope": "semantic fault injection for local math-signature verification and chapter/order cross-check"
+}

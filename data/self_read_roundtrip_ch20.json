@@ -1,0 +1,30 @@
+{
+  "format_version": "1.0.0",
+  "parser": "XML ElementTree + exporter-compatible whitespace canonicalization",
+  "serialized_subset": {
+    "concept_id": "recoverable",
+    "equation": "recoverable",
+    "svg_text": "recoverable after canonical whitespace",
+    "svg_fragment_sha256": "recomputable",
+    "chapter_titles": "recoverable from SVG metadata"
+  },
+  "counts": {
+    "concepts_parsed": 103,
+    "concepts_committed": 103,
+    "equations_match": 103,
+    "texts_match": 103,
+    "fragment_hashes_match": 103,
+    "chapters_in_metadata": 20
+  },
+  "concept_order_match": true,
+  "chapter_titles_match": true,
+  "roundtrip_exact_on_serialized_subset": true,
+  "not_recoverable_from_svg_alone": [
+    "full concept parameters",
+    "full validation objects",
+    "full relation graph",
+    "external data files not embedded in SVG"
+  ],
+  "status": "EXACT_ON_SERIALIZED_SUBSET",
+  "full_self_reading": "OPEN"
+}

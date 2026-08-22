@@ -1,0 +1,282 @@
+{
+  "format_version": "1.1.0",
+  "name": "Canonical classical Arabic abjad field",
+  "status": "numeric letter mapping; corpus-independent",
+  "letters": [
+    {
+      "index": 0,
+      "char": "ا",
+      "name": "alif",
+      "codepoint": "U+0627",
+      "value": 1,
+      "digital_root": 1
+    },
+    {
+      "index": 1,
+      "char": "ب",
+      "name": "ba",
+      "codepoint": "U+0628",
+      "value": 2,
+      "digital_root": 2
+    },
+    {
+      "index": 2,
+      "char": "ج",
+      "name": "jim",
+      "codepoint": "U+062C",
+      "value": 3,
+      "digital_root": 3
+    },
+    {
+      "index": 3,
+      "char": "د",
+      "name": "dal",
+      "codepoint": "U+062F",
+      "value": 4,
+      "digital_root": 4
+    },
+    {
+      "index": 4,
+      "char": "ه",
+      "name": "ha",
+      "codepoint": "U+0647",
+      "value": 5,
+      "digital_root": 5
+    },
+    {
+      "index": 5,
+      "char": "و",
+      "name": "waw",
+      "codepoint": "U+0648",
+      "value": 6,
+      "digital_root": 6
+    },
+    {
+      "index": 6,
+      "char": "ز",
+      "name": "zay",
+      "codepoint": "U+0632",
+      "value": 7,
+      "digital_root": 7
+    },
+    {
+      "index": 7,
+      "char": "ح",
+      "name": "ha_heavy",
+      "codepoint": "U+062D",
+      "value": 8,
+      "digital_root": 8
+    },
+    {
+      "index": 8,
+      "char": "ط",
+      "name": "ta_heavy",
+      "codepoint": "U+0637",
+      "value": 9,
+      "digital_root": 9
+    },
+    {
+      "index": 9,
+      "char": "ي",
+      "name": "ya",
+      "codepoint": "U+064A",
+      "value": 10,
+      "digital_root": 1
+    },
+    {
+      "index": 10,
+      "char": "ك",
+      "name": "kaf",
+      "codepoint": "U+0643",
+      "value": 20,
+      "digital_root": 2
+    },
+    {
+      "index": 11,
+      "char": "ل",
+      "name": "lam",
+      "codepoint": "U+0644",
+      "value": 30,
+      "digital_root": 3
+    },
+    {
+      "index": 12,
+      "char": "م",
+      "name": "mim",
+      "codepoint": "U+0645",
+      "value": 40,
+      "digital_root": 4
+    },
+    {
+      "index": 13,
+      "char": "ن",
+      "name": "nun",
+      "codepoint": "U+0646",
+      "value": 50,
+      "digital_root": 5
+    },
+    {
+      "index": 14,
+      "char": "س",
+      "name": "sin",
+      "codepoint": "U+0633",
+      "value": 60,
+      "digital_root": 6
+    },
+    {
+      "index": 15,
+      "char": "ع",
+      "name": "ayn",
+      "codepoint": "U+0639",
+      "value": 70,
+      "digital_root": 7
+    },
+    {
+      "index": 16,
+      "char": "ف",
+      "name": "fa",
+      "codepoint": "U+0641",
+      "value": 80,
+      "digital_root": 8
+    },
+    {
+      "index": 17,
+      "char": "ص",
+      "name": "sad",
+      "codepoint": "U+0635",
+      "value": 90,
+      "digital_root": 9
+    },
+    {
+      "index": 18,
+      "char": "ق",
+      "name": "qaf",
+      "codepoint": "U+0642",
+      "value": 100,
+      "digital_root": 1
+    },
+    {
+      "index": 19,
+      "char": "ر",
+      "name": "ra",
+      "codepoint": "U+0631",
+      "value": 200,
+      "digital_root": 2
+    },
+    {
+      "index": 20,
+      "char": "ش",
+      "name": "shin",
+      "codepoint": "U+0634",
+      "value": 300,
+      "digital_root": 3
+    },
+    {
+      "index": 21,
+      "char": "ت",
+      "name": "ta",
+      "codepoint": "U+062A",
+      "value": 400,
+      "digital_root": 4
+    },
+    {
+      "index": 22,
+      "char": "ث",
+      "name": "tha",
+      "codepoint": "U+062B",
+      "value": 500,
+      "digital_root": 5
+    },
+    {
+      "index": 23,
+      "char": "خ",
+      "name": "kha",
+      "codepoint": "U+062E",
+      "value": 600,
+      "digital_root": 6
+    },
+    {
+      "index": 24,
+      "char": "ذ",
+      "name": "dhal",
+      "codepoint": "U+0630",
+      "value": 700,
+      "digital_root": 7
+    },
+    {
+      "index": 25,
+      "char": "ض",
+      "name": "dad",
+      "codepoint": "U+0636",
+      "value": 800,
+      "digital_root": 8
+    },
+    {
+      "index": 26,
+      "char": "ظ",
+      "name": "za_heavy",
+      "codepoint": "U+0638",
+      "value": 900,
+      "digital_root": 9
+    },
+    {
+      "index": 27,
+      "char": "غ",
+      "name": "ghayn",
+      "codepoint": "U+063A",
+      "value": 1000,
+      "digital_root": 1
+    }
+  ],
+  "normalization": {
+    "unicode_form": "NFC",
+    "strip_combining_marks": true,
+    "strip_tatweel_U+0640": true,
+    "canonicalizations": {
+      "أ": "ا",
+      "إ": "ا",
+      "آ": "ا",
+      "ٱ": "ا",
+      "ؤ": "و",
+      "ئ": "ي",
+      "ى": "ي",
+      "ی": "ي",
+      "ة": "ه"
+    },
+    "standalone_hamza_U+0621": "ignored unless an explicit corpus spec chooses a value",
+    "other_characters": "ignored unless present in the 28-letter direct mapping"
+  },
+  "mod9": {
+    "digital_root": "dr(v)=1+((v-1) mod 9)",
+    "doubling_map": "T(x)=dr(2x)",
+    "cycles": {
+      "V1": [
+        1,
+        2,
+        4,
+        8,
+        7,
+        5
+      ],
+      "V3": [
+        3,
+        6
+      ],
+      "V9": [
+        9
+      ]
+    }
+  },
+  "corpus_claims": {
+    "status": "candidate pending exact fixture reproduction",
+    "hypothesis": "data/quran_abjad_hypothesis.json",
+    "measurement": "data/quran_abjad_measurement.json",
+    "fixture": "corpora/quran_uthmani/quran.jsonl"
+  },
+  "mapping_semantics": "direct Unicode character → classical abjad value lookup; charCode/codepoint modulo indexing is explicitly excluded",
+  "layers": {
+    "pure_math": "digital root and T(r)=dr(2r) orbit structure",
+    "cultural_mapping": "28-letter classical abjad table",
+    "empirical": "corpus-specific distributions computed only from an exact locked fixture"
+  }
+}

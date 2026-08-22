@@ -1,0 +1,114 @@
+{
+  "format_version": "1.0.0",
+  "name": "HEXA_64 Sanskrit UTF73 canonical field",
+  "status": "custom field using standard Unicode code points",
+  "consonants": [
+    {
+      "roman": "ka",
+      "char": "क",
+      "codepoint": "U+0915"
+    },
+    {
+      "roman": "ca",
+      "char": "च",
+      "codepoint": "U+091A"
+    },
+    {
+      "roman": "ṭa",
+      "char": "ट",
+      "codepoint": "U+091F"
+    },
+    {
+      "roman": "ta",
+      "char": "त",
+      "codepoint": "U+0924"
+    },
+    {
+      "roman": "pa",
+      "char": "प",
+      "codepoint": "U+092A"
+    },
+    {
+      "roman": "sa",
+      "char": "स",
+      "codepoint": "U+0938"
+    }
+  ],
+  "states12": [
+    {
+      "name": "a",
+      "char": "",
+      "codepoint": null
+    },
+    {
+      "name": "ā",
+      "char": "ा",
+      "codepoint": "U+093E"
+    },
+    {
+      "name": "i",
+      "char": "ि",
+      "codepoint": "U+093F"
+    },
+    {
+      "name": "ī",
+      "char": "ी",
+      "codepoint": "U+0940"
+    },
+    {
+      "name": "u",
+      "char": "ु",
+      "codepoint": "U+0941"
+    },
+    {
+      "name": "ū",
+      "char": "ू",
+      "codepoint": "U+0942"
+    },
+    {
+      "name": "ṛ",
+      "char": "ृ",
+      "codepoint": "U+0943"
+    },
+    {
+      "name": "e",
+      "char": "े",
+      "codepoint": "U+0947"
+    },
+    {
+      "name": "ai",
+      "char": "ै",
+      "codepoint": "U+0948"
+    },
+    {
+      "name": "o",
+      "char": "ो",
+      "codepoint": "U+094B"
+    },
+    {
+      "name": "au",
+      "char": "ौ",
+      "codepoint": "U+094C"
+    },
+    {
+      "name": "anusvāra",
+      "char": "ं",
+      "codepoint": "U+0902"
+    }
+  ],
+  "shunya": {
+    "name": "śūnya",
+    "char": "·",
+    "codepoint": "U+00B7",
+    "semantic_role": "abstract nil state; middle dot is display glyph"
+  },
+  "rgb24_encoder": {
+    "input": "RGB24, r/g/b integers 0..255",
+    "nil_rule": "(0,0,0) maps to state 72",
+    "hue_rule": "standard HSV hue; achromatic non-black pixels use hue=0",
+    "hue_sector": "floor((hue mod 360)/60), giving 0..5",
+    "brightness": "V=max(r,g,b)",
+    "brightness_bin": "min(11, floor(V*12/256)), giving 0..11",
+    "state_index": "hue_sector*12 + brightness_bin for non-black pixels"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.0.0",
+  "name": "LanguageFrame quotient-closure axioms",
+  "frame": {
+    "signature": "Frame = (C,S,b)",
+    "axioms": {
+      "A1": "C and S are non-empty finite sets",
+      "A2": "C ∩ S = ∅",
+      "A3": "b ∉ C ∪ S",
+      "A4": "b is the unique boundary-equivalence class representing the identified 0/1 boundary"
+    }
+  },
+  "atomic_frame": {
+    "signature": "AtomicFrame = Frame + atomicity",
+    "axioms": {
+      "AT1": "|C| = 1",
+      "AT2": "|S| = 1"
+    },
+    "cardinality": 3
+  },
+  "closure": {
+    "input": "three pairwise-disjoint AtomicFrames F_i=(C_i,S_i,b_i)",
+    "prequotient": "X = ⊔_i (C_i ⊔ S_i ⊔ {b_i})",
+    "equivalence": "b_1 ~ b_2 ~ b_3; every non-boundary point is equivalent only to itself",
+    "output": "Q = X/~; C' = image(⊔ C_i); S' = image(⊔ S_i); b = [b_1]=[b_2]=[b_3]",
+    "canonical_partition": "C' and S' are induced by the input tags; they are not reassigned after quotienting"
+  },
+  "theorem": {
+    "name": "Three-Atomic-Frame Quotient Closure",
+    "claim": "The quotient output (C',S',b) is a Frame and has 7 underlying points.",
+    "cardinality_derivation": [
+      "|X| = 3×(|C_i|+|S_i|+1) = 3×3 = 9",
+      "the boundary equivalence class merges 3 points into 1",
+      "|Q| = 9-(3-1) = 7",
+      "equivalently |C'|+|S'|+1 = 3+3+1 = 7"
+    ],
+    "status": "theorem inside the stated project model; atomicity remains an axiom, not yet derived from deeper principles"
+  }
+}

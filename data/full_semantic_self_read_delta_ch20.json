@@ -1,0 +1,129 @@
+{
+  "format_version": "1.0.0",
+  "name": "Full semantic self-read delta",
+  "canonical_object": "data/atlas.json",
+  "goal": "P_full(G_total(A_canonical)) = A_canonical",
+  "current_projection": {
+    "status": "EXACT_FULL_SEMANTIC",
+    "direct_or_recomputed": [
+      "concept_id",
+      "equation",
+      "svg_text",
+      "svg_fragment_sha256",
+      "chapter_title via SVG metadata"
+    ]
+  },
+  "concept_record_fields": {
+    "all": [
+      "chapter",
+      "chapter_title",
+      "concept_id",
+      "domain",
+      "equation",
+      "math_signature_sha256",
+      "parameters",
+      "relations",
+      "signal_type",
+      "subtitle",
+      "svg_element_count",
+      "svg_fragment_sha256",
+      "svg_selector",
+      "svg_text",
+      "title",
+      "validation"
+    ],
+    "directly_serialized_or_recomputed": [
+      "concept_id",
+      "equation",
+      "svg_text",
+      "svg_fragment_sha256",
+      "math_signature_sha256"
+    ],
+    "derivable_without_semantic_duplication": [
+      "svg_selector",
+      "svg_element_count"
+    ],
+    "semantic_payload_not_currently_total": [],
+    "semantic_payload_total": [
+      "chapter",
+      "chapter_title",
+      "title",
+      "subtitle",
+      "domain",
+      "signal_type",
+      "parameters",
+      "validation",
+      "relations"
+    ]
+  },
+  "top_level_fields": {
+    "all": [
+      "chapter_count",
+      "concept_count",
+      "concepts",
+      "default_discrete_frame",
+      "format_version",
+      "source_svg",
+      "style",
+      "title"
+    ],
+    "already_serialized_or_derivable": [
+      "title",
+      "style",
+      "default_discrete_frame",
+      "chapter_count",
+      "concept_count",
+      "concepts"
+    ],
+    "not_currently_explicit_in_svg": [
+      "format_version",
+      "source_svg"
+    ]
+  },
+  "minimal_total_projection": {
+    "payload_to_embed_per_concept": [
+      "chapter",
+      "chapter_title",
+      "title",
+      "subtitle",
+      "domain",
+      "signal_type",
+      "parameters",
+      "validation",
+      "relations"
+    ],
+    "payload_to_embed_top_level": [
+      "format_version",
+      "source_svg"
+    ],
+    "recompute_after_read": [
+      "svg_selector from concept_id",
+      "svg_element_count from parsed group",
+      "svg_fragment_sha256 from serialized group",
+      "chapter_count from embedded chapter metadata",
+      "concept_count from parsed concept groups",
+      "concepts from the ordered reconstructed concept records",
+      "math_signature_sha256 from canonicalJSON({concept_id,equation,parameters,validation})"
+    ],
+    "totality_invariant": "every field of A_canonical is either embedded losslessly or deterministically recomputable from the generated SVG",
+    "equality_test": "canonical_json(P_full(G_total(A_canonical))) == canonical_json(A_canonical)",
+    "status": "IMPLEMENTED",
+    "hash_rule": "hash fields are verification, never semantic payload; their preimages must be present and hashes are recomputed",
+    "verification_order": [
+      "local math_signature_sha256 recomputation per concept",
+      "local svg_fragment_sha256 recomputation per concept",
+      "chapter embedded-versus-order cross-check",
+      "global canonicalJSON equality"
+    ],
+    "payload_encoding": "nine separate data-sem-*-b64 attributes per concept; each value is Base64(canonicalJSON(field_value))",
+    "agni_rule": "additive only: existing data-concept, data-equation, visible SVG children, and 103-concept structure are preserved; semantic payload is added, never substituted"
+  },
+  "scope": {
+    "closes": "full semantic self-read of data/atlas.json",
+    "does_not_close": [
+      "reader-independence across real models",
+      "reconstruction of every external source/corpus file from SVG",
+      "semantic truth of the chosen parameters/relations themselves"
+    ]
+  }
+}

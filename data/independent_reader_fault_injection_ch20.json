@@ -1,0 +1,70 @@
+{
+  "format_version": "1.0.0",
+  "reader": "P_χ",
+  "baseline_pass": true,
+  "mutations": [
+    {
+      "mutation": "M1_hash_char_flip",
+      "expected_detected": true,
+      "detected": true,
+      "expectation_match": true,
+      "failed_checks": [
+        "ch14_png_sha256_recomputed"
+      ]
+    },
+    {
+      "mutation": "M2_remove_field",
+      "expected_detected": true,
+      "detected": true,
+      "expectation_match": true,
+      "failed_checks": [
+        "concept_count_103",
+        "concept_ids_unique",
+        "concept_order_matches_atlas"
+      ]
+    },
+    {
+      "mutation": "M3_swap_two_ids",
+      "expected_detected": true,
+      "detected": true,
+      "expectation_match": true,
+      "failed_checks": [
+        "concept_order_matches_atlas"
+      ]
+    },
+    {
+      "mutation": "M4_add_field_103_to_104",
+      "expected_detected": true,
+      "detected": true,
+      "expectation_match": true,
+      "failed_checks": [
+        "concept_count_103",
+        "concept_ids_unique",
+        "concept_order_matches_atlas",
+        "equation_attribute_count_103",
+        "equation_content_nonempty"
+      ]
+    },
+    {
+      "mutation": "M5_empty_one_equation",
+      "expected_detected": true,
+      "detected": true,
+      "expectation_match": true,
+      "failed_checks": [
+        "equation_content_nonempty"
+      ]
+    }
+  ],
+  "all_expectations_match": true,
+  "sensitivity_summary": {
+    "detected": [
+      "M1_hash_char_flip",
+      "M2_remove_field",
+      "M3_swap_two_ids",
+      "M4_add_field_103_to_104",
+      "M5_empty_one_equation"
+    ],
+    "not_detected": [],
+    "boundary": "P_χ now recomputes the Ch14 PNG SHA-256 independently and enforces non-empty equation content; broader semantic correctness remains out of scope"
+  }
+}

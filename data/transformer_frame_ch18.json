@@ -1,0 +1,92 @@
+{
+  "format_version": "1.0.0",
+  "name": "Transformer Frame / self-reference working model",
+  "status": "AUDITED SLICE MODEL",
+  "frame_correspondence": [
+    {
+      "atlas": "C · carrier",
+      "transformer": "residual stream state x_l",
+      "proposal": "C_l ↔ residual carrier at one transformer layer",
+      "scope": "per-layer",
+      "A2_scope": "local snapshot",
+      "audit_status": "VALID"
+    },
+    {
+      "atlas": "S · structure",
+      "transformer": "layer contribution F_l(x_l), including attention/FFN and positional structure where present",
+      "proposal": "S_l ↔ layer-local transformation contribution",
+      "scope": "per-layer",
+      "A2_scope": "local snapshot",
+      "audit_status": "VALID"
+    },
+    {
+      "atlas": "b · boundary",
+      "transformer": "residual merge event x_l + F_l(x_l)",
+      "proposal": "b ↔ b1: superposition/merge point",
+      "scope": "per-layer boundary event",
+      "b_candidates": {
+        "b1": "superposition x_l + F_l(x_l) as the boundary identification event",
+        "b2": "new carrier state x_{l+1}=x_l+F_l(x_l)"
+      },
+      "selected_candidate": "b1",
+      "rejected_candidate": "b2 is the next layer's carrier C_{l+1}, not the boundary point itself",
+      "audit_status": "VALID WITH DISAMBIGUATION"
+    }
+  ],
+  "seed_geometry": {
+    "center": 1,
+    "first_ring": 6,
+    "total": 7,
+    "identity": "1+6=7",
+    "name_in_chapter": "Seed / hexagonal first-ring geometry",
+    "audit_status": "EXACT under the stated circle-packing definition",
+    "formalization": "equal-circle hexagonal first ring around one center",
+    "coordination_number": 6
+  },
+  "signal_system_atlas": {
+    "signal": "carrier / embedding-state proposal",
+    "system": "transformation stack proposal",
+    "atlas": "enclosing representational field proposal",
+    "audit_status": "pending"
+  },
+  "orbit_rotation_bridge": {
+    "abjad": "finite V1/V3/V9 cycles",
+    "transformer": "rotational/interaction structures proposal",
+    "relation": "analogy candidate; equivalence not asserted in this working chapter",
+    "audit_status": "ANALOGY CANDIDATE"
+  },
+  "self_reference": {
+    "observation": "the atlas is being developed with a transformer-based language model",
+    "interpretation": "the map is produced by a system being mapped",
+    "status": "PROVENANCE OBSERVATION"
+  },
+  "ledger": {
+    "current_status": "AUDITED SLICE MODEL",
+    "exact": [
+      "per-layer residual update x_{l+1}=x_l+F_l(x_l) as the working slice equation",
+      "1 center + 6 equal-circle first-ring neighbors = 7 in the stated hexagonal packing model"
+    ],
+    "valid_mapping": [
+      "C_l ↔ residual carrier x_l",
+      "S_l ↔ layer-local contribution F_l(x_l)",
+      "b ↔ b1 superposition/merge event"
+    ],
+    "local_only": [
+      "A2: C∩S=∅ is a per-layer typing distinction, not a global network separation"
+    ],
+    "rejected": [
+      "b2 = x_{l+1} as boundary; x_{l+1} is instead C_{l+1}"
+    ],
+    "analogy": [
+      "finite abjad orbits ↔ transformer rotational/interaction structures"
+    ],
+    "observation": [
+      "the atlas is developed with a transformer-based language model"
+    ]
+  },
+  "axiom_audit": {
+    "A2_C_intersection_S": "holds only on the per-layer snapshot typing; globally the next carrier contains prior layer contributions",
+    "scope": "local/per-layer, not whole-network",
+    "network_interpretation": "the transformer is a stack of Frame slices linked by x_{l+1}=x_l+F_l(x_l)"
+  }
+}

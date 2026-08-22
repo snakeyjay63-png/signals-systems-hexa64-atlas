@@ -1,0 +1,42 @@
+{
+  "format_version": "1.0.0",
+  "canonical_object": "data/atlas.json",
+  "concept_field_count": 16,
+  "concept_record_count": 103,
+  "current_recoverable": [
+    "concept_id",
+    "equation",
+    "math_signature_sha256",
+    "svg_fragment_sha256",
+    "svg_text"
+  ],
+  "derivable": [
+    "svg_element_count",
+    "svg_selector"
+  ],
+  "semantic_payload_delta": [
+    "chapter",
+    "chapter_title",
+    "domain",
+    "parameters",
+    "relations",
+    "signal_type",
+    "subtitle",
+    "title",
+    "validation"
+  ],
+  "top_level_delta": [
+    "format_version",
+    "source_svg"
+  ],
+  "checks": {
+    "all_concept_records_have_same_field_set": true,
+    "concept_field_partition_is_total": true,
+    "concept_field_partition_is_disjoint": true,
+    "top_level_partition_is_total": true,
+    "spec_goal_is_full_atlas_equality": true,
+    "totality_invariant_declared": true
+  },
+  "pass": true,
+  "closure_status": "TOTAL_PROJECTION_IMPLEMENTED"
+}

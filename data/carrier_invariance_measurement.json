@@ -1,0 +1,74 @@
+{
+  "format_version": "1.0.0",
+  "canonicalization": "JSON sort_keys=true; separators=(',',':'); UTF-8; ensure_ascii=false",
+  "field": {
+    "mod9_orbits": {
+      "V1": [
+        1,
+        2,
+        4,
+        8,
+        7,
+        5
+      ],
+      "V3": [
+        3,
+        6
+      ],
+      "V9": [
+        9
+      ],
+      "transform": "T(r)=dr(2r)"
+    },
+    "closure_7_cardinality": {
+      "prequotient": 9,
+      "quotient": 7,
+      "carrier_count": 3,
+      "structure_count": 3
+    },
+    "choice_accounting": {
+      "used": [
+        "theta_raster",
+        "theta_utf73",
+        "theta_bridge",
+        "theta_abjad",
+        "theta_atomic",
+        "theta_transformer"
+      ],
+      "locked": [
+        "theta_raster",
+        "theta_utf73",
+        "theta_abjad",
+        "theta_atomic",
+        "theta_transformer"
+      ],
+      "routed_open": [
+        "theta_bridge"
+      ],
+      "closure_complete": false,
+      "closure_semantics": "OPEN_BY_DESIGN"
+    },
+    "chapter19_open_bridge": {
+      "id": "theta_bridge",
+      "kind": "inter-system routed-open relation",
+      "status": "ROUTED_OPEN",
+      "lock_policy": "NONE_BY_DESIGN",
+      "endpoint": "0.0.0.0",
+      "endpoint_network_status": "IPv4 unspecified address",
+      "default_route_prefix": "0.0.0.0/0"
+    },
+    "chapter18_slice_scope": {
+      "status": "AUDITED SLICE MODEL",
+      "scope": "local/per-layer, not whole-network",
+      "selected_boundary": "b1"
+    }
+  },
+  "canonical_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318",
+  "carrier_A_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318",
+  "carrier_B_sha256": "1343bb5bfd09cb9367c0e7778a4eabf57f256bc35dcb9d13adaff706c07fe318",
+  "deterministic_witness_match": true,
+  "carrier_content_consumed": false,
+  "reader_independence_proven": false,
+  "vacuity_status": "CURRENT ADAPTER IGNORES CARRIER CONTENT",
+  "scope": "abstract label witnesses only; proves deterministic canonical-field reconstruction, not reader-independence"
+}

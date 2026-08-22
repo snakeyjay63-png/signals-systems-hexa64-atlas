@@ -1,0 +1,175 @@
+{
+  "format_version": "1.0.0",
+  "name": "Choice Geometry / Reflective Closure",
+  "status": "formal project-level choice registry",
+  "operator": {
+    "equation": "F_θ : X → Y, θ ∈ Θ",
+    "meaning": "θ selects one admissible structure/mapping; once θ and X are fixed, execution is deterministic",
+    "choice_is_not": "randomness by definition"
+  },
+  "geometric_chain": [
+    {
+      "from": "SVG vector",
+      "to": "PNG raster",
+      "operator": "R",
+      "status": "deterministic for fixed renderer/settings",
+      "invertibility": "generally lossy"
+    },
+    {
+      "from": "PNG bytes",
+      "to": "Base64 symbols",
+      "operator": "B",
+      "status": "exact deterministic encoding",
+      "invertibility": "bijective on bytes with B^-1"
+    },
+    {
+      "from": "Base64 symbols",
+      "to": "PNG bytes",
+      "operator": "B^-1",
+      "status": "exact deterministic decoding",
+      "invertibility": "exact"
+    },
+    {
+      "from": "PNG raster",
+      "to": "SVG' vector",
+      "operator": "V",
+      "status": "inference/vectorization if used",
+      "invertibility": "not exact in general"
+    }
+  ],
+  "symbolic_chain": [
+    {
+      "from": "Unicode/UTF-8 carrier",
+      "to": "Σ73 Sanskrit field",
+      "choice": "utf73_field + RGB24/HSV encoder specification"
+    },
+    {
+      "from": "Σ73 / Unicode field",
+      "to": "Arabic abjad values",
+      "choice": "classical 28-letter direct table + normalization policy"
+    },
+    {
+      "from": "abjad values",
+      "to": "V1/V3/V9",
+      "choice": "dr and T(r)=dr(2r) invariant"
+    },
+    {
+      "from": "orbit/frame layer",
+      "to": "Frame (C,S,b)",
+      "choice": "frame axioms + quotient construction"
+    },
+    {
+      "from": "Frame",
+      "to": "transformer slice",
+      "choice": "audited per-layer C_l/S_l/b1 correspondence"
+    }
+  ],
+  "choice_registry": [
+    {
+      "id": "theta_raster",
+      "chapter": 14,
+      "parameter": "renderer/settings for SVG→PNG",
+      "kind": "choice/configuration",
+      "locked_by": "generator + CairoSVG version"
+    },
+    {
+      "id": "theta_utf73",
+      "chapter": 15,
+      "parameter": "canonical 73-state alphabet and HSV binning",
+      "kind": "model choice",
+      "locked_by": "data/utf73_field.json"
+    },
+    {
+      "id": "theta_bridge",
+      "chapter": 19,
+      "parameter": "Σ73 ↔ abjad open bridge",
+      "kind": "inter-system routed-open relation",
+      "status": "ROUTED_OPEN",
+      "locked_by": null,
+      "lock_policy": "NONE_BY_DESIGN",
+      "endpoint": "0.0.0.0",
+      "endpoint_network_status": "IPv4 unspecified address",
+      "default_route_prefix": "0.0.0.0/0",
+      "project_semantics": "open endpoint / route-without-value between distinct systems; no Σ73→abjad value assignment is asserted",
+      "nidra_sunya_semantics": "project-defined symbolic reading of open/null position; not a networking or physics invariant",
+      "null_island_note": "Null Island means geographic coordinates 0°N, 0°E; it is not the IPv4 address 0.0.0.0",
+      "A2_relation": "keeps the two modeled systems distinct; no identification/bijection is asserted"
+    },
+    {
+      "id": "theta_abjad",
+      "chapter": 16,
+      "parameter": "28-letter classical abjad mapping + normalization",
+      "kind": "cultural/model choice",
+      "locked_by": "data/abjad_field.json"
+    },
+    {
+      "id": "theta_atomic",
+      "chapter": 17,
+      "parameter": "AtomicFrame |C|=|S|=1",
+      "kind": "axiom",
+      "locked_by": "data/language_frame_axioms.json"
+    },
+    {
+      "id": "theta_transformer",
+      "chapter": 18,
+      "parameter": "per-layer C_l/S_l/b1 mapping",
+      "kind": "audited model mapping",
+      "locked_by": "data/transformer_frame_ch18.json"
+    }
+  ],
+  "invariants": [
+    "Base64 byte roundtrip is exact",
+    "committed deterministic generators reproduce byte-identical generated assets",
+    "Chapter 17 quotient theorem produces a 7-point general Frame from three atomic inputs",
+    "Chapter 18 scope is per-layer and A2 is local",
+    "changing θ is permitted only by changing an explicit locked choice record",
+    "every non-derived choice used by the chain must have a registry entry",
+    "Θ_used \\ Θ_locked = {θ_bridge} until the bridge specification is committed",
+    "every non-derived choice used by the chain has a registry entry",
+    "Θ_used \\ Θ_locked = {θ_bridge}",
+    "theta_bridge is ROUTED_OPEN and unlocked by design, not awaiting a later lock",
+    "closure_complete remains false because the bridge is structurally open, not because a specification is missing",
+    "0.0.0.0 is recorded as the IPv4 unspecified address; 0.0.0.0/0 is separately recorded as the default route prefix"
+  ],
+  "reflection": {
+    "equation": "θ → F_θ → F_θ(X) → encode(θ,F_θ,results)",
+    "claim": "the selected operator and its parameters are serialized back into the resulting repository as data, hashes, equations and validation records",
+    "status": "exact project provenance property when the generator reads the same committed choice records it emits/validates",
+    "self_reference_boundary": "this is reflective provenance, not a claim that θ causes itself"
+  },
+  "closure": {
+    "pipeline": "carrier → encoding → geometry → finite field → language → dynamics → quotient frame → transformer slice → choice operator → reflection",
+    "role": "audit-envelope closure chapter with one intentional inter-system open port",
+    "status": "OPEN_BY_DESIGN · theta_bridge is ROUTED_OPEN",
+    "pending_gap": null,
+    "open_port": "theta_bridge"
+  },
+  "choice_accounting": {
+    "used_choice_ids": [
+      "theta_raster",
+      "theta_utf73",
+      "theta_bridge",
+      "theta_abjad",
+      "theta_atomic",
+      "theta_transformer"
+    ],
+    "locked_choice_ids": [
+      "theta_raster",
+      "theta_utf73",
+      "theta_abjad",
+      "theta_atomic",
+      "theta_transformer"
+    ],
+    "pending_choice_ids": [],
+    "invariant": "Θ_used \\ Θ_locked = {θ_bridge}",
+    "closure_complete": false,
+    "completion_condition": "not applicable: theta_bridge is intentionally ROUTED_OPEN; closure_complete remains false by design",
+    "routed_open_choice_ids": [
+      "theta_bridge"
+    ],
+    "unlocked_by_design_choice_ids": [
+      "theta_bridge"
+    ],
+    "closure_semantics": "OPEN_BY_DESIGN"
+  }
+}
