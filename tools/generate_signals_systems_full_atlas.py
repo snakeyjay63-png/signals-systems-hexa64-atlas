@@ -1784,6 +1784,16 @@ text=SVG_PATH.read_text(encoding="utf-8")
 root=ET.fromstring(text)
 concepts=[el.attrib.get("data-concept") for el in root.iter() if "data-concept" in el.attrib]
 metadata=root.find("{http://www.w3.org/2000/svg}metadata")
+
+def _check_embedded_image_only(t):
+    has_b64 = 'href="data:image/png;base64,' in t
+    no_http = "http://" not in t.replace("http://www.w3.org/2000/svg", "")
+    no_https = "https://" not in t
+    return "PASS" if (has_b64 and no_http and no_https) else "CHECK"
+
+def _check_no_external_urls(t):
+    return "PASS" if ("http://" not in t.replace("http://www.w3.org/2000/svg", "") and "https://" not in t) else "CHECK"
+
 report=[
     "SIGNALS & SYSTEMS · FULL VISUAL ATLAS · VERIFICATION",
     "="*62,
@@ -1797,8 +1807,8 @@ report=[
     f"SVG title: {'PASS' if root.find('{http://www.w3.org/2000/svg}title') is not None else 'FAIL'}",
     f"SVG description: {'PASS' if root.find('{http://www.w3.org/2000/svg}desc') is not None else 'FAIL'}",
     f"XML parse: PASS",
-    f"embedded image only: {'PASS' if 'href=\"data:image/png;base64,' in text and 'http://' not in text.replace('http://www.w3.org/2000/svg','') and 'https://' not in text else 'CHECK'}",
-    f"external URLs: {'PASS' if 'http://' not in text.replace('http://www.w3.org/2000/svg','') and 'https://' not in text else 'CHECK'}",
+    f"embedded image only: {_check_embedded_image_only(text)}",
+    f"external URLs: {_check_no_external_urls(text)}",
     f"Chapter 14 PNG bytes: {len(CH14_PNG_BYTES)}",
     f"Chapter 14 PNG sha256: {CH14_RAW_SHA256}",
     f"Chapter 14 Base64 chars: {len(CH14_B64)}",
