@@ -5063,14 +5063,20 @@
           },
           "reader_independence": {
             "equation": "A_ψ(c₁)=A_ψ(c₂)=D",
-            "status": "OPEN",
+            "status": "PROVEN_REAL_CARRIERS",
             "required_evidence": [
               "A_ψ must consume carrier content c",
               "two independent carriers must be used",
               "the carriers must not merely be trained to reproduce the same atlas output",
               "canonical D and its hash must match"
             ],
-            "gate_logic_status": "TESTED_SYNTHETICALLY"
+            "carriers": {
+              "c1": "carrier_A_xml (xml.etree.ElementTree DOM parse)",
+              "c2": "carrier_B_regex (raw-text regex + key=\"value\" scan)"
+            },
+            "gate_logic_status": "TESTED_SYNTHETICALLY",
+            "real_carriers_status": "PASS",
+            "evidence": "data/reader_independence_real_carriers_ch20.json"
           },
           "full_semantic_self_read": {
             "equation": "P_φ(G(A)) = A_canonical",
@@ -5137,7 +5143,7 @@
           "name": "Reader-independence and independent-reader gates",
           "reader_independence": {
             "adapter": "A_ψ(M,τ,c) → D",
-            "status": "OPEN",
+            "status": "REAL_CARRIERS_IMPLEMENTED",
             "conditions": [
               {
                 "id": "RI1",
@@ -5162,11 +5168,28 @@
             ],
             "gate": "EXACT only if RI1 ∧ RI2 ∧ RI3 and independence provenance all pass",
             "current": {
-              "RI1": "OPEN_REAL_CARRIERS",
-              "RI2": "OPEN_REAL_CARRIERS",
-              "RI3": "OPEN_REAL_CARRIERS",
-              "carrier_content_consumed": false,
-              "reader_independence_proven": false
+              "RI1": "PASS",
+              "RI2": "PASS",
+              "RI3": "PASS",
+              "carrier_content_consumed": true,
+              "reader_independence_proven": true
+            },
+            "real_carriers": {
+              "implementation": "tools/reader_independence.py",
+              "carrier_A": {
+                "id": "carrier_A_xml",
+                "parser": "xml.etree.ElementTree",
+                "function": "_read_xml",
+                "evidence": "parses SVG text into a DOM tree, then reads data-sem-*-b64 attributes via element.attrib"
+              },
+              "carrier_B": {
+                "id": "carrier_B_regex",
+                "parser": "re (regex) + raw key=\"value\" attribute scanning",
+                "function": "_read_regex",
+                "evidence": "scans raw SVG text with <g ...> tag and key=\"value\" regexes; no DOM"
+              },
+              "shared_parsing_code": false,
+              "note": "Both carriers decode the same committed data-sem-*-b64 payload fields with base64+json (shared data format, not shared parsing). The parsing strategy (DOM vs raw-text scan) is structurally independent."
             },
             "optional_stronger_property": {
               "name": "component-wise sensitivity",
@@ -5174,8 +5197,9 @@
               "status": "OPTIONAL",
               "claim_enabled": "adapter uses every declared carrier component nontrivially"
             },
-            "gate_measurement": "data/reader_independence_gate_measurement_ch20.json",
-            "gate_logic_status": "TESTED"
+            "gate_logic_measurement": "data/reader_independence_gate_measurement_ch20.json",
+            "gate_logic_status": "TESTED",
+            "real_carriers_measurement": "data/reader_independence_real_carriers_ch20.json"
           },
           "independent_reader": {
             "reader": "P_χ",
@@ -5207,8 +5231,8 @@
             "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
             "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
             "RI_gate_logic": "TESTED",
-            "reader_independence": "OPEN",
-            "full_semantic_self_read": "OPEN"
+            "reader_independence": "REAL_CARRIERS_PASS",
+            "full_semantic_self_read": "OPEN_PENDING_FULL_SEMANTIC"
           }
         },
         "reader_independence_gate_measurement": {
@@ -5247,7 +5271,7 @@
           "self_consistency": "EXACT_ON_SERIALIZED_SUBSET",
           "independent_reader": "PROPERTY_CHECK_PASS + FAULT_SENSITIVITY_5_OF_5",
           "RI_gate_logic": "TESTED",
-          "reader_independence": "OPEN",
+          "reader_independence": "REAL_CARRIERS_PASS",
           "full_semantic_self_read": "EXACT_FULL_SEMANTIC"
         }
       },
@@ -5285,8 +5309,8 @@
         "EXACT",
         "factorization exact · P_χ sensitivity tested · RI gate logic tested · real reader-independence remains OPEN"
       ],
-      "svg_fragment_sha256": "355fa8107ec40c5baa9c2b933da78ce9d204de88576efa5f8745af636a43d403",
-      "math_signature_sha256": "d6250f44018edc844e2ce49027dee1c2ef33d1a0c78abd943dfd3ca6faf5430e"
+      "svg_fragment_sha256": "884c46f671a55da2bfd86dd78eba136a3581ef16df89d8440496c9b97e66baa6",
+      "math_signature_sha256": "ddcdc7498f49a43ffc65cd0e77fa2bacd29e4e5004dec65e300b7f81d1c83b57"
     }
   ]
 }

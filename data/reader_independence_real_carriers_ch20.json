@@ -8,7 +8,7 @@
       "function": "_read_xml",
       "parses": "SVG text via XML DOM",
       "d_concept_count": 103,
-      "d_canonical_atlas_sha256": "f630cab1f75bdb635ea6aa655ce05d2d9649e3a6a394b791a55629e303bd14bb"
+      "d_canonical_atlas_sha256": "5870d5fb6333a72872fdf9b24a81b276d5bfe471cc2f1210029a3966475fcbea"
     },
     "B": {
       "id": "carrier_B_regex",
@@ -16,12 +16,12 @@
       "function": "_read_regex",
       "parses": "SVG text via regex patterns",
       "d_concept_count": 103,
-      "d_canonical_atlas_sha256": "f630cab1f75bdb635ea6aa655ce05d2d9649e3a6a394b791a55629e303bd14bb"
+      "d_canonical_atlas_sha256": "5870d5fb6333a72872fdf9b24a81b276d5bfe471cc2f1210029a3966475fcbea"
     },
     "prime": {
       "id": "carrier_prime_corrupted",
       "description": "corrupted SVG (base64 char flip) for RI3",
-      "d_canonical_atlas_sha256": "aba6f662ca9917efd4c0110ca0fd4aec03e4db1e4f91f2810a8180fa8bc0d2d5"
+      "d_canonical_atlas_sha256": "8f06f9747ca942b76fde1ed5547e09d6c65c17c74a0ae6a098b148a00bcf15d6"
     }
   },
   "D": {
@@ -235,9 +235,9 @@
       "canonical_discrete_field": "97495c63c9bc5997fe9a121cfaa65f144e703b4756c6ee46c208de951481634b",
       "carrier_substitution_test": "eb3ace5dd7a9c2bb20df4fcc71cb4268ef502fc1af692bfb894f75e0ef793b80",
       "read_route_operations": "abc209d85e5f5e8fd57028508037c20f9a125e448d5617feb1fabc571d3afbaa",
-      "carrier_invariance_status": "d6250f44018edc844e2ce49027dee1c2ef33d1a0c78abd943dfd3ca6faf5430e"
+      "carrier_invariance_status": "ddcdc7498f49a43ffc65cd0e77fa2bacd29e4e5004dec65e300b7f81d1c83b57"
     },
-    "canonical_atlas_sha256": "f630cab1f75bdb635ea6aa655ce05d2d9649e3a6a394b791a55629e303bd14bb"
+    "canonical_atlas_sha256": "5870d5fb6333a72872fdf9b24a81b276d5bfe471cc2f1210029a3966475fcbea"
   },
   "RI1": true,
   "RI2": true,
