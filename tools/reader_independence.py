@@ -206,10 +206,10 @@ def _corrupt(text: str) -> str:
 def derive() -> dict:
     text = SVG.read_text(encoding="utf-8")
 
-    # RI1 + RI2: both carriers produce D
+    # RI1 + RI2: both carriers reproduce the atlas-derived reference D
     d_a = _read_xml(text)
     d_b = _read_regex(text)
-    d_ref = d_a  # reference
+    d_ref = _reference_d_from_atlas()  # reference: data/atlas.json
     ri1 = (d_a == d_ref)
     ri2 = (d_b == d_ref)
 
@@ -222,10 +222,6 @@ def derive() -> dict:
     # Carrier A uses xml.etree.ElementTree; Carrier B uses re.
     # They share no parsing code. Both genuinely consume SVG text.
     src_a = Path(__file__).read_text(encoding="utf-8")
-    src_b = src_a  # same file, different function — check structural independence
-    # Verify structural independence: _read_xml uses ET, _read_regex uses re
-    uses_et = "ET.fromstring" in src_a and "ET.parse" not in src_a.split("def _read_regex")[0].split("def _read_xml")[-1]
-    uses_re_in_b = "re.compile" in src_a.split("def _read_regex")[-1].split("def _canon")[0]
     prov_independent = (
         "ET.fromstring" in src_a and  # XML parser present
         "re.compile" in src_a and     # regex parser present
